@@ -11,7 +11,7 @@ Questi due files includono tutti gli altri files tex presenti. Ci sono tre direc
 1. Compilare ms.tex un paio di volte
 2. Compilare sol.tex un paio di volte
 3. Nella directory compariranno dei files con estensione .gnuplot
-4. [b]>[/b] gnuplot \*.gnuplot
+4. Da terminale: > gnuplot \*.gnuplot
 5. Compilare ms.tex ancora una volta
 6. Compilare sol.tex ancora una volta
 7. Questa procedura crea i files ms.pdf e sol.pdf
