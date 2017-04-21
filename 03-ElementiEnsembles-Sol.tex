@@ -1,0 +1,434 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Soluzione degli esercizi del Capitolo \ref{cap:elementi}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:03-gicur}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:03-gicur}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Per una particella relativistica di massa $m$ la relazione di dispersione energia--impulso è:
+%---
+\be
+\varepsilon^2 = p^2c^2 + m^2c^4
+\ee
+%---
+in cui $c$ è la velocità della luce. Il caso ultrarelativistico corrisponde a trascurare la massa rispetto al momento. Otteniamo dunque
+%---
+\be
+\varepsilon = pc
+\ee
+%---
+in cui $p$ è il modulo del momento. L'hamiltoniana totale per un gas ultrarelativistico sarà dunque
+%---
+\be
+\Ham = \sum_{i=1}^N p_i c
+\ee
+%---
+Passiamo al calcolo del numero di microstati con energia minore o uguale a $E$. Abbiamo
+%---
+\be
+\Sigma(E) = \frac{1}{N!}\frac{1}{h^{3N}}\int\limits_{\sum_i p_i \le P}\de^{3N} q \, \de^{3N} p
+\ee
+%---
+in cui abbiamo posto $P\equiv E/c$. L'integrazione sulle coordinate fornisce semplicemente un fattore $V^N$ perché $\Ham$ non dipende dalle coordinate. Inoltre riscriviamo $\de^3 p = 4\pi p^2\de p$ ottenendo
+%---
+\be
+\Sigma(E) = \frac{1}{N!}\frac{(4\pi V)^N}{h^{3N}}\int\limits_{\sum_i p_i \le P}\prod_{i=1}^N p_i^2\,\de p_i
+\ee
+%---
+Consideriamo l'integrale nell'espressione precedente nel caso semplificato $N=2$; possiamo scrivere
+%---
+\be
+I_2(P) = \int p_1^2\,\de p_1\int p_2^2\,\de p_2 \,\theta(P - p_1 - p_2)
+\ee
+%---
+in cui $\theta$ è la funzione a gradino. Riscriviamo quindi
+%---
+\be
+I_2(P) = \int_0^P p_1^2\,\de p_1\int_0^{P-p_1} p_2^2\, \de p_2 = \frac{1}{3}\int_0^P p_1^2(P-p_1)^3\de p_1
+\ee
+%---
+Risolviamo l'integrale più generale
+%---
+\be
+J_A(P) = \int_0^P x^2(P-x)^A\de x
+\ee
+%---
+che ci farà comodo in seguito. Poniamo $y = (P-x)$ e otteniamo subito
+%---
+\be
+J_A(P) = \int_0^P(y^{A+2} - 2Py^{A+1} + P^2y^A)\de y
+\ee
+%---
+e un facile calcolo ci fornisce il risultato:
+%---
+\be
+\label{eq:JA}
+J_A(P) = \frac{2A!}{(A+3)!}P^{A+3}
+\ee
+%---
+Abbiamo dunque
+%---
+\be
+I_2(P) = \frac{1}{3}J_3(P) = \frac{2^2}{6!}P^6
+\ee
+%---
+Il motivo per cui abbiamo scritto il risultato in questa maniera sarà chiaro tra poco. Consideriamo ora $I_3(P)$; si vede facilmente, utilizzando il risultato \ref{eq:JA} che abbiamo
+%---
+\be 
+I_3(P) = \int_0^P p_1^2 I_2(P-p_1)\de p_1 = \frac{2^3 6!}{6! 9!}P^9 = \frac{2^3}{9!}P^9
+\ee
+%---
+Procedendo iterativamente otteniamo
+%---
+\be
+I_N(P) = \int_0^P p_1^2 \,I_{N-1}(P-p_1)\de p_1 = \frac{2^N}{(3N)!}P^{3N}
+\ee
+%---
+e dunque l'espressione per il volume dello spazio delle fasi
+%---
+\be
+\Sigma(E) = \frac{1}{N!}\frac{(8\pi V)^N E^{3N}}{(3N)!(hc)^{3N}}
+\ee
+%---
+Abbiamo già visto che possiamo usare direttamente $\Sigma(E)$ per calcolare l'entropia: otteniamo dunque, utilizzando la formula di Stirling
+%---
+\be
+\label{eq:sgum}
+S(E,N,V) = Nk\left[
+\ln\left(\frac{8\pi VE^3}{27(hc)^3 N^4}\right) + 4
+\right]
+\ee 
+%---
+Notiamo che se avessimo omesso il fattore correttivo di Gibbs nel logaritmo sarebbe apparsa la quantità
+$VE^3/N^3$ invece che $VE^3/N^4$; la seconda espressione rende l'entropia una grandezza estensiva, la prima no.
+
+Per una trasformazione adiabatica abbiamo $S = \mathrm{costante}$, e dunque $VE^3 = 
+\mathrm{costante}$. Ricordando che
+%---
+\be
+P = -\dparc{E}{V}{S}
+\ee
+%---
+otteniamo subito
+%---
+\be
+P = \frac{E}{3V}
+\ee
+%---
+Ricaviamo inoltre anche la legge per una trasformazione adiabatica:
+%---
+\be
+PV^{4/3} = \mathrm{costante}
+\ee
+%---
+da cui si legge subito
+%---
+\be
+\frac{C_P}{C_V}\equiv\gamma = \frac{4}{3}
+\ee
+%---
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:03-oscfermi}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:03-oscfermi}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Sia $N_{+}$ il numero di particelle nello stato di energia $\varepsilon$ e $N_{-}$ il numero di particelle nello stato di energia $-\varepsilon$. Abbiamo chiaramente che
+\be
+\label{eq:es0}
+N = N_{+} + N_{-}
+\ee
+e inoltre possiamo scrivere
+\be
+\label{eq:es1}
+E = \varepsilon(N_{+} - N_{-}) = \varepsilon (2N_{+} - N)
+\ee
+Calcoliamo l'entropia con la formula di Boltzmann,
+\be
+S = k\ln \Gamma(E)
+\ee
+in cui $\Gamma(E)$ è il numero di microstati compatibili con il macrostato di energia $E$. 
+
+Da notare che in questo caso $\Gamma(E)$ non va diviso per $h^N$ perché lo ``spazio delle fasi'' del sistema è già discreto e $\Gamma(E)$ è un numero puro, adimensionale.
+
+Per calcolare $\Gamma(E)$ dobbiamo contare in quanti modi possiamo distribuire le $N$ particelle tra i due livelli in modo che valga la (\ref{eq:es1}), e la risposta è
+%---
+\be
+\Gamma(E) = \frac{N!}{N_{+}!N_{-}!} = \frac{N!}{N_{+}!(N-N_{+})!}
+\ee
+%---
+Utilizzando la formula di Stirling otteniamo subito
+%---
+\be
+S = k\left[N\ln N - N_{+}\ln N_{+} - (N-N_{+})\ln(N-N_{+})\right]
+\ee
+%---
+Per ottenere l'inverso della temperatura d'equilibrio dobbiamo derivare $S$ rispetto a $E$, cioè in definitiva rispetto alla variabile $(2\varepsilon N_{+})$:
+%---
+\be
+\frac{1}{T} = \frac{1}{2\varepsilon}\dpar{S}{N_{+}} = \frac{k}{2\varepsilon}
+\left[ \ln\frac{N-N_{+}}{N_{+}} \right]
+\ee
+%---
+dalla quale otteniamo subito la prima risposta:
+%---
+\be
+\label{eq:es2}
+N_{+} = \frac{N}{1+e^{2\varepsilon/kT}}
+\ee
+%---
+e la (\ref{eq:es0}) ci permette subito di scrivere
+%---
+\be
+N_{-} = \frac{Ne^{2\varepsilon/kT}}{1+e^{2\varepsilon/kT}}
+\ee
+%---
+Nel limite $T\to 0$ il denominatore delle espressioni precedenti è dominato dall'esponenziale, e otteniamo quindi subito:
+%---
+\be
+\lim_{T\to 0}N_{+} = 0\qquad\qquad \lim_{T\to 0}N_{-} = N
+\ee
+%---
+e cioè solo il livello a energia inferiore è popolato. Invece per $T\to\infty$ otteniamo
+%---
+\be
+\lim_{T\to\infty}N_{\pm} = \frac{N}{2}
+\ee
+%---
+e cioè entrambi i livelli sono ugualmente popolati. Per l'energia ciò implica che a $T=0$ il sistema raggiunge l'energia minima, ossia $E = -\varepsilon N$, mentre il valore massimo (in una situazione d'equilibrio termodinamico), $E = 0$, viene raggiunto solo a temperatura infinita. Ne segue che sistemi a energia positiva sono necessariamente fuori dall'equilibrio.
+
+Se l'energia vale $E$, possiamo scrivere $N_{+} = (E+N\varepsilon)/2\varepsilon$, e possiamo quindi esprimere l'entropia $S$ in funzione di $E$:
+%---
+\be
+\label{eq:SE}
+\frac{S(E)}{Nk} = -\frac{N\varepsilon + E}{2N\varepsilon}\ln\left(\frac{N\varepsilon + E}{2N\varepsilon}\right)
+-\frac{N\varepsilon - E}{2N\varepsilon}\ln\left(\frac{N\varepsilon - E}{2N\varepsilon}\right)
+\ee
+%---
+Possiamo semplificare l'espressione ponendo $\bar\varepsilon \equiv E/N\varepsilon$ e $s(\bar\varepsilon) \equiv S(E)/Nk$, ottenendo
+\be
+\label{eq:sol03-s-vs-e}
+s(\bar\varepsilon) = \ln 2 - \dfrac{1}{2}\left[
+(1+\bar\varepsilon)\ln(1+\bar\varepsilon) + (1-\bar\varepsilon)\ln(1-\bar\varepsilon)
+\right]
+\ee
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+  \label{fig:s-vs-e}
+  \centering
+  \input{figSol/03-s-vs-e}
+  \caption{La densità di entropia, $s(\bar\varepsilon) \equiv S(E)/Nk$, in funzione di $\bar\varepsilon \equiv \varepsilon E/N$.} 
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+La (\ref{eq:sol03-s-vs-e}) è graficata in figura \ref{fig:s-vs-e}, e poiché la derivata di $S(E)$ rispetto a $E$ dà l'inverso della temperatura termodinamica assoluta, vediamo che stati con $E > 0$ corrispondono a $T < 0$. Visto che l'energia totale del sistema è limitata dall'alto non c'è nessun motivo teorico per non ammettere temperature negative (se non fosse limitata, uno stato a temperatura negativa potrebbe avere peso di Boltzmann infinito). Ma una temperatura negativa, poiché corrisponde a stati con energia maggiore degli stati a temperatura positiva, è sempre {\em maggiore} di qualsiasi temperatura positiva. In altre parole, se mettiamo a contatto un sistema a temperatura negativa (quindi in uno stato metastabile) con una riserva termica a temperatura positiva, il calore fluirà dal sistema a temperatura negativa a quello a temperatura positiva, e l'equilibrio termico totale si raggiungerà comunque per valori positivi della temperatura $T$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:03-quasioscfermi}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:03-quasioscfermi}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Definiamo $x = n_1/N$ e scriviamo $E = x\varepsilon N$. In questo modo è possibile ricavare il numero di occupazione in funzione della temperatura tramite la relazione 
+\be
+\label{eq:sol03oneoverT}
+\dparc{S}{E}{N,V} = \dfrac{1}{\varepsilon N}\dparc{S}{x}{N,V} = \dfrac{1}{T}
+\ee
+Per calcolare l'entropia del sistema $S(E)$ dobbiamo determinare il numero di microstati $\Omega$ a $(E,N)$ fissati. Tale numero è dato dal numero di modi i cui possiamo scegliere $n_1$ particelle tra $N$ totali, senza che conti l'ordine di scelta; dunque dalla distribuzione di probabilità binomiale:
+\be
+\Omega(E,N) = \binom{N}{n_1}g^{n_1} = \dfrac{N!}{n_1!n_0!}g^{n_1}
+\ee 
+e nella precedente $g^{n_1}$ conta il numero di modi di distribuire $n_1$ particelle su $g$ stati degeneri.
+L'entropia sarà data dalla formula di Boltzmann $S(E,N) = k\ln\Omega(E,N)$:
+\be
+  \begin{split}
+    S(E,N) &=      k\ln\Omega(E,N) = k [ \ln(N!g^{n_1}) - \ln n_1! - \ln((N-n_1)!) ] \\
+	       &\simeq k [ N\ln N + n_1\ln g - n_1\ln n_1 - (N-n_1)\ln(N-n_1)]
+%	       &= kN[\ln N + x\ln g - x\ln n + (1-\frac{n}{N})\ln(N-n)] \\
+%   	       &= kN[\ln N +\frac{n}{N}\ln g - \frac{n}{N}\ln n - \ln(N(1-\frac{n}{N})) + \frac{n}{N}\ln\left(N\left[1-\frac{n}{N}\right]\right)] \\
+%			&= kN[\ln N +x\ln g - x\ln n -\ln N - \ln(1-x) + x\ln N +x\ln(1-x)] \\   	       
+%	       &= -kN[(1-x)\ln(1-x)+x\ln x -x\ln g]
+  \end{split}
+\ee
+nella quale abbiamo ovviamente usato la formula di Stirling. Mettendo in evidenza un fattore $N$ e scrivendo $x$ al posto di $n_1/N$, dopo pochi passaggi otteniamo
+\be
+S(E,N) = kN [ x\ln g - x\ln x - (1-x)\ln(1-x) ]
+\ee
+Abbiamo dunque, usando la (\ref{eq:sol03oneoverT}),
+\be
+	\beta = \dfrac{1}{kT} = \frac{1}{\varepsilon}[\ln g - \ln x - \ln(1-x) ]
+\ee
+da cui possiamo ricavare $x$, e quindi $n_1$, in funzione di $\beta$, e quindi di $T$:
+\be
+	\ln\left(\dfrac{g(1-x)}{x}\right) = \beta\varepsilon \implies x = \frac{n_1}{N} = \dfrac{g\,e^{-\beta\varepsilon}}{1 + e^{-\beta\varepsilon}}
+\ee
+rispondendo così al primo quesito posto dal problema:
+\begin{align*}
+  n_1 &=  N\dfrac{g\,e^{-\beta\varepsilon}}{1 + e^{-\beta\varepsilon}}\\
+  n_0 &= 1 - n_1
+\end{align*}
+
+Per quel che riguarda il secondo quesito, abbiamo $E=0.75\,N\epsilon \implies x = 3/4$. Con $g=2$ troviamo che la temperatura del sistema
+\be
+  \beta\epsilon = \ln\left( \dfrac{g(1-x)}{x} \right) = \ln(2/3) \simeq -0.405 < 0
+\ee
+	Ciò non deve meravigliare: questo risultato implica semplicemtne che sistema è in uno stato metastabile in cui $3/4$ delle particelle si trova al livello eccitato di energia e il valore negativo della temperatura indica che il calore, nel caso di contatto con una riserva termica all'equilibrio, e quindi a temperatura sanamente positiva, fluirà \emph{dal} sistema \emph{alla} riserva di calore. In questo caso particolare si ha che ciò succederà fino a che 
+\be
+	\dfrac{g(1-x)}{x} < 1 \implies x > \dfrac{2}{3}, \quad \text{cioè} \quad n_1 > \dfrac{2}{3}N.
+\ee 
+	 Calcolando l'entropia e assumendo un flusso di energia finito tra il sistema e la riserva (S $\rightarrow$ R), abbiamo che
+\be
+	\Delta S = \Delta S_R - \Delta S_S = \left(\dfrac{\partial S_R}{\partial E} -\dfrac{\partial S_S}{\partial E}\right)\Delta E = \left(\dfrac{1}{T_R} -\dfrac{1 }{T_S}\right)\Delta E
+\ee
+	Dato che $\Delta S \ge 0$ per $\Delta E >0$ dobbiammo avere $1/T_R - 1/T_S > 0$. Vediamo dunque che le temeperature negative rientrano perfettamente in questo schema.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:03-spin1}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:03-spin1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Anticipando i tempi, troviamo subito la soluzione col formalismo dell'ensemble canonico. Sia $Q_1$ la funzione di partizione di singola particella. La probabilità che la particella sia nello stato $\sigma = -1$ è data da
+\be
+P(-1) = e^{-h/kT}/Q_1
+\ee
+e analogamente abbiamo
+\be
+P(1) = e^{h/kT}/Q_1
+\ee
+Poiché $N_{-1} = NP(-1)$ e $N_{1} = NP(1)$, otteniamo subito
+\be
+\label{exeq:ratiocan}
+\dfrac{N_{-1}}{N_{1}} = e^{-2h/kT}
+\ee
+
+Le particelle sono distinguibili e non--interagenti, quindi per la funzione di partizione totale del sistema, $Q_N$, possiamo scrivere
+\be
+Q_N = Q_1^N
+\ee
+Il calcolo di $Q_1$ è immediato:
+\be
+Q_1 = e^{-h/kT} + 1 + e^{h/kT}
+\ee
+Per l'energia libera di Helmholtz troviamo:
+\be
+A = -kT\ln Q_N = -NkT \ln Q_1 = -NkT \ln\left(e^{-h/kT} + 1 + e^{h/kT}\right).
+\ee
+
+Il conto col formalismo microcanonico è molto più complicato. Per semplicità di notazione, poniamo $X \equiv N_{0}$, $Y \equiv N_{1}$, $Z \equiv N_{-1}$ e $\calE \equiv E/h$.
+
+Possiamo scrivere i vincoli su $N$ e su $E$, entrambi fissati:
+\bea
+\label{exeq:vinc1}
+N &=& X + Y + Z \nonumber \\
+\calE &=& Z - Y
+\eea
+Immaginiamo ora di fissare $X$: ci restano $N-X$ particelle che possono essere distribuite sui due livelli rimanenti. Il numero di modi in cui possiamo fare ciò è chiaramente
+\be
+\Omega'(X,Y,Z) = \dfrac{(N-X)!}{Y!Z!} = \dfrac{(N-X)!}{Y!(N-X-Y)!}
+\ee
+Per ottenere il numero di microstati totali non ci resta che contare tutti i modi in cui possiamo scegliere $X$ particelle tra $N$, moltiplicare per $\Omega'$ e sommare su tutti i possibili valori di $X$:
+\be
+\Omega(X,Y,Z) = \sum_{X=?}^{?} \dfrac{N!}{X!(N-X)!}\dfrac{(N-X)!}{Y!(N-X-Y)!} =
+\sum_{X=?}^{?} \dfrac{N!}{X!Y!Z!}
+\ee
+
+Il primo problema è quello di trovare i limiti della sommatoria su $X$. I vincoli (\ref{exeq:vinc1}) ci permettono di scrivere:
+\be
+X = N - \calE - 2Y
+\ee
+dalla quale ricaviamo che il limite inferiore della somma su $X$ è uguale a $0$ se $N-\calE$ è pari, mentre è uguale a $1$ in caso contrario. L'ultima equazione ci mostra anche che il limite superiore della somma su $X$ corrisponde al valore minimo di $Y$: osserviamo però, notando che $Y = Z-\calE$, che $\text{min}\{Y\} = 0$ se $\calE \ge 0$, mentre $\text{min}\{Y\} = -\calE$ se $\calE < 0$. Si vede subito che il limite superiore nella somma su $X$ è pari a $N-|\calE|$. Abbiamo quindi
+\be
+\Omega(X,Y,Z) = \sum_{X=(0 || 1}^{N-|\calE|} \dfrac{N!}{X!Y!Z!} \equiv \sum_{X=(0 || 1}^{N-|\calE|}
+\Phi(X,\calE,N)
+\ee
+
+Come al solito, non sappiamo fare questa somma. Un argomento di tipo {\em punto di sella} mostra però che nel limite termodinamico ($N\to\infty$) possiamo sostituire alla somma il termine che massimizza la funzione $\Phi$. Prima di ottenere il valore di $X_0$ che massimizza $\Phi$, e quindi $\ln\Phi$, osserviamo che a $X$ fissato abbiamo
+\bea
+\label{exeq:YZ}
+Y = \dfrac{N-\calE-X}{2} \nonumber \\
+Z = \dfrac{N+\calE-X}{2}
+\eea
+
+Usando la formula di Stirling abbiamo
+\be
+\ln\Phi = N\ln N - X\ln X - Y\ln Y - Z\ln Z
+\ee
+e quindi
+\be
+\label{exeq:max}
+\dparc{\ln\Phi}{X}{X=X_0} = -(\ln(X_0)+1) - \dfrac{1}{2}(\ln(Y_0)+1) - \dfrac{1}{2}(\ln(Z_0)+1) = 0
+\ee
+in cui abbiamo usato la notazione $Y_0 \equiv Y(X_0)$, $Z_0 \equiv Z(X_0)$ e il fatto che
+\be
+\dpar{Y}{X} = \dpar{Z}{X} = -\dfrac{1}{2}
+\ee
+La soluzione dell'equazione (\ref{exeq:max}) è
+\be
+X_0^2 = Y_0 Z_0
+\ee
+e ponendo $x_0 \equiv X_0/N$, $y_0 \equiv Y_0/N$, $z_0 \equiv Z_0/N$ e infine $\eps \equiv \calE/N$, otteniamo
+\be
+x_0^2 = y_0 z_0
+\ee
+e infine, usando le (\ref{exeq:YZ}), troviamo
+\be
+x_0 = \dfrac{1}{3}\left(\sqrt{4-3\eps^2}-1\right)
+\ee
+Per l'entropia del sistema otteniamo
+\be
+S = k\ln\Phi(X_0,\calE,N) = k(N\ln N - X_0\ln X_0 - Y_0\ln Y_0 - Z_0\ln Z_0)
+\ee
+e definendo $s \equiv S/Nk$ abbiamo
+\be
+s = \ln N - x_0\ln(Nx_0) - y_0\ln(Ny_0) - y_0\ln(Nz_0)
+\ee
+Ma ricordando che $x_0 + y_0 + z_0 = 1$ otteniamo facilmente
+\be
+s = - x_0\ln x_0 - y_0\ln y_0 - y_0\ln z_0
+\ee
+Troviamo la temperatura d'equilibrio del sistema con la formula
+\be
+\beta = \dfrac{1}{kT} = \dfrac{1}{k}\dparc{S}{E}{N} = \dfrac{1}{h}\dpar{s}{\eps}
+\ee
+e quindi
+\be
+\dfrac{h}{kT} = -(\ln y_0 + 1)\dpar{y_0}{\eps}-(\ln z_0 + 1)\dpar{z_0}{\eps}
+\ee
+e usando ancora le (\ref{exeq:YZ}) otteniamo
+\be
+\dfrac{2h}{kT} = -\ln(z_0/y_0)
+\ee
+Abbiamo finalmente
+\be
+\dfrac{N_{-1}}{N_{1}} = \dfrac{z_0}{y_0} = e^{-2h/kT}
+\ee
+da confrontare con la (\ref{exeq:ratiocan}).
+
+Definiamo ora $r \equiv e^{-h/kT}$. Abbiamo $z_0/y_0 = r^2$ e $x_0^2 = y_0z_0$, da cui ricaviamo facilmente $x_0^2/r^2 = y_0z_0/r^2 = y_0^2$, e cioè
+\bea
+y_0 &=& x_0/r \nonumber \\
+z_0 &=& x_0 r \nonumber \\
+x_0 &=& (r^{-1} + 1 + r)^{-1}
+\eea
+in cui l'ultima è stata ricavata ricordando che $x_0 + y_0 + z_0 = 1$. Con un po' di manipolazioni riusciamo a ottenere
+\bea
+S &=& -Nk \left[
+\ln x_0 + x_0(r-r^{-1})\ln r
+\right] \nonumber \\
+U &=& Nh\eps = Nh(z_0-y_0) = Nhx_0(r-r^{-1}) \nonumber \\
+T &=& -\dfrac{h}{k\ln r}
+\eea
+e quindi
+\be
+A = U - TS = -NkT \ln\left(e^{-h/kT} + 1 + e^{h/kT}\right)
+\ee
+e cioè lo stesso risultato del canonico ma usando una quantità di calcoli ben più pesante.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vskip 0.75cm
+\begin{flushright}
+{\em Ultimo aggiornamento del capitolo: 21.04.2017}
+\end{flushright}

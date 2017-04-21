@@ -1,0 +1,693 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Costruzione della Statistica Quantistica}
+\label{cap:quantistica}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}{0.35\textwidth}\end{minipage}\hfill
+\begin{minipage}{0.65\textwidth}
+\flushright{\em
+Se Dio ha creato il mondo come un meccanismo perfetto, nella Sua infinità bontà
+avrà almeno concesso, alle nostre menti imperfette, di poter comprendere piccole
+parti dell'Universo senza dover risolvere innumerevoli equazioni differenziali, 
+lasciandoci usare i dadi con un discreto successo.}
+
+\vskip 0.25cm
+M. Born\\
+(in risposta alla famosa affermazione di Einstein:\\
+``Dio non gioca a dadi con l'Universo'')
+\end{minipage}
+\vskip 1.0cm
+
+Fino a questo momento, con la teoria degli \ensembles, che ha caratteristiche estremamente generali, abbiamo considerato sistemi classici, conditi con la ricetta di Gibbs, oppure sistemi quantistici composti da entità elementari {\em distinguibili}. Quando si ha a che fare con sistemi quantistici composti da entità elementari {\em indistinguibili} occorre riscrivere la teoria degli \ensembles in un linguaggio adatto. Nel far questo non verrà introdotta alcuna idea fisica innovativa, ma solo il caro vecchio linguaggio degli operatori e delle funzioni d'onda. Come vedremo poi nel seguito in realtà per fare i conti, almeno nel caso dei sistemi ideali, non occorre neanche sporcarsi le mani con operatori o funzioni d'onda: nonostante ciò la riscrittura della meccanica statistica in termini quantistici fornisce gli strumenti necessari a inquadrare il problema sotto la giusta luce.
+
+Vedremo che anche nel limite di sistemi ideali, cioè composti da entità elementari non--interagenti, i sistemi quantistici mostrano comportamenti fisici completamente diversi dalle loro controparti classiche; comportamenti che da un punto di vista classico risultano assolutamente sorprendenti, e che servono a spiegare, almeno in prima approssimazione, il comportamento di un numero molto grande di sistemi fisici reali.
+
+Scopriremo che il limite classico spiega in maniera coerente il perché la correzione di Gibbs funziona, e al tempo stesso troveremo un criterio quantitativo per capire in quali condizioni fisiche un sistema può essere trattato classicamente. Allo stesso tempo scopriremo l'origine della correzione $h^m$, in cui $m$ è il numero di gradi di libertà del sistema, che è necessaria a calcolare il numero di microstati a partire dal volume del sistema nello spazio delle fasi.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{La matrice densità}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Consideriamo un \ensemble\ di $\calN$ sistemi identici, con $\calN \gg 1$. Tutti i sistemi hanno la stessa hamiltoniana, che indichiamo con l'operatore $\Hamop$. Al tempo $t$ lo stato fisico dei vari sistemi sarà denotato dalle funzioni d'onda normalizzate $\psik(\myvec{r}_i,t)$, con $k = 1\dots\calN$. Nel seguito, tranne quando necessario, ometteremo la dipendenza delle $\psik$ dalle coordinate $\myvec{r}_i$.
+
+L'evoluzione temporale delle funzioni $\psik(t)$ sarà determinata dall'equazione di Schr\"odinger:
+\be
+\label{eq:schr}
+\Hamop\psik(t) = i\hbar \dot\psi^{(k)}(t)
+\ee
+Se introduciamo un insieme completo di funzioni ortonormali, $\phi_n$, possiamo scrivere
+\be
+\label{eq:expapsi}
+\psik(t) = \sum_n\ank(t)\phi_n
+\ee
+nella quale i coefficienti dell'espansione sono dati da
+\be
+\label{eq:defank}
+\ank(t) = \int\phi_n^*\psik(t)\de\tau
+\ee
+Nell'ultima equazione $\de\tau$ è l'elemento di volume nello spazio delle coordinate per il sistema in esame. Notiamo che la dipendenza dal tempo è stata presa in carico dai coefficienti $\ank$. Inserendo l'espansione (\ref{eq:expapsi}) nella (\ref{eq:schr}) e utilizzando la (\ref{eq:defank}) possiamo scrivere
+\bea
+i\hbar\dotank(t) &=& i\hbar \int\phi_n^*\dot\psi^{(k)}(t)\de\tau 
+                  =         \int\phi_n^*\Hamop\psik(t)\de\tau \nonumber\\
+                 &=&        \int\phi_n^*\Hamop\left\{\sum_m \amk(t)\phi_m\right\}\de\tau \nonumber\\
+                 &=& \sum_m \Ham_{nm}\amk(t)
+\eea
+nella quale $\Ham_{nm}$ è l'elemento di matrice dell'hamiltoniana tra i vettori della base:
+\be
+\Ham_{nm} = \int\phi_n^*\Hamop\phi_m\de\tau
+\ee
+
+Come dovrebbe risultare chiaro, i coefficienti complessi $\ank(t)$ rappresentano delle ampiezze di probabilità. Per chiarezza, il numero reale $|\ank(t)|^2$ rappresenta la probabiltà che misurando il sistema $k$ al tempo $t$ lo si trovi nel particolare stato $\phi_n$. Per normalizzazione dobbiamo avere
+\be
+\label{eq:normank}
+\sum_n|\ank(t)|^2 = 1\qquad \forall\;\,k
+\ee
+
+Introduciamo ora l'operatore densità $\hat\rho(t)$ per mezzo dei suoi elementi di matrice:
+\be
+\label{eq:oprho}
+\rho_{mn}(t) = \frac{1}{\calN}\sum_{k=1}^{\calN}\left\{\amk(t)\anks(t)\right\}
+\ee
+Chiaramente $\rho_{mn}(t)$ rappresenta una media sull'\ensemble; in particolare l'elemento diagonale $\rho_{nn}(t)$ è la media sull'\ensemble\ della probabilità $|a_n(t)|^2$, che è a sua volta frutto di una media quantistica. Vediamo dunque che incontriamo un processo in cui è coinvolta una doppia operazione di media: una dovuta alla natura probabilistica della funzione d'onda e l'altra alla natura statistica dell'\ensemble. $\rho_{nn}(t)$ rappresenta la probabilità che scelto un sistema {\em a caso} dall'\ensemble\ al tempo $t$ lo si trovi nello stato $\phi_n$. La condizione di normalizzazione (\ref{eq:normank}) ci dà naturalmente
+\be
+\label{eq:normrho}
+\sum_n \rho_{nn}(t) = 1
+\ee
+
+Vogliamo ora trovare le equazioni del moto, ovvero l'evoluzione temporale, degli elementi della matrice $\rho_{mn}(t)$. Con un po' di passaggi, e utilizzando il fatto che l'hamiltoniana è hermitiana, $\Ham^*_{nl} = \Ham_{ln}$, troviamo
+\bea
+i\hbar\dot\rho_{mn}(t) &=& \frac{1}{\calN}\ \sum_{k=1}^{\calN}\left\{i\hbar\left[
+\dotamk(t)\anks(t) + \amk(t)\dotanks(t) 
+\right]\right\} \nonumber\\
+&=& \frac{1}{\calN}\ \sum_{k=1}^{\calN}\left\{
+\left[\sum_l\Ham_{ml}\alk(t)\right]\anks(t) - 
+\amk(t)\left[ \sum_l\Ham^*_{nl}\alks(t)\right] \right\} \nonumber \\
+&=& \sum_l \left\{\Ham_{ml}\rho_{ln}(t)-\rho_{ml}(t)\Ham_{ln}  \right\} \nonumber\\
+&=& \left(\Hamop\hat\rho - \hat\rho\Hamop\right)_{mn}
+\eea
+Otteniamo quindi
+\be
+\label{eq:quantliouv}
+i\hbar\dot\rhop = [\Hamop,\rhop]
+\ee
+che rappresenta l'equivalente quantistico del teorema di Liouville classico. Come ci si poteva aspettare, le parentesi di Poisson lasciano il posto, a meno di un fattore $i\hbar$, al commutatore. In completa equivalenza col caso classico otteniamo quindi che la matrice densità deve commutare con l'hamiltoniana del sistema.
+
+Se le $\phi_n$ sono le autofunzioni dell'energia, abbiamo
+\be
+\Ham_{mn} = E_n\delta_{mn}
+\ee
+e come immediata conseguenza anche la matrice densità, in questa rappresentazione, deve essere diagonale:
+\be
+\rho_{mn} = \rho_n\delta_{mn}
+\ee
+L'elemento diagonale $\rho_n$ rappresenta la probabilità che un sistema scelto a caso nell'ensemble, a un tempo qualsiasi, si trovi in un autostato $\phi_n$. Tale probabilità dipenderà ovviamente dal valore di $E_n$, ma in modo che cambia a seconda del tipo di \ensemble\ in cui scegliamo di lavorare. In rappresentazioni diverse da quelle dell'energia $\rhop$ non sarà più necessariamente diagonale, ma come vedremo sarà necessariamente simmetrica:
+\be
+\rho_{mn} = \rho_{nm}
+\ee
+Questa condizione è detta {\em bilancio dettagliato}. 
+
+Arriviamo infine al valore d'aspettazione di una quantità fisica $G$. Naturalmente questo valore d'aspettazione sarà il risultato di una doppia media: una media quantistica e una media statistica sull'\ensemble. Abbiamo
+\bea
+\langle G\rangle &=& 
+\dfrac{1}{\calN}\sum_{k=1}{\calN}\int\phi^{*(k)}\hat G\phi^{(k)}\de{\tau}\nonumber\\
+&=& \dfrac{1}{\calN}\sum_{k=1}{\calN}\left[
+\sum_{mn}\amks\ank G_{nm}
+\right]\nonumber\\
+&=&\sum_{mn}\rho_{mn}G_{nm} = \sum_m(\rhop\,\hat G)_{nn} = \textrm{Tr}(\rhop\,\hat G)
+\eea
+Nel caso in cui le funzioni d'onda $\psi^{(k)}$ o le funzioni di base $\phi_n$ non fossero normalizzate, otteniamo naturalmente
+\be
+\langle G\rangle = \dfrac{\textrm{Tr}(\rhop\,\hat G)}{\textrm{Tr}(\rhop)}
+\ee
+Notiamo che essendo espresso come una traccia (o come rapporto di due tracce), il valore d'aspettazione di qualsiasi osservabile è indipendente dalla scelta delle funzioni di base $\phi_n$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{{\em Ensembles} quantistici}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Microcanonico}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Partiamo naturalmente dal microcanonico. Avremo dunque un macrostato rappresentato da un numero di particelle $N$, un volume $V$ e un'energia libera di fluttuare tra i limiti $E-\Delta/2$ e $E+\Delta/2$. La quantità rilevante è il numero di microstati $\Gamma(N,V,E;\Delta)$ compatibili con il macrostato del sistema. Nella rappresentazione dell'energia abbiamo, come abbiamo visto
+\be
+\rho_{mn} = \rho_n\delta_{mn}
+\ee
+e invocando il principio delle uguali probabilità a priori otteniamo
+\be
+\label{eq:rhomicro}
+\rho_n = \left\{ \begin{array}{ll}
+ 1/\Gamma(N,V,E;\Delta)\quad & \textrm{se lo stato è accessibile}\\
+ 0 & \textrm{altrimenti}
+  \end{array} \right.
+\ee
+
+Nel caso in cui $\Gamma = 1$ (cosa che per esempio si verifica a $T=0$ per sistemi con un {\em ground--state} non degenere) abbiamo il cosi detto {\em caso puro}. La matrice densità assume una forma molto semplice: è composta da $0$ ovunque tranne per l'elemento in alto a sinistra che è uguale a $1$. In questo caso $\rho$ soddisfa la condizione
+\be
+\label{eq:rho2rho}
+\rho^2 = \rho
+\ee
+come è facile verificare. Se fossimo in una diversa rappresentazione avremmo
+\be
+\rho_{mn} = a_m a^{*}_n
+\ee
+in quanto l'indice $(k)$ sulle $a$ è diventato completamente superfluo: tutti gli elementi dell'\ensemble\ sono nell'unico stato possibile. Abbiamo quindi ancora
+\be
+\rho_{mn}^2 = \sum_l \rho_{ml}\rho_{ln} = \sum_l a_m a_l^* a_l a_n^* = a_m a_n^* = \rho_{mn}
+\ee
+per via della condizione di normalizzazione $\sum_l a_l^* a_l = 1$. Vediamo dunque che la relazione (\ref{eq:rho2rho}) vale, nel caso di stato puro, in qualsiasi rappresentazione.
+
+Se $\Gamma > 1$ abbiamo il così detto {\em caso misto}. A causa delle particolarità del microcanonico, nel quale l'energia $E$ è tenuta costante (a meno di piccole fluttuazioni casuali), con un minimo di riflessione vediamo che la matrice densità deve continuare a rimanere della forma (\ref{eq:rhomicro}) in qualsiasi rappresentazione. Se così non fosse, infatti, partendo da una certa base $\phi_n$ e usando una trasformazione unitaria potremmo portarci nella base degli autostati dell'energia e trovare una $\rho$ in cui non tutti gli elementi diagonali sono uguali, il che è una contraddizione.
+
+Per soddisfare questo importante vincolo abbiamo bisogno di un nuovo postulato, che però sembra estremamente ragionevole. Questo postulato è quello delle {\em fasi random a priori}. Scriviamo i coefficienti complessi $\amk$ in forma polare, assumendo che, qualunque sia la base scelta, la dipendenza dall'elemento $(k)$ dell'\ensemble\ sia completamente contenuta nella fase:
+\be
+\amk = a_m e^{i\theta^{(k)}_m}
+\ee
+e che queste fasi siano completamente random, ossia completamente scorrelate passando da un elemento dell'\ensemble\ all'altro. Dal punto di vista fisico ciò equivale a richiedere che non ci sia correlazione ({\em entanglement}) tra i vari sistemi ideali che costituiscono l'\ensemble, e questa sembra una richiesta molto ragionevole. Otteniamo dunque
+\bea
+\rho_{mn} &=& \dfrac{1}{\calN}\sum_k\amk\anks = 
+\dfrac{1}{\calN}\sum_k a_m a_n e^{i(\theta^{(k)}_m-\theta^{(k)}_n)} \nonumber\\
+&=& a_m a_n\left\langle e^{i(\theta^{(k)}_m-\theta^{(k)}_n)}\right\rangle = a_n^2\delta_{mn}
+\eea
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Canonico}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Abbiamo ancora una volta, nella rappresentazione dell'energia:
+\be
+\rho_{mn} = \rho_n\delta_{mn}
+\ee
+Considerando che $\rho_n$ è la probabilità di trovare uno qualunque dei sistemi dell'\ensemble, a un tempo qualsiasi, nell'autostato con energia $E_n$, dobbiamo avere
+\be
+\rho_n = Ce^{-\beta E_n}
+\ee
+$C$ è una costante di normalizzazione, e troviamo immediatamente
+\be
+C = \dfrac{1}{\sum_n e^{-\beta E_n}} = \dfrac{1}{Q_N(\beta)}
+\ee
+Per altro possiamo scrivere
+\bea
+\rhop &=& \sum_n\ket{\phi_n}\dfrac{e^{-\beta E_n}}{Q_N(\beta)}\bra{\phi_n}
+= \dfrac{e^{-\beta\Hamop}}{Q_N(\beta)}\sum_n\ket{\phi_n}\bra{\phi_n}\nonumber\\
+&=& \dfrac{e^{-\beta\Hamop}}{\textrm{Tr}(e^{-\beta\Hamop})}
+\eea
+nella quale abbiamo usato la relazione di completezza della base $\phi_n$, ossia
+\be
+\sum_n\ket{\phi_n}\bra{\phi_n} = 1
+\ee
+Naturalmente l'esponenziale dell'operatore hamiltoniano va inteso, appunto, nel solito senso operatoriale:
+\be
+e^{-\beta\Hamop} = \sum_k(-1)^k\dfrac{(\beta\Hamop)^k}{k!}
+\ee
+Per una generica osservabile $G$ otteniamo
+\be
+\label{eq:aspecanoq}
+\langle G \rangle = \textrm{Tr}(\rhop\,\hat G) = 
+\dfrac{\textrm{Tr}(\hat G\,e^{-\beta\Hamop})}{\textrm{Tr}(e^{-\beta\Hamop})}
+\ee
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Grancanonico}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+L'unica differenza rispetto al canonico è che ora $\rhop$ deve commutare, oltre che con l'hamiltoniana, anche con l'operatore $\hat N$ ``numero di particelle''. Per sistemi ideali (non--interagenti) $\hat N$ commuta necessariamente con $\Hamop$, quindi è possibile trovare una base comune. Possiamo scrivere subito, nella base $(E,N)$,
+\be
+\rhop = \dfrac{e^{-\beta(\Hamop-\mu\hat N)}}{\textrm{Tr}(e^{-\beta(\Hamop-\mu\hat N)})}
+= \dfrac{e^{-\beta(\Hamop-\mu\hat N)}}{\calQ(\mu,V,T)}
+\ee
+Per una generica osservabile fisica $G$ otteniamo
+\be
+\langle G \rangle = 
+\dfrac{\textrm{Tr}(\hat G\,e^{-\beta(\Hamop-\mu\hat N)})}{\calQ(\mu,V,T)}
+= \dfrac{\sum_{N=0}^{\infty}z^N \langle G \rangle_N Q_N(\beta)}{\sum_{N=0}^{\infty}z^N Q_N(\beta)}
+\ee
+nella quale $Q_N(\beta)$ è la funzione di partizione canonica (quantistica) per un sistema con $N$ particelle, e $\langle G \rangle_N$ è il valore d'aspettazione canonico di $G$, eq. (\ref{eq:aspecanoq}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Esempi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Nel caso in cui il sistema sia composto da una singola particella o un solo elemento microscopico, il formalismo quantistico deve di necessità riprodurre gli stessi risultati che abbiamo già ottenuto nel caso classico. Questo è quel che andiamo ora a verificare tramite un paio di esempi.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Elettrone in un campo magnetico}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Un elettrone possiede uno spin intrinseco $\frac{1}{2}\hbar\hat{\mathbf{\sigma}}$, in cui $\hat\sigma$ è l'operatore di spin di Pauli, e un momento magnetico $\mu_B = e\hbar/2mc$. In presenza di un campo magnetico $\myvec{B}$, orientato per esempio lungo l'asse $z$, lo spin dell'elettrone ha due possibili orientazioni: o è parallelo al campo o è antiparallelo al campo. L'hamiltoniana magnetica, con il campo orientato lungo l'asse $z$, è:
+\be
+\Hamop = -\mu_B(\hat\sigma\cdot\myvec{B}) = -\mu_B\,B\,\hat\sigma_z
+\ee
+Ci poniamo nella rappresenzatione in cui $\hat\sigma_z$ è diagonale:
+\be
+\sigma_x = \left(
+\begin{array}{rr}
+ 0  &  1 \\
+ 1  &  0
+\end{array}
+\right)
+\qquad
+\sigma_y = \left(
+\begin{array}{rr}
+ 0  & -i \\
+ i  &  0
+\end{array}
+\right)
+\qquad
+\sigma_z = \left(
+\begin{array}{rr}
+ 1  &  0 \\
+ 0  & -1
+\end{array}
+\right)
+\ee
+Possiamo dunque scrivere subito
+\be
+\rhop = \dfrac{e^{-\beta\Hamop}}{\textrm{Tr}(e^{-\beta\Hamop})}
+= \dfrac{1}{e^{\beta\mu_B B}+e^{-\beta\mu_B B}} \left(
+\begin{array}{cc}
+ e^{\beta\mu_B B} &  0 \\
+ 0                &  e^{-\beta\mu_B B}
+\end{array}
+\right)
+\ee
+Per il valore d'aspettazione di $\hat\sigma_z$ otteniamo dunque
+\be
+\langle \sigma_z\rangle = \textrm{Tr}(\rhop\,\hat\sigma_z) = \tanh(\beta\mu_B B)
+\ee
+in perfetto accordo con quanto avevamo già trovato col formalismo classico.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Particella libera in una scatola}
+\label{subsec:freeqpart}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Scriviamo l'hamiltoniana per una particella libera:
+\be
+\Hamop = -\dfrac{\hbar^2}{2m}\nabla^2 =
+-\dfrac{\hbar^2}{2m} \left(
+\dfrac{\partial^2}{\partial x^2} + \dfrac{\partial^2}{\partial y^2} + 
+\dfrac{\partial^2}{\partial z^2}
+\right)
+\ee
+Confiniamo la particella in una scatola cubica di lato $L$ e imponiamo condizioni periodiche al contorno. In questo caso le autofunzioni dell'energia, opportunamente normalizzate, possono essere scritte come
+\be
+\phi_E(\myvec{r}) = \dfrac{1}{L^{3/2}}e^{i\myvec{k}\cdot\myvec{r}}
+\ee
+il cui il vettore d'onda $\myvec{k}$ è dato da
+\be
+\label{eq:kn}
+\myvec{k} = (k_x, k_y, k_z) = \dfrac{2\pi}{L}(n_x, n_y, n_z) = \dfrac{2\pi}{L}\myvec{n}
+\ee
+Il vettore $\myvec{n}$ è a componenti intere, $0, \pm 1, \pm 2, \dots$, e gli autovalori dell'energia sono dati da
+\be
+E = \dfrac{\hbar^2 k^2}{2m}
+\ee
+
+Calcoliamo $\rhop$ nella rappresentazione delle coordinate. Applicando la definizione possiamo scrivere
+\be
+\rho(\myvec{r},\myvec{r}') = 
+\dfrac{\bra{\myvec{r}} e^{-\beta\Hamop} \ket{\myvec{r}'}}{\Tr{e^{-\beta\Hamop}}}
+\ee
+Inseriamo ora il set completo degli autostati dell'energia,
+\be
+\sum_E \ket{E}\bra{E} = 1
+\ee
+ottenendo
+\be
+\bra{\myvec{r}} e^{-\beta\Hamop} \ket{\myvec{r}'} = \sum_E\bra{\myvec{r}} e^{-\beta\Hamop}\ket{E}
+\braket{E}{\myvec{r}'} = \sum_E e^{-\beta E}\braket{\myvec{r}}{E}\braket{E}{\myvec{r}'}
+\ee
+Ma per definizione abbiamo
+\be
+\braket{\myvec{r}}{E} = \phi_E(\myvec{r})
+\ee
+e possiamo dunque scrivere
+\bea
+\bra{\myvec{r}} e^{-\beta\Hamop} \ket{\myvec{r}'} &=& \sum_E e^{-\beta E}\phi_E(\myvec{r})\phi^*_E(\myvec{r}')
+\nonumber\\
+&=& \dfrac{1}{L^3}\sum_{\myvec{k}}\exp\left\{
+-\dfrac{\beta\hbar^2}{2m}k^2 + i\myvec{k}\cdot(\myvec{r}-\myvec{r}')
+\right\}
+\eea
+La somma su $\myvec{k}$ è in realtà una somma su $\myvec{n}$. Nel limite termodinamico i livelli d'energia sono così ravvicinati che possiamo tranquillamente passare dalla somma all'integrale. L'eq. (\ref{eq:kn}) ci permette di scrivere, con un leggero abuso (o forse misuso) di notazione,
+\be
+\dfrac{\den{3}{k}}{(2\pi)^3} \simeq \dfrac{\den{3}{n}}{L^3}
+\ee
+e otteniamo dunque
+\be
+\label{eq:rho1int}
+\bra{\myvec{r}} e^{-\beta\Hamop} \ket{\myvec{r}'} = \dfrac{1}{(2\pi)^3}\int_{-\infty}^{\infty}
+\den{3}{k}\exp\left\{
+-\dfrac{\beta\hbar^2}{2m}k^2 + i\myvec{k}\cdot(\myvec{r}-\myvec{r}')
+\right\}
+\ee
+Nell'equazione precedente c'è un integrale gaussiano ``mascherato''. Consideriamo infatti
+\be
+I = \int_{-\infty}^{\infty}\de{x}e^{-ax^2 + bx}
+\ee
+Dopo aver messo in evidenza $-a$ possiamo scrivere, aggiungendo e togliendo una costante,
+\be
+-a\left(x^2 -\dfrac{b}{a}x\right) = -a\left(x-\dfrac{b}{2a}\right)^2 + \dfrac{b^2}{4a}
+\ee
+e con il cambio di variabile $y = x-b/2a$ otteniamo
+\be
+I = e^{b^2/4a}\int_{-\infty}^{\infty}\de{y}e^{-ay^2} = e^{b^2/4a}\sqrt{\pi/a}
+\ee
+Con questo risultato a disposizione possiamo risolvere l'integrale in (\ref{eq:rho1int}) ottenendo, con un minimo di passaggi algebrici,
+\be
+\bra{\myvec{r}} e^{-\beta\Hamop} \ket{\myvec{r}'} = \lambda^{-3}\,\exp\left\{
+-\dfrac{mkT}{2\hbar^2}|\myvec{r}-\myvec{r}'|^2
+\right\}
+\ee
+in cui $\lambda = h/\sqrt{2\pi mkT}$ è la lunghezza d'onda termica.
+
+Per la funzione di partizione di singola particella troviamo quindi
+\be
+Q_1(\beta) = \Tr{e^{-\beta\Hamop}} = \int_{-\infty}^{\infty}\de{\myvec{r}}\,
+\bra{\myvec{r}}e^{-\beta\Hamop}\ket{\myvec{r}} = V/\lambda^3
+\ee
+cioè esattamente lo stesso risultato che avevamo ottenuto col formalismo classico. È da notare però che col formalismo classico, per arrivare a questo risultato, abbiamo dovuto dividere il volume dello spazio delle fasi, in maniera abbastanza arbitraria, per un fattore $h^3$ al fine di ottenere il corretto conteggio dei microstati.
+
+Infine possiamo scrivere:
+\be
+\rho(\myvec{r},\myvec{r}') = \dfrac{1}{V}\exp\left\{
+-\dfrac{mkT}{2\hbar^2}|\myvec{r}-\myvec{r}'|^2
+\right\}
+\ee
+Come avevamo anticipato, la matrice densità è simmetrica.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Gas ideale quantistico}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Possiamo considerare i conti della sezione precedente come un allenamento necessario ad affrontare il calcolo della matrice densità per un gas ideale quantistico. Abbiamo dunque $N$ particelle {\em identiche} di massa $m$, non interagenti, racchiuse in un volume $V$, all'equilibrio termico a temperatura $T$.
+
+In questa sezione non terremo conto di un'eventuale componente di spin della funzione d'onda, che può essere comunque inserita facilmente, se necessario. L'hamiltoniana totale del sistema sarà semplicemente la somma delle hamiltoniane di singola particella:
+\be
+\Hamop(\myvec{q},\myvec{p}) = \sum_{i=1}^N\Hamop_i(q_i,p_i)
+\ee
+nella quale tutte le $\Hamop_i$ sono formalmente identiche, differendo solo per gli argomenti da cui dipendono. La soluzione dell'equazione di Schr\"odinger indipendente dal tempo è
+\be
+\Hamop(\myvec{q},\myvec{p})\psi_E(\myvec{q}) = E\psi_E(\myvec{q})
+\ee
+Il fatto che le particelle non interagiscano tra loro porta alla fattorizzazione della funzione d'onda totale del sistema:
+\be
+\psi_E(\myvec{q}) = \prod_{i=1}^N u_i(q_i)
+\ee
+in cui le $u_i$ sono soluzioni di
+\be
+\Hamop_i(q_i,p_i) u_i(q_i) = \varepsilon_i u_i(q_i)
+\ee
+e abbiamo naturalmente $E = \sum_{i=1}^N\varepsilon_i$. Introduciamo ora il solito set $\{n_k\}$, in cui $n_k$ rappresenta il numero di particelle che sono nell'autostato $\varepsilon_k$ di singola particella. Specificare il set $\{n_k\}$ significa specificare un particolare microstato del sistema, e il set deve ovviamente soddisfare i due vincoli
+\bea
+\sum_k n_k &=& N\nonumber\\
+\sum_k n_k\varepsilon_k &=& E
+\eea
+Possiamo allora scrivere, ponendo $u_i(q_m) \equiv u_i(m)$ per semplificare la notazione, 
+\be
+\label{eq:psiboltz}
+\psi_E(\myvec{q}) = \prod_{m=1}^{n_1}u_1(m) \prod_{m=n_1+1}^{n_2}u_2(m) \cdots
+\ee
+Immaginiamo ora di operare una permutazione $P$ sulle coordinate delle particelle. Chiamando $Pm$ la permutazione delle coordinate della particella $m$-ma otteniamo, per la funzione d'onda permutata,
+\be
+\label{eq:psiboltzP}
+P\psi_E(\myvec{q}) = \prod_{m=1}^{n_1}u_1(Pm) \prod_{m=n_1+1}^{n_2}u_2(Pm) \cdots
+\ee
+In statistica classica, in cui le particelle, sebbene {\em identiche}, sono in realtà {\em distinguibili}, lo scambio delle coordinate di due particelle che sono in livelli energetici diversi porta, come abbiamo visto, a un microstato nuovo, {\em fisicamente distinto} da quello originale. Questo significa che un certo set $\{n_k\}$ porta a
+\be
+W\{n_k\} = \dfrac{N!}{n_1! n_2! \cdots}
+\ee
+microstati distinti. La correzione di Gibbs cancella $N!$ al numeratore ma lascia ancora un residuo, perché il peso statistico di un certo set deve essere pari a $W\{n_k\} = 1$ se il set è ammesso, $0$ se non è ammesso per qualche motivo.
+
+In realtà, seguendo il precetto quantistico della reale {\em indistinguibilità} delle particelle, ogni stato ottenuto come una permutazione delle coordinate deve essere visto come lo stesso identico microstato di partenza. In altre parole, un certo set $\{n_k\}$ deve identificare un solo microstato (o nessun microstato se il set non è ammesso).
+
+La funzione d'onda in (\ref{eq:psiboltz}), che chiameremo funzione d'onda {\em boltzmanniana} e indicheremo con il simbolo $\psi_B(\myvec{q})$, non è adatta a descrivere lo stato di un sistema formato da particelle indistinguibili, perché sotto l'operazione di permutazione delle coordinate porta a una funzione d'onda che è matematicamente e fisicamente diversa da quella originale, e quindi a un microstato distinto da quello di partenza.
+
+La soluzione è quella di definire una nuova funzione d'onda che sia una combinazione lineare di tutte le $N!$ funzioni d'onda di tipo (\ref{eq:psiboltzP}) che si ottengono da (\ref{eq:psiboltz}) tramite tutte le permutazioni possibili di $N$ coordinate. Chiamando genericamente $\psi$ questa nuova funzione d'onda, se operiamo una permutazione su $\psi$ dobbiamo necessariamente avere
+\be
+|P\psi|^2 = |\psi|^2
+\ee
+e ciò porta alle due possibilità seguenti:
+\be
+P\psi = \psi \qquad \textrm{per ogni\ } P
+\ee
+e quindi a una funzione d'onda $\psi_S$ che è {\em simmetrica} nei suoi argomenti, oppure
+\be
+P\psi = \left\{
+\begin{array}{ll}
++\psi & \textrm{se\ } P \textrm{\ è una permutazione {\em pari}} \\
+-\psi & \textrm{se\ } P \textrm{\ è una permutazione {\em dispari}}
+\end{array} \right.
+\ee
+e quindi a una funzione d'onda $\psi_A$ che è {\em antisimmetrica} nei suo argomenti. Possiamo scrivere, in tutta generalità,
+\bea
+\label{eq:sa}
+\psi_S(\myvec{q}) &=& \dfrac{1}{\sqrt{N!}}\sum_P P\psi_B(\myvec{q})\nonumber\\
+\psi_A(\myvec{q}) &=& \dfrac{1}{\sqrt{N!}}\sum_P \delta_P P\psi_B(\myvec{q})
+\eea
+in cui nell'espressione per $\psi_A$ il coefficiente $\delta_P$ vale $+1$ o $-1$ a seconda che la permutazione $P$ sia pari o dispari.
+
+Notiamo che la funzione d'onda $\psi_A(\myvec{q})$ può essere scritta come un {\em determinante di Slater}:
+\be
+\psi_A(\myvec{q}) = \dfrac{1}{\sqrt{N!}} \left|
+\begin{array}{cccc}
+u_i(1) & u_i(2) & \cdots & u_i(N) \\
+u_j(1) & u_j(2) & \cdots & u_j(N) \\
+\cdot  & \cdot  & \cdots & \cdot  \\
+\cdot  & \cdot  & \cdots & \cdot  \\
+\cdot  & \cdot  & \cdots & \cdot  \\
+u_k(1) & u_k(2) & \cdots & u_k(N) 
+\end{array}
+\right|
+\ee
+Il prodotto degli elementi diagonali, cioè il termine dominante, ci dà proprio $\psi_B$, mentre gli altri termini rappresentano le varie permutazioni, in cui gli eventuali segni meno sono automaticamente presi in considerazione quando espandiamo il determinante. Scambiare due colonne della matrice equivale a una permutazione, e di conseguenza $\psi_A$ cambia segno, come deve. Inoltre, se due particelle si trovano nello stesso stato energetico, allora due righe della matrice diventano uguali e il determinante, e quindi la funzione d'onda $\psi_A$, si annulla identicamente; ciò significa che un tale stato è impossibile da realizzare fisicamente. Questo risultato è equivalente al {\em principio di esclusione di Pauli}, per il quale due elettroni non possono stare nello stesso stato di singola particella. Questo risultato si estende in realtà a tutte le particelle con spin semi--intero, quindi a tutti i {\em fermioni}. Elettroni, protoni, neutroni, neutrini, atomi di He$3$ e tutte le altre particelle o sistemi microscopici con spin semi--intero obbediscono dunque alla statistica di {\em Fermi--Dirac}. Per queste particelle i possibili set $\{n_k\}$ sono tali che
+\be
+W_{\textrm{FD}}\{n_k\} = \left\{
+\begin{array}{ll}
+1 & \textrm{se\ \ }\sum_k n_k^2 = N \\
+0 & \textrm{se\ \ }\sum_k n_k^2 > N
+\end{array}
+\right.
+\ee
+Nessun problema di questo genere sussiste nel caso di una funzione d'onda simmetrica, e in particolare non c'è nessuna restrizione sui possibili valori di $n_k$. Le particelle con spin intero, come fotoni, fononi, pioni, ma anche sistemi microscopici come atomi di He$^4$, sono dette {\em bosoni} e obbediscono alla statistica di {\em Bose--Einstein}. Per queste particelle vale
+\be
+W_{\textrm{BE}}\{n_k\} = 1 \qquad \textrm{per\ } n_k = 0,\; 1,\; 2,\; \dots
+\ee
+
+I risultati di questa sezione, anche se ottenuti per sistemi in cui le particelle non interagiscono tra loro, continuano a essere validi anche per sistemi interagenti. In quest'ultimo caso certamente non potremo fattorizzare la funzione d'onda totale del sistema, ma detta funzione d'onda dovrà continuare a essere o simmetrica o antisimmetrica.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{La matrice densità canonica di un gas quantistico ideale}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Vogliamo calcolare la matrice densità, nella rappresentazione delle coordinate, del sistema che abbiamo appena illustrato, applicando il formalismo canonico. In questa sottosezione useremo un formalismo leggermente diverso da quel che abbiamo usato finora.
+
+Prima di tutto notiamo che specificare il set $(\myvec{k}_1,\;\myvec{k}_2,\;\cdots\;\myvec{k}_N) \equiv \{\myvec{k}\}$ equivale a specificare un certo autovalore $E$ dell'energia, dato che
+\be
+E = \sum_i \dfrac{\hbar^2k_i^2}{2m}
+\ee
+Indichiamo dunque le autofunzioni dell'energia col simbolo $\ket{\{\myvec{k}\}}$:
+\be
+\Hamop \ket{\{\myvec{k}\}} = \left(\sum_i \dfrac{\hbar^2k_i^2}{2m}\right)\ket{\{\myvec{k}\}}
+\ee
+in cui $\ket{\{\myvec{k}\}}$ è evidentemente lo stato prodotto degli autostati di singola particella:
+\be
+\ket{\{\myvec{k}\}} = \ket{\myvec{k}_1}\ket{\myvec{k}_2}\cdots\ket{\myvec{k}_N}
+\ee
+Nella rappresentazione delle coordinate abbiamo
+\be
+\braket{\{\myvec{r}\}}{\{\myvec{k}\}} = \dfrac{1}{V^{N/2}}\exp\left(
+i\sum_{\alpha=1}^{N}\myvec{k}_\alpha \cdot \myvec{r}_\alpha
+\right)
+\ee
+Vogliamo calcolare la quantità
+\be
+\bra{\{\myvec{r}\}}e^{-\beta\Hamop}\ket{\{\myvec{r}'\}} =
+\dfrac{1}{N!}\sum_{PP'}\sum_{\{\myvec{k}\}}' \delta_P \delta_{P'}
+e^{-\beta\hbar^2 K^2/2m}\braket{P\{\myvec{r}\}}{\{\myvec{k}\}}\braket{\{\myvec{k}\}}{P'\{\myvec{r}'\}}
+\ee
+Nell'equazione precedente abbiamo inserito un set completo di autostati dell'energia,
+\be
+1 = \sum_{\{\myvec{k}\}}\ket{\{\myvec{k}\}}\bra{\{\myvec{k}\}}
+\ee
+e l'apice sulla sommatoria ricorda che la sommatoria stessa è vincolata dalla relazione
+\be
+\label{eq:sumk2}
+K^2 = \sum_{\alpha=1}^Nk_\alpha^2
+\ee
+Detto altrimenti, non possiamo sommare su ogni $\myvec{k}_{\alpha}$ indipendentemente l'uno dall'altro, ma solo in modo tale che il vincolo (\ref{eq:sumk2}) sia rispettato; in altre parole ancora, il vincolo implementa la condizione per la quale un determinato set di numeri d'occupazione, $\{\myvec{n}\}$, deve comparire una e una sola volta nella somma. Inoltre, 
+$\braket{P\{\myvec{r}\}}{\{\myvec{k}\}}$ rappresenta evidentemente una possibile permutazione della funzione d'onda boltzmanniana, vedi eq. (\ref{eq:psiboltzP}). Infine, abbiamo posto
+\be
+\delta_P = (\pm 1)^{[P]}
+\ee
+in cui $[P]$ è la parità della permutazione $P$. Il segno positivo vale per i bosoni, quello negativo per i fermioni, in modo da poter trattare i due tipi di particelle in maniera unificata.
+
+Il vincolo sulla sommatoria può essere eliminato notando che se sommiamo su tutti i $\myvec{k}_\alpha$ indipendentemente l'uno dall'altro otteniamo solamente $N!$ volte la somma originale. Possiamo dunque scrivere
+\bea
+&&\bra{\{\myvec{r}\}}e^{-\beta\Hamop}\ket{\{\myvec{r}'\}} =
+\dfrac{1}{(N!)^2}\sum_{PP'}\delta_P \delta_{P'}\sum_{\{\myvec{k}\}}\dfrac{1}{V^N}\nonumber\\
+&&\times\exp\left\{\sum_\alpha [ -\beta\hbar^2 k_\alpha^2 / 2m 
++ i \myvec{k}_\alpha\cdot(\myvec{r}_{P\alpha}-\myvec{r}_{P'\alpha}') ]
+\right\}
+\eea
+Come nel caso della particella singola, scriviamo un'integrale al posto della somma sui vettori d'onda, ottendendo:
+\bea
+\label{eq:rhocangas1}
+&&\bra{\{\myvec{r}\}}e^{-\beta\Hamop}\ket{\{\myvec{r}'\}} =
+\dfrac{1}{(N!)^2}\sum_{PP'}\delta_P \delta_{P'}\prod_{\alpha=1}^N
+\int \dfrac{\den{3}{k_\alpha}}{(2\pi)^3}\nonumber\\
+&&\times\exp\left\{\sum_\alpha [ -\beta\hbar^2 k_\alpha^2 / 2m 
++ i \myvec{k}_\alpha\cdot(\myvec{r}_{P\alpha}-\myvec{r}_{P'\alpha}') ]
+\right\}
+\eea
+Ciascuno degli integrali nell'ultima equazione è pari a
+\be
+\dfrac{1}{\lambda^3}\exp\left\{
+-\dfrac{\pi}{\lambda^2}(\myvec{r}_{P\alpha}-\myvec{r}_{P'\alpha}')^2
+\right\}
+\ee
+e se nell'eq. (\ref{eq:rhocangas1}) poniamo $\gamma = P'\alpha$ otteniamo
+\be
+\bra{\{\myvec{r}\}}e^{-\beta\Hamop}\ket{\{\myvec{r}'\}} =
+\dfrac{1}{\lambda^{3N}(N!)^2}\sum_{PP'}\delta_P \delta_{P'}
+\exp\left\{
+-\dfrac{\pi}{\lambda^2}\sum_\gamma(\myvec{r}_{P(P')^{-1}\gamma}-\myvec{r}_\gamma')^2
+\right\}
+\ee
+in cui abbiamo usato il fatto che la somma su $\alpha$, nell'esponenziale, è completamente equivalente alla somma su $\gamma$. Notiamo ora che $\delta_{(P')^{-1}} = \delta_{P'}$, e che definendo $Q = P(P')^{-1}$ abbiamo $\delta_{Q} = \delta_{P} \delta_{P'}$. Una delle due somme sulle permutazioni diventa banale, fornendo solo un fattore $N!$ al numeratore. Con le posizioni $Q\to P$ e $\gamma\to\alpha$ otteniamo dunque
+\be
+\label{eq:rhocangiq1}
+\bra{\{\myvec{r}\}}\rhop\ket{\{\myvec{r}'\}} =
+\dfrac{1}{\lambda^{3N}N!\,Q_N(\beta)}\sum_{P}\delta_P
+\exp\left\{
+-\dfrac{\pi}{\lambda^2}\sum_\alpha(\myvec{r}_{P\alpha}-\myvec{r}_\alpha')^2
+\right\}
+\ee
+che costituisce il nostro risultato per la matrice densità. $Q_N(\beta)$ è ovviamente la funzione di partizione canonica, che si ottiene dalla condizione di normalizzazione $\Tr{\rhop} = 1$. Il risultato (\ref{eq:rhocangiq1}) può essere riscritto come
+\be
+\label{eq:rhocangiq2}
+\bra{\{\myvec{r}\}}\rhop\ket{\{\myvec{r}'\}} =
+\dfrac{1}{\lambda^{3N}N!\,Q_N(\beta)}\sum_{P}\delta_P
+\prod_\alpha f(\myvec{r}_{P\alpha}-\myvec{r}_\alpha')
+\ee
+in cui abbiamo introdotto la funzione
+\be
+f(\myvec{x}) = \exp\left( 
+-\pi x^2/\lambda^2
+\right)
+\ee
+e la condizione di normalizzazione ci fornisce
+\be
+Q_N(\beta) = \dfrac{1}{\lambda^{3N} N!} \int \prod_{\alpha=1}^{N}
+\de{\myvec{r}_\alpha} \sum_P \delta_P f(\myvec{r}_{P\alpha}-\myvec{r}_\alpha)
+\ee
+Non ci imbarcheremo nel difficile compito di calcolare esplicitamente la funzione di partizione canonica, perché come vedremo nei capitoli successivi è molto più facile calcolare direttamente la funzione di partizione grancanonica. Possiamo però fare qualche utile osservazione. In primo luogo notiamo che il termine {\em leading} della sommatoria su $P$ è dato dalla permutazione identica. In questo caso $f(0) = 1$, e il termine leading è dato quindi da $1$. Se approssimiamo la somma su $P$ solo col termine {\em leading} otteniamo
+\be
+Q_N(V,T) = \dfrac{1}{\lambda^{3N} N!} \int \prod_{\alpha=1}^{N}
+\de{\myvec{r}_\alpha} = \dfrac{1}{N!}\left(\dfrac{V}{\lambda^3}\right)^N
+\ee
+che è esattamente il risultato classico per la funzione di partizione canonica di un gas ideale. Questo risultato ci permette di stabilire un criterio quantitativo per decidere in quali situazioni fisiche un gas ideale può essere trattato classicamente. Notiamo infatti che la funzione $f(\myvec{r}_{i}-\myvec{r}_j)$ può essere approssimata con $1$ quando la distanza tipica tra due particelle qualsiasi $i$ e $j$ è molto maggiore di $\lambda$, la lunghezza d'onda termica. Il volume medio a disposizione di una singola particella è dato da $v = V/N = 1/n$, in cui $n$ è la densità numerica del gas e $v$ è chiamato {\em volume specifico}. Quando la distanza tipica tra due particelle è molto maggiore di $\lambda$ avremo
+\be
+\label{eq:condnl3}
+\lambda^3 / v = n\lambda^3 \ll 1
+\ee
+e questa è esattamente la condizione che ci dice quando possiamo trattare il gas ideale in modo classico.
+
+Il termine più importante dopo il termine {\em leading} sarà dato dalla permutazione di una singola coppia di particelle. Se scambiamo tra loro, poniamo, le particelle $1$ e $2$ e teniamo conto che esistono $N(N-1)/2$ possibili coppie che permutate tra loro danno lo stesso contributo, possiamo scrivere:
+\be
+Q_N(V,T) = \dfrac{1}{\lambda^{3N} N!} \int \prod_{\alpha=1}^{N}
+\de{\myvec{r}_\alpha}\left\{
+1 \pm \dfrac{N(N-1)}{2}\exp\left[
+-\dfrac{2\pi(\myvec{r}_1-\myvec{r}_2)^2}{\lambda^2}
+\right]
+\right\}
+\ee
+in cui il segno positivo è per i bosoni e quello negativo per i fermioni. Nella precedente, tutti gli integrali con $\alpha$ diverso da $1$ e $2$ daranno semplicemente un contributo pari a $V$. Per i due rimanenti, ponendo $\myvec{r}\equiv\myvec{r}_1-\myvec{r}_2$, possiamo scrivere
+\be
+\int\de{\myvec{r}_1}\de{\myvec{r}_2} \exp\left[
+-\dfrac{2\pi(\myvec{r}_1-\myvec{r}_2)^2}{\lambda^2}
+\right]
+= V\int\de{\myvec{r}}\; e^{-2\pi r^2/\lambda^2} = \dfrac{\lambda^3 V}{2^{3/2}}
+\ee
+In definitiva otteniamo
+\be
+Q_N(V,T) = \dfrac{1}{N!}\left(\dfrac{V}{\lambda^3}\right)^N\left[
+1 \pm \dfrac{N(N-1)\lambda^3}{2^{5/2}V} + \cdots
+\right]
+\ee
+Calcoliamo ora l'energia libera di Helmoltz,
+\be
+\label{eq:Aapprox}
+\dfrac{A}{kT} = -\ln Q_N(V,T) \simeq -N\ln(V/\lambda^3) - N\ln N + N \mp \dfrac{N^2\lambda^3}{2^{5/2}V}
++ \cdots
+\ee
+nella quale abbiamo approssimato $N(N-1)\simeq N^2$ e abbiamo espanso il logaritmo di
+$1 \pm \frac{N(N-1)\lambda^3}{2^{5/2}V}$. Dall'energia libera di Helmoltz ricaviamo subito la pressione
+\be
+P = -\dparc{A}{V}{N,T} = \dfrac{NkT}{V}\left(
+1 \mp \dfrac{n\lambda^3}{2^{5/2}}
+\right)
+\ee
+in cui stavolta il segno negativo è per i bosoni e quello positivo per i fermioni. Dobbiamo notare alcune cose. In primo luogo, il termine {\em leading} dell'espressione precedente fornisce, come è ovvio che sia, l'equazione di stato dei gas ideali classici. Inoltre vediamo che a parità di condizioni $(N,V,T)$ un gas di bosoni ha una pressione {\em minore} di quella dell'equivalente gas classico, mentre un gas di fermioni ha una pressione {\em maggiore}. Inoltre ci accorgiamo di come il parametro di espansione sia proprio $n\lambda^3$, in linea con i ragionamenti che ci hanno portato alla (\ref{eq:condnl3}). In effetti se continuassimo l'espansione otterremmo un termine proporzionale a $(n\lambda^3)^2$, e così via. Nei prossimi capitoli ritroveremo questo risultato, sulla base di considerazioni più precise.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Il potenziale statistico}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Per interpretare il risultato appena ottenuto è forse il caso di fare un passo indietro e tornare, almeno temporaneamente, al mondo classico. Consideriamo un gas classico le cui particelle interagiscano {\em debolmente} tra di loro tramite un potenziale a coppie del tipo
+\be
+U(\myvec{r}) = \sum_{i<j}u(\myvec{r}_i-\myvec{r}_j) \equiv \sum_{i<j} u(r_{ij})
+\ee
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+  \centering
+\begin{tikzpicture}[domain={0:1.8},xscale=4,yscale=1.5]
+  \draw[->] (0,-1.2) -- (0,3); % node[anchor=north] {$(\eps-\mu)/kT$};
+  \draw[->] (-0.1,0) -- (2,0) node[anchor=north] {$\sqrt{2\pi}r/\lambda$}; 
+  \draw plot[id=psbe,domain={0.0:1.8}] function{-log(1+exp(-x**2))};
+  \draw plot[id=psfd,domain={0.3:1.8}] function{-log(1-exp(-x**2))};
+  \draw (0.3,1.8)   node{FD};
+  \draw (0.3,-0.85) node{BE};
+
+\end{tikzpicture}
+  \caption{Il potenziale statistico per le due statistiche quantistiche.} 
+  \label{fig:potstat}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In altre parole il potenziale tra una coppia $(i,j)$ di particelle dipende solo dalla loro distanza relativa $r_{ij}$. Dunque l'hamiltoniana del sistema sarà
+\be
+\Ham = \Ham_0 + U(\myvec{r})
+\ee
+in cui $\Ham_0$ è l'hamiltoniana libera. Per la funzione di partizione del sistema possiamo scrivere
+\be
+Q = \dfrac{1}{h^{3N}N!}\int \de{\omega}e^{-\beta\Ham_0}e^{-\beta U} = Q_0\left\langle
+\exp(-\beta U)
+\right\rangle_0
+\ee
+in cui $\langle\cdots\rangle_0$ indica il valore d'aspettazione ottenuto usando solo l'hamiltoniana libera. Per piccoli valori di $\beta U$ (quindi alte temperature e potenziale che tende velocemente a zero) possiamo espandere l'esponenziale,
+\be
+Q \simeq Q_0\langle 1 - \beta U\rangle_0
+\ee
+e per l'energia libera di Helmoltz otteniamo
+\be
+A \simeq A_0 + \langle U\rangle_0
+\ee
+Ma
+\be
+\langle U\rangle_0 = \sum_{i<j}\int\dfrac{\de{\myvec{r}_i}\de{\myvec{r}_j}}{V^2}u(r_{ij})
+\simeq \dfrac{N^2}{2V}\int\de{\myvec{r}}\,u(r)
+\ee
+e quindi
+\be
+\label{eq:Apotstat}
+A \simeq A_0 + \dfrac{N^2}{2V}\int\de{\myvec{r}}\,u(r)
+\ee
+Confrontando l'ultima equazione con la (\ref{eq:Aapprox}) vediamo che in prima approssimazione possiamo trattare un gas quantistico come un gas classico che interagisce tramite un potenziale che viene chiamato {\em potenziale statistico}.
+
+L'analisi che abbiamo appena svolto è troppo superficiale per calcolare il potenziale statistico $u_s$, ma con un'analisi più attenta si potrebbe dimostrare che per ottenere lo stesso risultato in (\ref{eq:Aapprox}) ma usando il formalismo classico occorre introdurre il potenziale statistico
+\be
+u_s(r) = -kT\ln\left[1 \pm \exp(-2\pi r^2/\lambda^2) \right]
+\ee
+I potenziali statistici per bosoni e fermioni sono mostrati (in unità arbitrarie) in figura \ref{fig:potstat}. Si vede che il potenziale bosonico è sempre attrattivo, mentre quello fermionico è sempre repulsivo.
