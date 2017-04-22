@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Soluzione degli esercizi del Capitolo \ref{cap:basi}}
+\chapter{Soluzioni degli esercizi del Capitolo \ref{cap:basi}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Esercizio \ref{ex2:relaSOmega}}
-\addcontentsline{toc}{section}{Esercizio \ref{ex2:relaSOmega}}
+\section*{Esercizio \ref{ex:02-relaSOmega}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:02-relaSOmega}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Data la natura additiva di $S$ e moltiplicativa di $\Omega$ la funzione $f$ deve necessariamente soddisfare la relazione
@@ -31,30 +31,18 @@ f(\Omega) = k\ln(\Omega) + c
 \ee
 in cui $c$ è una costante di integrazione. Inserendo l'ultima equazione nella (\ref{ans2:o1o2}) vediamo subito che $c=0$.
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Esercizio \ref{ex2:sfere}}
-\addcontentsline{toc}{section}{Esercizio \ref{ex2:sfere}}
+\section*{Esercizio \ref{ex:02-sfere}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:02-sfere}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Costruiamo il nostro sistema aggiungendo una particella alla volta. Il primo atomo, trascurando effetti di bordo, avrà a disposizione un volume $V$. Per il secondo atomo occorre considerare il volume già occupato dal primo; avrà quindi a disposizione un volume pari a $(V-\alpha v_0)$, con $\alpha$ da determinare. Osservando la figura \ref{fig:raggio2} si evince subito che il volume escluso è quello di una sfera di raggio $2r$, e cioè $8v_0$. 
+Costruiamo il nostro sistema aggiungendo una particella alla volta. Il primo atomo, trascurando effetti di bordo, avrà a disposizione un volume $V$. Per il secondo atomo occorre considerare il volume già occupato dal primo; avrà quindi a disposizione un volume pari a $(V-\alpha v_0)$, con $\alpha$ da determinare. Osservando la figura \ref{fig:02-sol-raggio2} si evince subito che il volume escluso è quello di una sfera di raggio $2r$, e cioè $8v_0$. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \centering
-\begin{tikzpicture}[scale=0.5]
-
-  \draw[thick,blue,fill=blue!20] (0,0) circle (2);
-  \draw[thick,blue,fill=blue!20] (4,0) circle (2);
-  %\draw[thick] (0,0) arc[start angle=0, end angle=360, x radius=2, y radius=2];
-  %\draw[thick] (4,0) arc[start angle=0, end angle=360, x radius=2, y radius=2];
-  \draw[thick,red,dotted] (0,0) circle (4);
-  %\draw[thick,dotted] (2,0) arc[start angle=0, end angle=360, x radius=4, y radius=4];
-  \draw[thick,dashed] (0,0)--(4,0);
-  \draw (1,-0.3) node{$r$};
-  \draw (3,-0.3) node{$r$};
-\end{tikzpicture}
+  \include{figSol/02-raggio2}
   \caption{Effetti di volume escluso.}
-  \label{fig:raggio2}
+  \label{fig:02-sol-raggio2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Dunque $\alpha = 8$. Per la dipendenza del numero dei microstati dal volume otteniamo dunque subito
@@ -87,8 +75,8 @@ V_{\textrm{eff}} = \frac{V}{1+4Nv_0/V} \simeq V\left\{ 1 - \frac{4Nv_0}{V} \righ
 che è esattamente il risultato che ci eravamo proposti di dimostrare.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Esercizio \ref{ex2:Saddit}}
-\addcontentsline{toc}{section}{Esercizio \ref{ex2:Saddit}}
+\section*{Esercizio \ref{ex:02-Saddit}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:02-Saddit}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Se $S$ è estensiva sappiamo che dev'essere direttamente proporzionale a $N$, cioè
@@ -116,5 +104,5 @@ Sommando le tre espressioni otteniamo il risultato cercato.
 
 \vskip 0.75cm
 \begin{flushright}
-{\em Ultimo aggiornamento del capitolo: 20.04.2017}
+{\em Ultimo aggiornamento del capitolo: 22.04.2017}
 \end{flushright}

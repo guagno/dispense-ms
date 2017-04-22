@@ -1,0 +1,25 @@
+\changetocdepth {2}
+\select@language {italian}
+\select@language {italian}
+\contentsline {chapter}{Indice}{3}
+\contentsline {chapter}{\chapternumberline {1}Soluzioni degli esercizi del Capitolo \ref {cap:termodinamica}}{5}
+\contentsline {section}{Esercizio \ref {ex:01-cvcp1}}{5}
+\contentsline {section}{Esercizio \ref {ex:01-PVNkT}}{6}
+\contentsline {section}{Esercizio \ref {ex:01-potAG}}{7}
+\contentsline {section}{Esercizio \ref {ex:01-cvcp2}}{7}
+\contentsline {section}{Esercizio \ref {ex:01-pasta}}{9}
+\contentsline {section}{Esercizio \ref {ex:01-vanderWaals}}{11}
+\contentsline {chapter}{\chapternumberline {2}Soluzioni degli esercizi del Capitolo \ref {cap:basi}}{13}
+\contentsline {section}{Esercizio \ref {ex:02-relaSOmega}}{13}
+\contentsline {section}{Esercizio \ref {ex:02-sfere}}{13}
+\contentsline {section}{Esercizio \ref {ex:02-Saddit}}{15}
+\contentsline {chapter}{\chapternumberline {3}Soluzioni degli esercizi del Capitolo \ref {cap:elementi}}{17}
+\contentsline {section}{Esercizio \ref {ex:03-gicur}}{17}
+\contentsline {section}{Esercizio \ref {ex:03-oscfermi}}{19}
+\contentsline {section}{Esercizio \ref {ex:03-quasioscfermi}}{21}
+\contentsline {section}{Esercizio \ref {ex:03-spin1}}{23}
+\contentsline {chapter}{\chapternumberline {4}Soluzioni degli esercizi del Capitolo \ref {cap:canonico}}{27}
+\contentsline {section}{Esercizio \ref {ex:04-guc}}{27}
+\contentsline {section}{Esercizio \ref {ex:04-oscfermi}}{28}
+\contentsline {section}{Esercizio \ref {ex:04-eqchim}}{29}
+\contentsline {section}{Esercizio \ref {ex:04-esps}}{29}
