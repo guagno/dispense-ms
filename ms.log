@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.13)  22 APR 2017 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.13)  22 APR 2017 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1420,32 +1420,32 @@ Overfull \hbox (1.91618pt too wide) detected at line 73
  []
 
 [4]
-Overfull \hbox (1.91618pt too wide) detected at line 77
+Overfull \hbox (1.91618pt too wide) detected at line 76
  \T1/lmr/bx/n/10.95 115
  []
 
 
-Overfull \hbox (1.91618pt too wide) detected at line 89
+Overfull \hbox (1.91618pt too wide) detected at line 88
  \T1/lmr/bx/n/10.95 133
  []
 
 
-Overfull \hbox (1.91618pt too wide) detected at line 101
+Overfull \hbox (1.91618pt too wide) detected at line 100
  \T1/lmr/bx/n/10.95 145
  []
 
 
-Overfull \hbox (1.91618pt too wide) detected at line 116
+Overfull \hbox (1.91618pt too wide) detected at line 115
  \T1/lmr/bx/n/10.95 169
  []
 
 [5]
-Overfull \hbox (1.91618pt too wide) detected at line 124
+Overfull \hbox (1.91618pt too wide) detected at line 123
  \T1/lmr/bx/n/10.95 179
  []
 
 
-Overfull \hbox (1.91618pt too wide) detected at line 132
+Overfull \hbox (1.91618pt too wide) detected at line 131
  \T1/lmr/bx/n/10.95 189
  []
 
@@ -1544,31 +1544,19 @@ Overfull \hbox (2.7859pt too wide) in alignment at lines 23--28
 [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102])
 (./06-Interagenti.tex [103] [104
 
-] [105]
+] [105] (./figMS/06-deffij.tex)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+(./figMS/06-grafici.tex) [106]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Overfull \hbox (1.28564pt too wide) in paragraph at lines 129--130
- [][] 
- []
-
-[106] [107]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[108]
+ [107]
+(./figMS/06-5cluster.tex) (./figMS/06-3cluster.tex) [108]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [109]
-[110] [111] [112] [113]
-
-LaTeX Warning: Reference `ex2:sfere' on page 114 undefined on input line 450.
-
-) (./07-Quantistica.tex [114] [115
+[110] [111] [112] [113]) (./07-Quantistica.tex [114] [115
 
 ] [116]
 Overfull \hbox (5.6939pt too wide) in alignment at lines 78--87
@@ -1697,12 +1685,15 @@ r/m/n/10.95 = [][] [][] []\OML/lmm/m/it/10.95 ^^U  [] [] [] [] [] []$
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 21508 strings out of 493014
- 399920 string characters out of 6133351
- 528670 words of memory out of 5000000
- 24269 multiletter control sequences out of 15000+600000
+ 21610 strings out of 493014
+ 402038 string characters out of 6133351
+ 532511 words of memory out of 5000000
+ 24359 multiletter control sequences out of 15000+600000
  124870 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,16n,65p,1576b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1733,7 +1724,7 @@ nts/type1/public/lm/lmss17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/
 lmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ms.pdf (190 pages, 1362999 bytes).
+Output written on ms.pdf (190 pages, 1368682 bytes).
 PDF statistics:
  763 PDF objects out of 1000 (max. 8388607)
  523 compressed objects within 6 object streams

@@ -73,7 +73,6 @@
 \contentsline {chapter}{\chapternumberline {6}Sistemi interagenti: un'introduzione}{105}
 \contentsline {section}{\numberline {6.1}Espansione in cluster di un gas classico}{105}
 \contentsline {subsection}{\numberline {6.1.1}L'equazione di van der Waals}{113}
-\contentsline {section}{\numberline {6.2}Esercizi per il capitolo \ref {cap:interagenti}}{114}
 \contentsline {chapter}{\chapternumberline {7}Costruzione della Statistica Quantistica}{115}
 \contentsline {section}{\numberline {7.1}La matrice densit\IeC {\`a}}{116}
 \contentsline {section}{\numberline {7.2}{\em Ensembles} quantistici}{118}

@@ -1,0 +1,17 @@
+\begin{tikzpicture}[domain={0.92:2.5},xscale=7,yscale=1]
+  \draw[->] (0.8,-1.3) -- (2.5,-1.3) node[anchor=north] {$x$};
+  \draw[->] (0.8,-1.3) -- (0.8,4);
+  \draw[densely dotted] (0.8,0) -- (2.5,0);
+  
+  \draw[thick,blue,samples=100,smooth] plot[id=int-uLJ] function{4*(x**(-12)-x**(-6))};
+  \draw[thick,red,samples=100,smooth,domain={0.8:2.5}]  plot[id=int-fLJ] function{exp(-4*(x**(-12)-x**(-6)))-1};
+
+  \draw[blue] (1.0,2.6) node{$u(r)$};
+  \draw[red]  (1.4,1.0) node{$f(r)$};
+
+  \foreach \x in {0.8,1.3,1.8,2.3}
+    \draw (\x cm,-1.35) -- (\x cm,-1.25) node[anchor=north] {$\x$};
+  \foreach \y in {-1, 0, 1, 2}
+    \draw (0.81,\y cm) -- (0.79,\y cm) node[anchor=east] {$\y$};
+\end{tikzpicture}
+
