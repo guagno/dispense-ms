@@ -11,6 +11,7 @@ Ma c'è ancora di più: in realtà il formalismo dell'\ensemble\ grancanonico (c
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Contatto con una riserva}
+\label{sec:05-contatto}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Consideriamo dunque il nostro sistema fisico $A$ in contatto con una riserva $A'$. $A$ può scambiare con $A'$ sia energia sia particelle. In ogni caso il numero totale di particelle in $A_0 = A + A'$, e cioè $N_0$, è costante, e così pure l'energia di $A_0$, uguale a $E_0$. Dunque, se in un certo dato istante il sistema $A$ si trova in uno stato con energia $E_r$ e numero di particelle $N_s$, abbiamo due relazioni che devono essere contemporaneamente soddisfatte:
@@ -34,33 +35,32 @@ e normalizzando
 P_{r,s} = \frac{e^{-\alpha N_s - \beta E_r}}{\sum_{\rho,\sigma}e^{-\alpha N_\sigma - \beta E_\rho}}
 \ee
 
-%-----------------------------------------------------------------------
-% ENSEMBLE
-%-----------------------------------------------------------------------
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{L'\ensemble\ grancanonico}
+\label{sec:05-ensemble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Immaginiamo ora $\calN$ sistemi identici. I sistemi hanno in totale un numero di particelle pari a $\calN\aspetta{N}$, e un'energia pari a $\calN U$. Resta inteso che $U$ è l'energia media dei sistemi, che assumeremo essere l'energia interna del nostro sistema fisico originale, e $\aspetta{N}$ il numero medio di particelle. Nel seguito, per non appesantire la notazione, scriveremo sempre $N$ al posto di $\aspetta{N}$, a meno che questo non ingeneri confusione. Dunque da questo punto in poi, salvo avviso contrario, $N$ rappresenta il valore d'aspettazione del numero di particelle del sistema (un'osservabile, quindi) e non più una quantità fissa.
 Sia $\nrs$ il numero di elementi dell'\ensemble\ con energia $E_r$ e numero di particelle $N_s$; il nostro \ensemble\ grancanonico è ora sottoposto a tre vincoli:
 \bea
-\label{eq:condgcan}
+\label{eq:05-condgcan}
 \sum_{r,s} \nrs &=& \calN\nonumber \\
 \sum_{r,s} N_s\nrs &=& \calN N\nonumber \\
 \sum_{r,s} E_r \nrs &=& \calN U
 \eea
-Qualsiasi insieme $\nrsset$ dei numeri $\nrs$ che soddisfi le condizioni \ref{eq:condgcan} rappresenta uno dei possibili modi di distribuire energia e particelle tra gli elementi dell'\ensemble. Ciascuno di questi modi può essere realizzato in $\Wnrs$ modi, con
+Qualsiasi insieme $\nrsset$ dei numeri $\nrs$ che soddisfi le condizioni (\ref{eq:05-condgcan}) rappresenta uno dei possibili modi di distribuire energia e particelle tra gli elementi dell'\ensemble. Ciascuno di questi modi può essere realizzato in $\Wnrs$ modi, con
 \be
-\label{eq:wnrs}
+\label{eq:05-wnrs}
 \Wnrs = \frac{\calN!}{\prod_{r,s}\nrs!}
 \ee
 Ora, esattamente come nel caso del canonico, possiamo calcolare la probabilità $P_{r,s}$ di trovare il nostro sistema fisico in uno stato con energia $E_r$ e numero di particelle $N_s$ o tramite il metodo del valore più probabile o tramite il metodo del valor medio (nel secondo caso avremo a che fare con integrali in due variabili complesse). In ogni caso il risultato è lo stesso, e la derivazione così facile che è lasciata come esercizio:
 \be
-\label{eq:gcp}
+\label{eq:05-gcp}
 P_{r,s} = \lim_{\calN\to\infty}\frac{\aspetta{\nrs}}{\calN} = \frac{e^{-\alpha N_s - \beta E_r}}{\sum_{\rho,\sigma}e^{-\alpha N_\sigma - \beta E_\rho}}
 \ee
 I parametri $\alpha$ e $\beta$ sono soluzione delle equazioni
 \bea
-\label{eq:gcnu}
+\label{eq:05-gcnu}
 N = \frac{\sum_{r,s} N_s e^{-\alpha N_s - \beta E_r}}{\sum_{r,s} e^{-\alpha N_s - \beta E_r}} =
 -\dpar{}{\alpha}\left\{ \ln\sum_{r,s} e^{-\alpha N_s - \beta E_r}  \right\} \nonumber \\
 U = \frac{\sum_{r,s} E_r e^{-\alpha N_s - \beta E_r}}{\sum_{r,s} e^{-\alpha N_s - \beta E_r}} =
@@ -68,11 +68,10 @@ U = \frac{\sum_{r,s} E_r e^{-\alpha N_s - \beta E_r}}{\sum_{r,s} e^{-\alpha N_s 
 \eea
 con $N$ e $U$ preassegnati.
 
-%-----------------------------------------------------------------------
-% SIGNIFICATO
-%-----------------------------------------------------------------------
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Significato fisico delle quantità statistiche}
+\label{sec:05-significato}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Iniziamo con l'introdurre il $q$--potenziale:
 \be
@@ -80,21 +79,21 @@ q \equiv \ln\sum_{r,s} e^{-\alpha N_s - \beta E_r}
 \ee
 $q$ è funzione di $\alpha$, di $\beta$ e dei livelli $E_r$. E perché non anche di $N_s$, chiederanno subito i miei piccoli lettori? Il motivo è molto semplice: nell'espressione $\sum_{r,s}$, la somma su $s$ in realtà significa: $\sum_{N_s=0}^\infty$, chiaro? Le quantità $E_r$ possono essere modificate, per esempio, variando il volume; su $N_s$ si somma direttamente sopra, è una variabile {\em dummy}.
 
-Chiarito questo punto, possiamo calcolare il differenziale totale $\de q$. Facendo uso delle (\ref{eq:gcp}, \ref{eq:gcnu}) otteniamo
+Chiarito questo punto, possiamo calcolare il differenziale totale $\de q$. Facendo uso delle (\ref{eq:05-gcp}, \ref{eq:05-gcnu}) otteniamo
 \be
-\label{eq:deqpot}
+\label{eq:05-deqpot}
 \de q = -N\de\alpha - U\de\beta - \frac{\beta}{\calN}\sum_{r,s}\aspetta{\nrs}\de E_r
 \ee
 (dove con $N$, lo scrivo per l'ultima volta, spero, si intende $\aspetta{N}$). 
-Per ricavare il terzo dermine nel lato destro della \ref{eq:deqpot} ragioniamo come segue: differenziamo dapprima rispetto a una sola delle $E_r$, ottenendo:
+Per ricavare il terzo dermine nel lato destro della (\ref{eq:05-deqpot}) ragioniamo come segue: differenziamo dapprima rispetto a una sola delle $E_r$, ottenendo:
 \be
 -\beta \frac{e^{-\alpha N_s - \beta E_r}}{\sum{\rho,\sigma -\alpha N_\sigma - \beta E_\rho}}\de{E_r}
 \ee
 e riconosciamo che la frazione nella precedente è proprio $P_{r,s}$, che possiamo scrivere come $\aspetta{n_{r,s}}/\calN$. Sommando su $r$ e $s$ otteniamo il risultato.
 
-Dalla \ref{eq:deqpot} ricaviamo
+Dalla (\ref{eq:05-deqpot}) ricaviamo
 \be
-\label{eq:preQ}
+\label{eq:05-preQ}
 \de(q + \alpha N + \beta U) = \beta\left( \frac{\alpha}{\beta} + \de U - \frac{1}{\calN}\sum_{r,s}\aspetta{\nrs}\de E_r \right)
 \ee
 Compariamo quest'ultima equazione con la prima legge della termodinamica:
@@ -109,7 +108,7 @@ Ma
 \be
 \de U\big|_S = \frac{1}{\calN}\sum_{r,s}\aspetta{\nrs}\de E_r
 \ee
-perché se $S = \mathrm{costante}$ non devo differenziare le $P_{r,s}$. Il risultato netto è che il membro di destra della \ref{eq:preQ} è $\beta\delta Q$, $\beta$ può essere identificato con $1/kT$ e $\mu = -\alpha/\beta$. Abbiamo quindi
+perché se $S = \mathrm{costante}$ non devo differenziare le $P_{r,s}$. Il risultato netto è che il membro di destra della (\ref{eq:05-preQ}) è $\beta\delta Q$, $\beta$ può essere identificato con $1/kT$ e $\mu = -\alpha/\beta$. Abbiamo quindi
 \be
 q = \frac{S}{k} - \alpha N - \beta U = \frac{TS + \mu N - U}{kT}
 \ee
@@ -133,11 +132,11 @@ Da come è stata definita, sembra che per calcolare la funzione di granpartizion
 
 Siamo ora in posizione per scrivere la ricetta completa che ci permette di passare dalla meccanica statistica grancanonica alla termodinamica. Abbiamo:
 \bea
-P(z,V,T) &=& \frac{kT}{V}q(z,V,T) = \frac{kT}{V}\ln\calQ(z,V,T) \label{eq:granCP} \\
-N(z,V,T) &=& z\left[ \dpar{}{z}q(z,V,T) \right]_{V,T} = kT\left[ \dpar{}{\mu}q(\mu,V,T) \right]_{V,T} \label{eq:granCN} \\
-U(z,V,T) &=& -\left[ \dpar{}{\beta}q(z,V,T) \right]_{z,V} = kT^2\left[ \dpar{}{T}q(z,V,T) \right]_{z,V} \label{eq:granCU}
+P(z,V,T) &=& \frac{kT}{V}q(z,V,T) = \frac{kT}{V}\ln\calQ(z,V,T) \label{eq:05-granCP} \\
+N(z,V,T) &=& z\left[ \dpar{}{z}q(z,V,T) \right]_{V,T} = kT\left[ \dpar{}{\mu}q(\mu,V,T) \right]_{V,T} \label{eq:05-granCN} \\
+U(z,V,T) &=& -\left[ \dpar{}{\beta}q(z,V,T) \right]_{z,V} = kT^2\left[ \dpar{}{T}q(z,V,T) \right]_{z,V} \label{eq:05-granCU}
 \eea
-Eliminando $z$ tra la \ref{eq:granCP} e la \ref{eq:granCN} otteniamo la relazione che lega pressione, volume, temperatura e numero di particelle, ossia in parole povere l'equazione di stato del sistema. D'altro canto eliminando $z$ tra la \ref{eq:granCN} e la \ref{eq:granCU} otteniamo $U$ come funzione di $N,V,T$, e possiamo facilmente arrivare a $C_V$.
+Eliminando $z$ tra la (\ref{eq:05-granCP}) e la (\ref{eq:05-granCN}) otteniamo la relazione che lega pressione, volume, temperatura e numero di particelle, ossia in parole povere l'equazione di stato del sistema. D'altro canto eliminando $z$ tra la (\ref{eq:05-granCN}) e la (\ref{eq:05-granCU}) otteniamo $U$ come funzione di $N,V,T$, e possiamo facilmente arrivare a $C_V$.
 
 Per l'energia libera di Helmoltz abbiamo
 \be
@@ -148,11 +147,10 @@ e per l'entropia
 S = \frac{U-A}{T} = kT\dparc{q}{T}{z,V} - Nk\ln z + kq
 \ee
 
-%-----------------------------------------------------------------------
-% ESEMPI
-%-----------------------------------------------------------------------
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Esempi}
+\label{sec:05-esempi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In questa sezione vedremo un paio di esempi per vedere come funziona il formalismo del $q$-potenziale. Non sono dimostrazioni della potenza del metodo: quella verrà fuori naturalmente quando ci occuperemo della statistica quantistica.
 
@@ -174,13 +172,13 @@ q(z,V,T) = zVf(T)
 \ee
 Utilizzando le formule della sezione precedente otteniamo subito
 \bea
-P &=& \phantom{-} zkTf(T) \label{eq:gcgiP} \\
-N &=& \phantom{-} zVf(T)  \label{eq:gcgiN} \\
-U &=& \phantom{-} zVkT^2f'(T) \label{eq:gcgiU} \\
-A &=& \phantom{-} NkT\ln z - zVkTf(T) \label{eq:gcgiA} \\
-S &=& -Nk\ln z + zVk[Tf'(T) + f(T)] \label{eq:gcgiS}
+P &=& \phantom{-} zkTf(T) \label{eq:05-gcgiP} \\
+N &=& \phantom{-} zVf(T)  \label{eq:05-gcgiN} \\
+U &=& \phantom{-} zVkT^2f'(T) \label{eq:05-gcgiU} \\
+A &=& \phantom{-} NkT\ln z - zVkTf(T) \label{eq:05-gcgiA} \\
+S &=& -Nk\ln z + zVk[Tf'(T) + f(T)] \label{eq:05-gcgiS}
 \eea
-Eliminando $z$ tra la \ref{eq:gcgiP} e la \ref{eq:gcgiN} otteniamo l'equazione di stato: $PV = NkT$. Notiamo che questa relazione vale per qualsiasi $f(T)$ che sia funzione della sola temperatura. Per l'energia interna abbiamo
+Eliminando $z$ tra la (\ref{eq:05-gcgiP}) e la (\ref{eq:05-gcgiN}) otteniamo l'equazione di stato: $PV = NkT$. Notiamo che questa relazione vale per qualsiasi $f(T)$ che sia funzione della sola temperatura. Per l'energia interna abbiamo
 \be
 U = NkT^2f'(T)/f(T)
 \ee
@@ -206,12 +204,12 @@ P = \frac{kT}{V}q(z,T) = -\frac{kT}{V}\ln[1-z\phi(T)]
 \ee
 e poiché sia $z$ sia $T$ sono quantità intensive, la pressione va a zero nel limite termodinamico (ma vedi dopo). Otteniamo poi:
 \bea
-N &=& \phantom{-} \frac{z\phi(T)}{1-z\phi(T)} \label{eq:gcoaN} \\
-U &=& \phantom{-} \frac{zkT^2\phi'(T)}{1-z\phi(T)} \label{eq:gcoaU} \\
-A &=& \phantom{-} NkT\ln z + kT\ln[1-z\phi(T)] \label{eq:gcoaA} \\
-S &=& -Nk\ln z - k\ln[1-z\phi(T)] + \frac{zkT\phi'(T)}{1-z\phi(T)} \label{eq:gcoaS}
+N &=& \phantom{-} \frac{z\phi(T)}{1-z\phi(T)} \label{eq:05-gcoaN} \\
+U &=& \phantom{-} \frac{zkT^2\phi'(T)}{1-z\phi(T)} \label{eq:05-gcoaU} \\
+A &=& \phantom{-} NkT\ln z + kT\ln[1-z\phi(T)] \label{eq:05-gcoaA} \\
+S &=& -Nk\ln z - k\ln[1-z\phi(T)] + \frac{zkT\phi'(T)}{1-z\phi(T)} \label{eq:05-gcoaS}
 \eea
-Dalla \ref{eq:gcoaN} otteniamo
+Dalla (\ref{eq:05-gcoaN}) otteniamo
 \be
 z\phi(T) = \frac{N}{N+1} \simeq 1 - \frac{1}{N}\quad\quad(N\gg 1)
 \ee
@@ -229,7 +227,6 @@ L'eliminazione di $z$ dalle altre equazioni ci permette di scrivere
 %-----------------------------------------------------------------------
 % EQUILIBRIO SOLIDO-VAPORE
 %-----------------------------------------------------------------------
-
 \subsection{Equilibrio solido--vapore}
 
 Come corollario dei due esempi precedenti consideriamo il problema dell'equilibrio solido--vapore. Abbiamo dunque un sistema fisico con un singolo componente elementare ma diviso in due fasi, una solida e una di vapore, all'equilibrio a temperatura $T$. Il tutto è racchiuso in un contenitore di volume $V$. Le due fasi sono libere di scambiarsi particelle, e dunque la condizione di equilibrio indica che i potenziali chimici nelle due fasi devono essere uguali. Avremo dunque
@@ -242,7 +239,7 @@ z_s \simeq \frac{1}{\phi(T)}
 \ee
 per la fase solida. Uguagliando le ultime due otteniamo, per la densità della fase di vapore
 \be
-\label{eq:cfs}
+\label{eq:05-cfs}
 N_g/V = f(T)/phi(T)
 \ee
 in cui abbiamo posto $V_g\simeq V$. Se la densità nella fase di vapore non è troppo elevata possiamo considerare il gas come un gas ideale monoatomico: quindi
@@ -257,7 +254,7 @@ Tuttavia, per una corretta comparazione tra la funzione $f(T)$ e $\phi(T)$, occo
 \be
 P = \frac{N_g}{V}kT = kT \frac{f(T)}{\phi(T)}e^{-\epsilon/kT}
 \ee
-Notiamo che la \ref{eq:cfs} fornisce la condizione necesaria per la formazione della fase solida. La condizione chiaramente è
+Notiamo che la (\ref{eq:05-cfs}) fornisce la condizione necesaria per la formazione della fase solida. La condizione chiaramente è
 \be
 N > V\frac{f(T)}{\phi(T)}
 \ee
@@ -266,11 +263,10 @@ in cui $N$ è il numero totale di atomi nel sistema. Alternativamente possiamo p
 \frac{f(T_c)}{\phi(T_c)} = \frac{N}{V}
 \ee
 
-%-----------------------------------------------------------------------
-% FLUTTUAZIONI
-%-----------------------------------------------------------------------
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fluttuazioni}
+\label{sec:05-fluttuazioni}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Per stabilire l'eventuale corrispondenza con gli altri due \ensembles\ dovremo tener conto, questa volta, non solo delle fluttuazioni dell'energia ma anche del numero di particelle. In questa sezione reintroduciamo momentaneamente la notazione $\aspetta{N}$ per indicare il numero medio di particelle nel sistema.
 
@@ -296,19 +292,19 @@ Per scrivere il risultato in forma più pratica ricordiamo la relazione termodin
 \ee
 per cui a $T$ costante $\de\mu = v\de P$. Dunque
 \be
-\label{eq:fluttNGran}
+\label{eq:05-fluttNGran}
 \frac{\aspetta{(\Delta n)^2}}{\aspetta{n}^2} = -\frac{kT}{V}\left[\frac{1}{v}\dparc{v}{P}{T} \right] \equiv \frac{kT}{V}\kappa_T
 \ee
 in cui $\kappa_T$ è la compressibilità isoterma del sistema. Otteniamo un risultato importante: ordinariamente abbiamo che le fluttuazioni quadratiche medie nella densità sono $O(N^{-1/2})$ e dunque completamente trascurabili nel limite termodinamico; esistono però eccezioni a questa situazione, in particolare durante le transizioni di fase. In queste situazioni la compressibilità isoterma di un sistema può diventare enorme, e al limite divergere al punto critico. Per esempio sperimentalmente si trova, per il punto critico liquido--vapore, $\kappa_T(T_c) \sim N^{0.63}$. Quindi le fluttuazioni crescono più rapidamente di $N^{1/2}$, e vanno come $N^{0.82}$. Nella regione di transizione, e specialmente al punto critico, potremo osservare grandi fluttuazioni nella densità. Risulta chiaro che in queste situazioni i tre ensemble non possono dare gli stessi risultati: il formalismo corretto da usare è quello del grancanonico.
 
 Esaminiamo ora le fluttuazioni dell'energia (ristabiliamo la notazione per cui il valore d'aspettazione del numero di particelle è scritto semplicemente $N$). Con l'usuale procedura otteniamo
 \be
-\label{eq:primafgc}
+\label{eq:05-primafgc}
 \aspetta{(\Delta E)^2} = \aspetta{E^2} - \aspetta{E}^2 = -\dparc{U}{\beta}{z,V} = kT^2\dparc{U}{T}{z,V}
 \ee
 Abbiamo
 \be
-\label{eq:secondafgc}
+\label{eq:05-secondafgc}
 \dparc{U}{T}{z,V} = \dparc{U}{T}{N,V} + \dparc{U}{N}{T,V}\dparc{N}{T}{z,V}
 \ee
 Considerando che
@@ -321,10 +317,10 @@ abbiamo
 \ee
 e quindi
 \be
-\label{eq:terzafgc}
+\label{eq:05-terzafgc}
 \dparc{N}{T}{z,V} = \frac{1}{T}\dparc{U}{\mu}{T,V}
 \ee
-Sostituendo la \ref{eq:secondafgc} e la \ref{eq:terzafgc} nella \ref{eq:primafgc} otteniamo
+Sostituendo la (\ref{eq:05-secondafgc}) e la (\ref{eq:05-terzafgc}) nella (\ref{eq:05-primafgc}) otteniamo
 \be
 \aspetta{(\Delta E)^2} = kT^2C_V + kT\dparc{U}{N}{T,V}\dparc{U}{\mu}{T,V}
 \ee
@@ -342,7 +338,7 @@ Vediamo dunque che le fluttuazioni di energia del grancanonico sono composte dal
 \label{sec:05-potesternoGC}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Nella sezione \ref{sec:potesterno} del capitolo \ref{cap:canonico} abbiamo studiato il gas ideale classico in presenza di un potenziale esterno, in particolare di una forza gravitazionale costante. In questa sezione riprendiamo il problema per mostrare come il formalismo grancanonico ci permetta di arrivare facilmente a esprimere la pressione in funzione dell'altezza. Ricapitoliamo le condizioni che deve soddisfare il potenziale esterno:
+Nella sezione \ref{sec:04-potesterno} del Capitolo \ref{cap:canonico} abbiamo studiato il gas ideale classico in presenza di un potenziale esterno, in particolare di una forza gravitazionale costante. In questa sezione riprendiamo il problema per mostrare come il formalismo grancanonico ci permetta di arrivare facilmente a esprimere la pressione in funzione dell'altezza. Ricapitoliamo le condizioni che deve soddisfare il potenziale esterno:
 \begin{itemize}
 \item dev'essere indipendente dal tempo;
 \item deve variare lentamente sulla scala delle distanze tipiche tra le particelle e delle eventuali interazioni microscopiche;
@@ -350,11 +346,11 @@ Nella sezione \ref{sec:potesterno} del capitolo \ref{cap:canonico} abbiamo studi
 \end{itemize}
 Sotto queste condizioni possiamo immaginare di isolare, all'interno del nostro sistema, un sottosistema intorno alla coordinata $\myvec{r}$ tale che il potenziale $U(\myvec{r})$ possa essere considerato sostanzialmente costante all'interno del sottosistema, anche se il sottosistema stesso è da intendersi come macroscopico a tutti gli effetti pratici. Nel caso del gas in un cilindro possiamo pensare a un cilindretto posto a quota $y$, di altezza $\de{y}$ e la cui base sia parallela alla base del cilindro. All'interno di questo sottosistema possiamo considerare il potenziale gravitazionale come costante e pari a $mgy$.
 
-Nel capitolo \ref{cap:canonico} abbiamo scoperto che la funzione di partizione di {\em singola particella} per un gas ideale classico è
+Nel Capitolo \ref{cap:canonico} abbiamo scoperto che la funzione di partizione di {\em singola particella} per un gas ideale classico è
 \be
 Q_1 = V/\lambda^3
 \ee
-in cui $\lambda$ è la lunghezza d'onda termica. Invece in questo capitolo abbiamo visto che il $q$--potenziale del sistema è
+in cui $\lambda$ è la lunghezza d'onda termica. Invece in questo Capitolo abbiamo visto che il $q$--potenziale del sistema è
 \be
 q(z,V,T) = \ln\calQ(z,V,T) = zV/\lambda^3
 \ee
@@ -364,22 +360,22 @@ q(z,V,T) = zQ_1
 \ee 
 D'altronde per il numero medio di particelle $N$ abbiamo
 \be
-\label{eq:conGC0}
+\label{eq:05-conGC0}
 N = z\left[ \dpar{}{z}q(z,V,T) \right]_{V,T} = zQ_1
 \ee
 Nessuno però può negarci il diritto di scrivere
 \be
-\label{eq:conGC1}
+\label{eq:05-conGC1}
 Q_1 = \sum_\varepsilon e^{-\beta\varepsilon}
 \ee
 in cui la somma è su tutti i livelli di energia di singola particella del sistema. Possiamo però anche scrivere
 \be
-\label{eq:conGC2}
+\label{eq:05-conGC2}
 N = \sum_\varepsilon \langle n_\varepsilon\rangle
 \ee
 nella quale $\langle n_\varepsilon\rangle$ rappresenta il valore d'aspettazione del numero di particelle sul livello d'energia $\varepsilon$.
 
-Confrontando la (\ref{eq:conGC0}) con la (\ref{eq:conGC2}) e usando la (\ref{eq:conGC1}) otteniamo, per un gas ideale classico,
+Confrontando la (\ref{eq:05-conGC0}) con la (\ref{eq:05-conGC2}) e usando la (\ref{eq:05-conGC1}) otteniamo, per un gas ideale classico,
 \be
 \langle n_\varepsilon\rangle = e^{(\mu-\varepsilon)/kT}
 \ee
@@ -417,13 +413,13 @@ P(y) = P(0)e^{-mgy/kT}
 \ee
 La precedente è la {\em formula barometrica dell'atmosfera isoterma}, ottenuta per la prima volta da Boltzmann (con un metodo completamente diverso).
 
-Sostituendo $y = L$ in questa equazione e normalizzando correttamente (tutto ciò è lasciato come esercizio) otteniamo, per la pressione sulla faccia superiore del cilindro, la stessa espressione che avevamo ottenuto in precedenza, eq. (\ref{eq:PaL}).
+Sostituendo $y = L$ in questa equazione e normalizzando correttamente (tutto ciò è lasciato come esercizio) otteniamo, per la pressione sulla faccia superiore del cilindro, la stessa espressione che avevamo ottenuto in precedenza, eq. (\ref{eq:04-PaL}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Esercizi per il capitolo \ref{cap:grancanonico}}
+\section{Esercizi per il Capitolo \ref{cap:grancanonico}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{Exercise}[title={Equivalenza tra \ensembles},label={ex:eqcgc}]
+\begin{Exercise}[title={Equivalenza tra \ensembles},label={ex:05-eqcgc}]
 \noindent
 Si consideri un gas ideale classico composto da $N$ particelle {\em distinguibili}. Si calcolino l'energia libera di Helmholtz $A$, l'energia interna $U$ e l'entropia $S$ in termini di $Q_1$ (funzione di partizione di singola particella), sia nel canonico ($C$) sia nel grancanonico ($G$). Si verifichi che $U_G = U_C$, e che nel limite termodinamico vale la relazione
 \be
@@ -431,8 +427,16 @@ Si consideri un gas ideale classico composto da $N$ particelle {\em distinguibil
 \ee
 \end{Exercise}
 
-\begin{Exercise}[title={Scatola a sorpresa},label={es:sas}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Exercise}[title={Scatola a sorpresa},label={ex:05-sas}]
 \noindent
-Si consideri una scatola di volume $V$ in cui è contenuto un gas ideale classico composto da $N$ molecole monoatomiche. Le pareti del contenitore hanno $N_0$ centri di assorbimento; ognuno di questi centri può ospitare al massimo una molecola di gas. Nel caso in cui la molecola venga assorbita, assume un'energia pari a $-\epsilon$. Si calcoli, all'equilibrio termico a temperatura $T$, la fugacità del gas in funzione di pressione $P$ e temperatura $T$. Si calcoli il numero medio $\aspetta{N}$ di molecole assorbite e si discutano i limiti di pressione piccola e grande.
+Si consideri una scatola di volume $V$ in cui è contenuto un gas ideale classico composto da $N$ molecole monoatomiche. Le pareti del contenitore hanno $N_0$ centri di assorbimento; ognuno di questi centri può ospitare al massimo una molecola di gas. Nel caso in cui la molecola venga assorbita, assume un'energia pari a $-\epsilon$. Si calcoli, all'equilibrio termico a temperatura $T$, la fugacità del gas in funzione di pressione $P$ e temperatura $T$. Si calcoli il numero medio $\aspetta{N_a}$ di molecole assorbite in funzione di $P$ e $T$ e si discutano i limiti di pressione piccola e grande.
 \end{Exercise}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vskip 0.75cm
+\begin{flushright}
+{\em Ultimo aggiornamento del Capitolo: 22.04.2017}
+\end{flushright}

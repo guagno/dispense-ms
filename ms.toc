@@ -69,7 +69,7 @@
 \contentsline {subsection}{\numberline {5.4.1}Equilibrio solido--vapore}{97}
 \contentsline {section}{\numberline {5.5}Fluttuazioni}{98}
 \contentsline {section}{\numberline {5.6}Ritorno sul potenziale esterno}{100}
-\contentsline {section}{\numberline {5.7}Esercizi per il capitolo \ref {cap:grancanonico}}{103}
+\contentsline {section}{\numberline {5.7}Esercizi per il Capitolo \ref {cap:grancanonico}}{103}
 \contentsline {chapter}{\chapternumberline {6}Sistemi interagenti: un'introduzione}{105}
 \contentsline {section}{\numberline {6.1}Espansione in cluster di un gas classico}{105}
 \contentsline {subsection}{\numberline {6.1.1}L'equazione di van der Waals}{113}
