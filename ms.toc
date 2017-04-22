@@ -59,8 +59,8 @@
 \contentsline {subsection}{\numberline {4.10.1}Velocit\IeC {\`a} pi\IeC {\`u} probabile, velocit\IeC {\`a} media}{85}
 \contentsline {section}{\numberline {4.11}Considerazioni cinetiche}{86}
 \contentsline {subsection}{\numberline {4.11.1}L'effusione di un gas}{87}
-\contentsline {section}{\numberline {4.12}Potenziale esterno: un esempio}{88}
-\contentsline {section}{\numberline {4.13}Esercizi per il capitolo \ref {cap:canonico}}{89}
+\contentsline {section}{\numberline {4.12}Potenziale esterno: un esempio}{87}
+\contentsline {section}{\numberline {4.13}Esercizi per il Capitolo \ref {cap:canonico}}{89}
 \contentsline {chapter}{\chapternumberline {5}L'{\em ensemble}\ grancanonico}{91}
 \contentsline {section}{\numberline {5.1}Contatto con una riserva}{91}
 \contentsline {section}{\numberline {5.2}L'{\em ensemble}\ grancanonico}{92}

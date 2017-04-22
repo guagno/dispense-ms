@@ -9,6 +9,7 @@ Possiamo pensare di tenere costante qualcos'altro, al posto dell'energia? La ris
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Sistema all'equilibrio con una riserva termica}
+\label{sec:04-equilibrio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Immaginiamo che il nostro sistema fisico sia in contatto termico con una riserva, ossia un sistema molto più grande (al limite, l'intero Universo). L'energia del sistema totale è conservata, e sarà uguale alla somma delle energie dei due sistemi:
@@ -17,13 +18,13 @@ E_0 = E_r + E'_r
 \ee
 in cui $E_r$ è l'energia del nostro sistema fisico ed $E'_r$ l'energia della riserva termica. Notiamo che i due sistemi, essendo in contatto termico e all'equilibrio, avranno una temperatura comune, $T$, ma in ogni caso l'energia di ciascuno potrà variare tra $0$ e $E_0$, fermo restando il fatto che la loro somma deve rimanere costante. La riserva termica serve a garantire che il sistema fisico che stiamo considerando resti a temperatura costante $T$. Ora, poiché la riserva termica è molto più grande del nostro sistema, possiamo tranquillamente chiedere che in ogni istante di tempo debba valere
 \be
-\label{eq:cond1}
+\label{eq:04-cond1}
 E_r \ll E'_r
 \ee
 e quindi $E'_r$ sarà sempre molto vicina a $E_0$; a tutti gli effetti pratici possiamo considerare la riserva come un sistema con un'energia fissata, e trattarla quindi con i metodi microcanonici.
 Chiamiamo $\Omega'(E'_r)$ il numero dei microstati della riserva termica compatibili con l'energia $E'_r$; risulterà chiaro che più grande $\Omega'(E'_r)$, più grande la probabilità che il sistema fisico abbia energia $E_r$. Se inoltre si considera che tutti i microstati compatibili con $E'_r$ sono ugualmente probabili si arriva alla conclusione che la probabilità $P_r$ di osservare un'energia $E_r$ nel sistema fisico è direttamente proporzionale a $\Omega'(E'_r)$ stesso.
 
-Tenendo conto della (\ref{eq:cond1}) possiamo espandere intorno al caso $E_r \simeq 0$:
+Tenendo conto della (\ref{eq:04-cond1}) possiamo espandere intorno al caso $E_r \simeq 0$:
 \be
 \ln\Omega'(E'_r) = \ln\Omega'(E_0) + E_r\dpar{\ln\Omega'}{E'_r} + \cdots \simeq \mbox{\textrm{cost}} - \beta'E_r
 \ee
@@ -38,21 +39,22 @@ P_r = \frac{e^{-\beta E_r}}{\sum_s e^{-\beta E_s}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{L'\ensemble\ canonico}
+\label{sec:04-ensemble}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Consideriamo un \ensemble\ di $\calN$ copie mentali dello stesso sistema fisico; $n_k$ rappresenta il numero di copie con energia $E_k$. L'energia totale dell'\ensemble, ossia la somma di tutte le energie dei sistemi nell'\ensemble, vale $\calE$. Naturalmente $E_k$ e $n_k$ devono soddisfare i vincoli
 \bea
-\label{eq:condcan}
+\label{eq:04-condcan}
 \sum_{k}n_k      &=& \calN\nonumber\\
 \sum_{k} E_k n_k &=& \calE \equiv U\calN
 \eea
 in cui $U$ è l'energia media dell'\ensemble\ che coincide proprio con l'energia interna del sistema fisico originale. 
-Qualsiasi insieme $\nkset$ che soddisfi i vincoli (\ref{eq:condcan}) rappresenta un modo possibile di distribuire l'energia $\calE$ tra gli $\calN$ membri dell'\ensemble. Inoltre ognuno di questi modi possibili può essere ottenuto in molti modi diversi, perché possiamo sempre pensare di permutare i sistemi: per esempio potremmo prendere un sistema con energia $E_1$ e scambiarlo con un sistema con energia $E_5$, ottenendo un altro modo possibile di avere lo stesso set $\nkset$. Chiamiamo $\Wnk$ il numero di modi in cui possiamo ottenere il set $\nkset$:
+Qualsiasi insieme $\nkset$ che soddisfi i vincoli (\ref{eq:04-condcan}) rappresenta un modo possibile di distribuire l'energia $\calE$ tra gli $\calN$ membri dell'\ensemble. Inoltre ognuno di questi modi possibili può essere ottenuto in molti modi diversi, perché possiamo sempre pensare di permutare i sistemi: per esempio potremmo prendere un sistema con energia $E_1$ e scambiarlo con un sistema con energia $E_5$, ottenendo un altro modo possibile di avere lo stesso set $\nkset$. Chiamiamo $\Wnk$ il numero di modi in cui possiamo ottenere il set $\nkset$:
 \be
-\label{eq:W}
+\label{eq:04-W}
 \Wnk = \frac{\calN!}{n_0!n_1!n_2!\cdots}
 \ee
-Considerando che tutti i possibili stati dell'\ensemble\ compatibili con le (\ref{eq:condcan}) hanno la stessa probabilità di occorrere, la frequenza con cui apparirà un determinato insieme 
+Considerando che tutti i possibili stati dell'\ensemble\ compatibili con le (\ref{eq:04-condcan}) hanno la stessa probabilità di occorrere, la frequenza con cui apparirà un determinato insieme 
 $\nkset$ sarà proporzionale a $\Wnk$
 
 Il nostro obiettivo è quello di calcolare la probabilità $P_k$ di trovare uno degli elementi dell'\ensemble\ in uno stato con energia $E_k$; naturalmente avremo
@@ -61,10 +63,10 @@ P_k = \frac{\aspetta{n_k}}{\calN}
 \ee
 in cui per definizione di media sull'\ensemble\ avremo
 \be
-\label{eq:nrmean}
+\label{eq:04-nrmean}
 \aspetta{n_k} = \frac{\sum_{\nkset}'n_k \Wnk}{\sum_{\nkset}' \Wnk}
 \ee
-e l'apice sulle sommatorie serve a ricordare che le sommatorie stesse devono essere fatte rispettando i vincoli (\ref{eq:condcan}). Possiamo anche cercare l'insieme $\nkset$ più probabile, $n_k^*$; come vedremo, nel limite $\calN\to\infty$ i due risultati coincidono. Cominciamo quindi la derivazione dell'\ensemble\ canonico con il metodo del valore più probabile.
+e l'apice sulle sommatorie serve a ricordare che le sommatorie stesse devono essere fatte rispettando i vincoli (\ref{eq:04-condcan}). Possiamo anche cercare l'insieme $\nkset$ più probabile, $n_k^*$; come vedremo, nel limite $\calN\to\infty$ i due risultati coincidono. Cominciamo quindi la derivazione dell'\ensemble\ canonico con il metodo del valore più probabile.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Il metodo del valore più probabile}
@@ -72,14 +74,14 @@ e l'apice sulle sommatorie serve a ricordare che le sommatorie stesse devono ess
 
 L'insieme $n_k^*$ sarà tale da massimizzare $\Wnk$. Come al solito lavoriamo con il logaritmo e assumiamo che $n_k\gg 1$ per ogni $k$:
 \be
-\label{eq:lnW}
+\label{eq:04-lnW}
 \ln W = \ln(\calN!) - \sum_k\ln(n_k!) \simeq \calN\ln\calN - \sum_k n_k\ln n_k
 \ee
-in cui nell'ultimo passaggio abbiamo usato la formula di Stirling. Se adesso passiamo da $\nkset$ a un insieme leggermente diverso, $\dnkset$, l'espressione (\ref{eq:lnW}) cambierà di una quantità
+in cui nell'ultimo passaggio abbiamo usato la formula di Stirling. Se adesso passiamo da $\nkset$ a un insieme leggermente diverso, $\dnkset$, l'espressione (\ref{eq:04-lnW}) cambierà di una quantità
 \be
 \delta(\ln W) = -\sum_k(\ln n_k + 1)\delta n_k
 \ee
-e se il set $\nkset$ è quello più probabile allora $\delta(\ln W) = 0$. A causa dei vincoli (\ref{eq:condcan}) le variazioni $\delta n_k$ non possono essere arbitrarie, ma devono a loro volta sottostare ai vincoli
+e se il set $\nkset$ è quello più probabile allora $\delta(\ln W) = 0$. A causa dei vincoli (\ref{eq:04-condcan}) le variazioni $\delta n_k$ non possono essere arbitrarie, ma devono a loro volta sottostare ai vincoli
 \bea
 \sum_k \delta n_k     &=& 0\nonumber\\
 \sum_k E_k \delta n_k &=& 0
@@ -111,32 +113,32 @@ Come vedremo in seguito, è naturale identificare ancora una volta $\beta$ con l
 \subsection{Il metodo di Darwin--Fowler}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Il nostro obiettivo è ora quello di calcolare $\aspetta{n_k}$; vedi eq. (\ref{eq:nrmean}). Per prima cosa introduciamo dei parametri reali $w_k$ e definiamo la funzione
+Il nostro obiettivo è ora quello di calcolare $\aspetta{n_k}$; vedi eq. (\ref{eq:04-nrmean}). Per prima cosa introduciamo dei parametri reali $w_k$ e definiamo la funzione
 \be
 \widetilde{W}\nkset = \Wnk w_0^{n_0} w_1^{n_1} w_2^{n_2}\dots 
 \ee
 Introduciamo ora
 \be
-\label{eq:gamnu}
+\label{eq:04-gamnu}
 \Gamma(\calN,U) \equiv \sum_{\nkset}''\widetilde{W}\nkset
 \ee
-dove si nota che la sommatoria è ancora sottoposta ai vincoli (\ref{eq:condcan}). Il motivo per cui si è scelto di indicare i vincoli con due apici sarà chiaro tra poco. La definizione (\ref{eq:gamnu}) ci permette di scrivere
+dove si nota che la sommatoria è ancora sottoposta ai vincoli (\ref{eq:04-condcan}). Il motivo per cui si è scelto di indicare i vincoli con due apici sarà chiaro tra poco. La definizione (\ref{eq:04-gamnu}) ci permette di scrivere
 \be
 \aspetta{n_k} = w_k\dpar{}{w_k}\ln\Gamma(\calN,U)|_{w_r = 1\;\;\forall\;\;r}
 \ee
 Dalla definizione di $\widetilde{W}\nkset$ abbiamo subito che
 \be
-\label{eq:gamnu2}
+\label{eq:04-gamnu2}
 \Gamma(\calN,U) \equiv \sum_{\nkset}''\calN!\frac{w_0^{n_0}}{n_0!}
 \frac{w_1^{n_1}}{n_1!}\frac{w_2^{n_2}}{n_2!}\cdots
 \ee
-Ora, se non ci fosse il secondo dei vincoli (\ref{eq:condcan}) ma solo il primo, potremmo calcolare $\Gamma(\calN,U)$ al volo, applicando banalmente il teorema multinomiale (vedi sezione (\ref{subsec:app1-multinomiale}) dell'Appendice \ref{app:matematica}):
+Ora, se non ci fosse il secondo dei vincoli (\ref{eq:04-condcan}) ma solo il primo, potremmo calcolare $\Gamma(\calN,U)$ al volo, applicando banalmente il teorema multinomiale (vedi sezione (\ref{subsec:app1-multinomiale}) dell'Appendice \ref{app:matematica}):
 \be
 \Gamma(\calN,U) = (w_0 + w_1 + w_2 + \cdots)^\calN
 \ee
 Per poter ricavare $\Gamma$ introduciamo un'altra funzione:
 \bea
-\label{eq:gammatilde}
+\label{eq:04-gammatilde}
 \widetilde{\Gamma}(\calN,U;z) &\equiv& \sum_{\nkset}'\calN!\frac{w_0^{n_0}}{n_0!}
 \frac{w_1^{n_1}}{n_1!}\frac{w_2^{n_2}}{n_2!}\cdots z^\calE\nonumber\\
 &=& \sum_{\nkset}'\calN!\frac{w_0^{n_0}}{n_0!}
@@ -144,9 +146,9 @@ Per poter ricavare $\Gamma$ introduciamo un'altra funzione:
 &=& \sum_{\nkset}'\calN!\frac{(w_0 z^{E_0})^{n_0}}{n_0!}
 \frac{(w_1 z^{E_1})^{n_1}}{n_1!}\frac{(w_2 z^{E_2})^{n_2}}{n_2!}\cdots
 \eea
-in cui $z$ è una variabile complessa. Ora l'apice sulla sommatoria è diventato solo uno, per ricordarci che il secondo dei vincoli, quello sull'energia, è caduto: il vincolo sull'energia è stato implementato quando abbiamo scritto esplicitamente, nella (\ref{eq:gammatilde}), $z^\calE = z^{n_0E_0+n_1E_1+...}$. Rimane dunque solo il primo vincolo.
+in cui $z$ è una variabile complessa. Ora l'apice sulla sommatoria è diventato solo uno, per ricordarci che il secondo dei vincoli, quello sull'energia, è caduto: il vincolo sull'energia è stato implementato quando abbiamo scritto esplicitamente, nella (\ref{eq:04-gammatilde}), $z^\calE = z^{n_0E_0+n_1E_1+...}$. Rimane dunque solo il primo vincolo.
 
-A questo punto dobbiamo ricorrere a un trucco. Prima di tutto, poiché l'energia, almeno classicamente, è sempre definita a meno di una costante additiva arbitraria, siamo liberi di porre $E_0 = 0$. Inoltre scegliamo un'unità di misura per l'energia talmente fine da rendere le $E_k$ numeri interi a tutti gli effetti pratici (se si pensa ai livelli di energia quantistici di una particella in una scatola si vede subito che questo è certamente possibile). Inoltre la nostra unità di misura per l'energia è tale che le $E_k$ non hanno nessun divisore comune (questa è un'assunzione che ci servirà in seguito). Per giustificare la fondatezza di quest'ultima assunzione basti pensare che se gli $E_k$ avessero un divisore comune allora anche $\calE$ l'avrebbe, perché altrimenti il secondo dei vincoli (\ref{eq:condcan}) non sarebbe soddisfatto. Sia ora $\tau$ il massimo comun divisore: in altre parole posso sempre scrivere
+A questo punto dobbiamo ricorrere a un trucco. Prima di tutto, poiché l'energia, almeno classicamente, è sempre definita a meno di una costante additiva arbitraria, siamo liberi di porre $E_0 = 0$. Inoltre scegliamo un'unità di misura per l'energia talmente fine da rendere le $E_k$ numeri interi a tutti gli effetti pratici (se si pensa ai livelli di energia quantistici di una particella in una scatola si vede subito che questo è certamente possibile). Inoltre la nostra unità di misura per l'energia è tale che le $E_k$ non hanno nessun divisore comune (questa è un'assunzione che ci servirà in seguito). Per giustificare la fondatezza di quest'ultima assunzione basti pensare che se gli $E_k$ avessero un divisore comune allora anche $\calE$ l'avrebbe, perché altrimenti il secondo dei vincoli (\ref{eq:04-condcan}) non sarebbe soddisfatto. Sia ora $\tau$ il massimo comun divisore: in altre parole posso sempre scrivere
 \be
 \tau\calE' = \tau\sum_k n_k E_k'
 \ee
@@ -154,33 +156,33 @@ in cui le variabili primate continuano a essere numeri interi. Se ora divido ent
 
 Adesso possiamo finalmente applicare il teorema multinomiale e scrivere
 \be
-\label{eq:serie1}
+\label{eq:04-serie1}
 \widetilde{\Gamma}(\calN,U;z) = (w_0 z^{E_0} + w_1 z^{E_1} + w_2 z^{E_2} + \cdots)^\calN \equiv f^\calN(z)
 \ee
 Ora espandiamo in serie la funzione, scrivendo
 \be
-\label{eq:serie2}
+\label{eq:04-serie2}
 \widetilde{\Gamma}(\calN,U;z) = \sum_n\Gamma_n z^n
 \ee
-e risulta subito evidente dalla definizione (\ref{eq:gammatilde}) che $\Gamma(\calN,U) = \Gamma_{\calE}$ (ricordiamo che $\calE$, con la nuova scala dell'energia, è diventato un numero intero). Per il nostro calcolo dobbiamo quindi solo ricavare il coefficiente $\Gamma_{\calE}$ dell'espansione, e il teorema dei residui ci permette di scrivere
+e risulta subito evidente dalla definizione (\ref{eq:04-gammatilde}) che $\Gamma(\calN,U) = \Gamma_{\calE}$ (ricordiamo che $\calE$, con la nuova scala dell'energia, è diventato un numero intero). Per il nostro calcolo dobbiamo quindi solo ricavare il coefficiente $\Gamma_{\calE}$ dell'espansione, e il teorema dei residui ci permette di scrivere
 \be
-\label{eq:residui}
+\label{eq:04-residui}
 \Gamma(\calN,U) = \frac{1}{2\pi i}\oint\frac{\widetilde{\Gamma}(\calN,U;z)}{z^{\calE+1}}\de z
 \ee
-La serie (\ref{eq:serie2}) ha un raggio di convergenza $\rho$ (quale che sia, $\rho \le 1$). Se si analizza separatamente il comportamento del numeratore e del denominatore della funzione integranda nella (\ref{eq:residui}) (vedi figura \ref{fig:04-x0}) ci si rende subito conto che la funzione integranda stessa deve avere, sull'asse reale, un unico minimo per un valore $x_0 < 1$ della parte reale $x$ di $z = x + iy$. Intuitivamente possiamo ragionare così; nella funzione integranda il numeratore parte da $1$ per $z=0$ e va monotonicamente all'infinito positivo verso il bordo di convergenza della serie (\ref{eq:serie1}). Il fattore $z^{-\calE-1}$ parte dall'infinito positivo per $z=0$ e decresce monotonicamente verso $0$, conservando un valore finito sul bordo di convergenza della serie (\ref{eq:serie1}). Che ci debba essere un minimo in $x_0$, con $0 < x_0 < 1$ è evidente. Per i dettagli della dimostrazione che il minimo è unico si veda \cite{Schr}.
+La serie (\ref{eq:04-serie2}) ha un raggio di convergenza $\rho$ (quale che sia, $\rho \le 1$). Se si analizza separatamente il comportamento del numeratore e del denominatore della funzione integranda nella (\ref{eq:04-residui}) (vedi figura \ref{fig:04-x0}) ci si rende subito conto che la funzione integranda stessa deve avere, sull'asse reale, un unico minimo per un valore $x_0 < 1$ della parte reale $x$ di $z = x + iy$. Intuitivamente possiamo ragionare così; nella funzione integranda il numeratore parte da $1$ per $z=0$ e va monotonicamente all'infinito positivo verso il bordo di convergenza della serie (\ref{eq:04-serie1}). Il fattore $z^{-\calE-1}$ parte dall'infinito positivo per $z=0$ e decresce monotonicamente verso $0$, conservando un valore finito sul bordo di convergenza della serie (\ref{eq:04-serie1}). Che ci debba essere un minimo in $x_0$, con $0 < x_0 < 1$ è evidente. Per i dettagli della dimostrazione che il minimo è unico si veda \cite{Schr}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
-  \label{fig:04-x0}
   \centering
   \input{figMS/04-x0-df}
   \caption{Determinazione di $x_0$} 
+  \label{fig:04-x0}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Per ottenere la condizione di minimo scriviamo
 \be
 \frac{f^\calN(z)}{z^{\calE+1}} \equiv e^{\calN g(z)}
 \ee
-e poiché il circuito chiuso nell'integrale della (\ref{eq:residui}) è arbitrario, lo prendiamo essere un cerchio di raggio $x_0$. La condizione di minimo
+e poiché il circuito chiuso nell'integrale della (\ref{eq:04-residui}) è arbitrario, lo prendiamo essere un cerchio di raggio $x_0$. La condizione di minimo
 \be
 \frac{\de e^{\calN g(x)}}{\de x} = 0
 \ee
@@ -194,7 +196,7 @@ g(x) = \frac{1}{\calN}(\calN\ln f - (\calN U + 1)\ln x) \simeq \ln f - U\ln x
 \ee
 in cui nell'ultimo passaggio abbiamo sfruttato il fatto che $\calN U \gg 1$. Abbiamo dunque la condizione
 \be
-\label{eq:condmin}
+\label{eq:04-condmin}
 g'(x_0) = \frac{f'(x_0)}{f(x_0)} - \frac{U}{x_0} = 0
 \ee
 Teniamo a mente questo risultato: anche nel limite $\calN\to\infty$, il valore di $x_0$ è indipendente da $\calN$. Poi, ricordando che
@@ -209,7 +211,7 @@ e introducendo il parametro $\beta$
 \be
 x_0 \equiv e^{-\beta}
 \ee
-dalla (\ref{eq:condmin}) possiamo ricavare immediatamente
+dalla (\ref{eq:04-condmin}) possiamo ricavare immediatamente
 \be
 U = \frac{\sum_k E_k w_k e^{-\beta E_k}}{\sum_k w_k e^{-\beta E_k}}
 \ee
@@ -225,26 +227,26 @@ g''(x_0) &=& \frac{f''(x_0)}{f(x_0)} - \left(\frac{f'(x_0)}{f(x_0)}\right)^2 + \
 \eea
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
-  \label{fig:04-sella}
   \centering
   \includegraphics[width=0.7\textwidth]{saddle-point.png}
   \caption{Un punto di sella} 
+  \label{fig:04-sella}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Notiamo che anche $g''(x_0)$ rimane indipendente da $\calN$ nel limite $\calN\to\infty$. Per svolgere l'integrale (\ref{eq:residui}) ragioniamo in questo modo: tenendo conto che nel limite $\calN\to\infty$ il minimo in direzione $x$ è {\em molto profondo} e il massimo in direzione $y$ è {\em molto piccato}, spezziamo l'integrale circolare in due parti: un breve tratto (da $-\varepsilon$ a $\varepsilon$), che possiamo considerare rettilineo, in direzione immaginaria; e poi il resto della circonferenza:
+Notiamo che anche $g''(x_0)$ rimane indipendente da $\calN$ nel limite $\calN\to\infty$. Per svolgere l'integrale (\ref{eq:04-residui}) ragioniamo in questo modo: tenendo conto che nel limite $\calN\to\infty$ il minimo in direzione $x$ è {\em molto profondo} e il massimo in direzione $y$ è {\em molto piccato}, spezziamo l'integrale circolare in due parti: un breve tratto (da $-\varepsilon$ a $\varepsilon$), che possiamo considerare rettilineo, in direzione immaginaria; e poi il resto della circonferenza:
 \be
-\label{eq:spezza}
+\label{eq:04-spezza}
 \frac{1}{2\pi i}\oint \frac{f^\calN}{z^{\calE+1}}\de z =
 \frac{1}{2\pi i}\left\{ \int_{-\varepsilon}^{\varepsilon}\frac{f^\calN}{y^{\calE+1}} i \de y
 +\int_{C}\frac{f^\calN}{z^{\calE+1}}\de z\right\}
 \ee
-in cui la curva $C$ nel secondo integrale a destra è quasi tutta la circonferenza tranne il pezzettino di lunghezza $2\varepsilon$ che abbiamo spostato nell'integrale in $\de y$. Come vedremo in seguito, nel limite $\calN\to\infty$ l'integrale su $C$ nella (\ref{eq:spezza}) diventa trascurabile; per il momento lo ignoriamo. Per quel che riguarda invece il primo integrale, considerando che solo la regione immediatamente vicina a $x_0$ dà contributi significativi, siamo liberi di mandare $\varepsilon\to\infty$. Se approssimiamo $g(z)$, in direzione $y$, con il suo sviluppo in serie di Taylor al secondo ordine,
+in cui la curva $C$ nel secondo integrale a destra è quasi tutta la circonferenza tranne il pezzettino di lunghezza $2\varepsilon$ che abbiamo spostato nell'integrale in $\de y$. Come vedremo in seguito, nel limite $\calN\to\infty$ l'integrale su $C$ nella (\ref{eq:04-spezza}) diventa trascurabile; per il momento lo ignoriamo. Per quel che riguarda invece il primo integrale, considerando che solo la regione immediatamente vicina a $x_0$ dà contributi significativi, siamo liberi di mandare $\varepsilon\to\infty$. Se approssimiamo $g(z)$, in direzione $y$, con il suo sviluppo in serie di Taylor al secondo ordine,
 \be
 g(z) \simeq g(x_0) - \frac{1}{2}y^2g''(x_0)\quad\mbox{\textrm{in direzione}}\ y
 \ee
 otteniamo immediatamente
 \be
-\label{eq:gammanu}
+\label{eq:04-gammanu}
 \Gamma(\calN,U) \simeq \frac{1}{2\pi}\frac{f^\calN(x_0)}{x_0^{\calE+1}}\int_{-\infty}^{\infty}\de y\; e^{-\calN a y^2/2} = \frac{f^\calN(x_0)}{x_0^{\calE+1}\sqrt{2\pi\calN a}}
 \ee
 in cui abbiamo posto $g''(x_0)\equiv a$. Possiamo quindi scrivere
@@ -253,7 +255,7 @@ in cui abbiamo posto $g''(x_0)\equiv a$. Possiamo quindi scrivere
 \ee
 Notiamo due cose: prima di tutto possiamo porre $(\calE+1)/\calN\simeq U$, perché $\calE\gg 1$; in secondo luogo vediamo che l'ultimo termine scompare nel limite $\calN\to\infty$ in virtù del fatto che $a$ è indipendente da $\calN$. Otteniamo quindi
 \be
-\label{eq:lgamma}
+\label{eq:04-lgamma}
 \frac{1}{\calN}\ln\Gamma(\calN,U) = \ln\left(\sum_k w_k e^{-\beta E_k}\right) + \beta U
 \ee
 Finalmente possiamo scrivere
@@ -266,9 +268,9 @@ L'ultima parentesi tonda nella precedente è identicamente nulla, e otteniamo
 \be
 \frac{\aspetta{n_r}}{\calN} = \frac{e^{-\beta E_r}}{\sum_k e^{-\beta E_k}}
 \ee
-Alla fine di questo lungo viaggio abbiamo scoperto che il valor medio $\aspetta{n_r}$ coincide col valore più probabile $n_r^*$. Ci restano due cose da fare; la prima è dimostrare che l'integrale su $C$, nell'eq. (\ref{eq:spezza}), è trascurabile; la seconda è mostrare che le fluttuazioni di $\aspetta{n_r}$ sono ininfluenti e scompaiono nel limite termodinamico. Se non lo fossero l'uguaglianza $n_r^* = \aspetta{n_r}$ potrebbe essere una mera coincidenza numerica, derivante da una distribuzione molto larga. Scopriremo invece che la distribuzione dei set $\nkset$, nel limite $\calN\to\infty$, è talmente piccata intorno al valore più probabile che a tutti gli effetti pratici possiamo considerare $n_r^*$ al posto di $\aspetta{n_r}$.
+Alla fine di questo lungo viaggio abbiamo scoperto che il valor medio $\aspetta{n_r}$ coincide col valore più probabile $n_r^*$. Ci restano due cose da fare; la prima è dimostrare che l'integrale su $C$, nell'eq. (\ref{eq:04-spezza}), è trascurabile; la seconda è mostrare che le fluttuazioni di $\aspetta{n_r}$ sono ininfluenti e scompaiono nel limite termodinamico. Se non lo fossero l'uguaglianza $n_r^* = \aspetta{n_r}$ potrebbe essere una mera coincidenza numerica, derivante da una distribuzione molto larga. Scopriremo invece che la distribuzione dei set $\nkset$, nel limite $\calN\to\infty$, è talmente piccata intorno al valore più probabile che a tutti gli effetti pratici possiamo considerare $n_r^*$ al posto di $\aspetta{n_r}$.
 
-Iniziamo dal primo problema, l'ininfluenza del secondo integrale nel membro a destra della (\ref{eq:spezza}). Dobbiamo dimostrare che nel limite $\calN\to\infty$ l'integrale
+Iniziamo dal primo problema, l'ininfluenza del secondo integrale nel membro a destra della (\ref{eq:04-spezza}). Dobbiamo dimostrare che nel limite $\calN\to\infty$ l'integrale
 \be
 \frac{1}{2\pi i}\int_C\frac{f^\calN(z)}{z^{\calE+1}}\de z
 \ee
@@ -282,7 +284,7 @@ Avremo quindi
 \frac{1}{2\pi}\frac{M^\calN}{x_0^{\calE+1}} \oint\de\theta \simeq 
 \left(\frac{M}{x_0^U}\right)^\calN = \left(\frac{f(x_0)}{x_0^U}\right)^\calN\left(\frac{M}{f(x_0)}\right)^\calN
 \ee
-Confrontando il risultato appena ottenuto con la (\ref{eq:gammanu}) si vede subito che il secondo integrale nella (\ref{eq:spezza}) dà un contributo trascurabile. Ma ciò è vero solo se $M = f(x_0)$ solo per $z = x_0$. Immaginiamo che per un certo angolo $\phi$ tutti i termini della serie che definisce $f(z)$ divengano reali (questo è il disastro che vogliamo evitare). Ciò implicherebbe che tutte le quantità $E_k\phi$ sono multiple intere di $2\pi$:
+Confrontando il risultato appena ottenuto con la (\ref{eq:04-gammanu}) si vede subito che il secondo integrale nella (\ref{eq:04-spezza}) dà un contributo trascurabile. Ma ciò è vero solo se $M = f(x_0)$ solo per $z = x_0$. Immaginiamo che per un certo angolo $\phi$ tutti i termini della serie che definisce $f(z)$ divengano reali (questo è il disastro che vogliamo evitare). Ciò implicherebbe che tutte le quantità $E_k\phi$ sono multiple intere di $2\pi$:
 \be
 E_k = m_k\frac{2\pi}{\phi}
 \ee
@@ -302,7 +304,7 @@ L'apice su $\Gamma$ indica derivazione rispetto a $w_r$. Nell'ultimo termine ric
 \be
 \aspetta{n_r^2} = \frac{1}{\Gamma}\left( w_r\dpar{}{w_r} \right)\left( w_r\dpar{}{w_r} \right)\Gamma
 \ee
-Tenendo conto della (\ref{eq:lgamma}) scriviamo
+Tenendo conto della (\ref{eq:04-lgamma}) scriviamo
 \be
 \frac{\aspetta{(\Delta n_r)^2}}{\calN} = w_r\dpar{}{w_r}\left\{ \frac{w_r e^{-\beta E_r}}{\sum_k w_k e^{-\beta E_k}}
 +\dpar{\beta}{w_r}\left[ U - \frac{\sum_k w_k E_k e^{-\beta E_k}}{\sum_k w_k e^{-\beta E_k}}
@@ -316,7 +318,7 @@ Il termine tra parentesi quadre nella precedente è identicamente nullo, ma ci r
 \ee
 Riconosciamo immediatamente i primi due termini, e tralasciando per un istante la derivata di $\beta$ rispetto a $w_r$ otteniamo
 \be
-\label{eq:terzu}
+\label{eq:04-terzu}
 \frac{\aspetta{(\Delta n_r)^2}}{\calN} = \frac{\aspetta{n_r}}{\calN} - \left( \frac{\aspetta{n_r}}{\calN} \right)^2
 + w_r \dpar{\beta}{w_r} \frac{\aspetta{n_r}}{\calN} (U - E_r)
 \ee
@@ -326,14 +328,14 @@ U = \frac{\sum_k w_k E_k e^{-\beta E_k}}{\sum_k w_k e^{-\beta E_k}}
 \ee
 con la richiesta $U = \mathrm{costante}$. Utilizziamo quest'ultima relazione per scrivere
 \be
-\label{eq:dlnu}
+\label{eq:04-dlnu}
 \de\ln U = 0
 \ee
 Per semplificare la notazione introduciamo le quantità
 \be
 s_n = \sum_r w_r E_r^n e^{-\beta E_r}
 \ee
-e scriviamo dunque $\ln U = \ln s_1 - \ln s_0$. Quindi, per la (\ref{eq:dlnu}), variando $\beta$ e solo una delle $w_k$, diciamo $w_r$, abbiamo
+e scriviamo dunque $\ln U = \ln s_1 - \ln s_0$. Quindi, per la (\ref{eq:04-dlnu}), variando $\beta$ e solo una delle $w_k$, diciamo $w_r$, abbiamo
 \be
 \frac{\de s_1}{s_1} - \frac{\de s_0}{s_0} = 
 \frac{E_r e^{-\beta E_r}\de w_r - s_2\de\beta}{s_1} - \frac{e^{-\beta E_r}\de w_r - s_1\de\beta}{s_0} = 0
@@ -346,7 +348,7 @@ e ripristinando la solita notazione otteniamo finalmente
 \be
 w_r\dpar{\beta}{w_r} = \frac{\aspetta{n_r}}{\calN} \frac{E_r - U}{\aspetta{E_r^2} - U^2}
 \ee
-Inserendo l'ultima equazione nella (\ref{eq:terzu}) possiamo scrivere
+Inserendo l'ultima equazione nella (\ref{eq:04-terzu}) possiamo scrivere
 \be
 \frac{\aspetta{(\Delta n_r)^2}}{\calN} = \frac{\aspetta{n_r}}{\calN}
 \left\{
@@ -364,36 +366,37 @@ Se vogliamo che $P_r$ abbia un limite finito, nel limite $\calN\to\infty$ anche 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Significato fisico delle quantità statistiche}
+\label{sec:04-significato}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Riprendiamo l'espressione per la distribuzione canonica:
 \be
-\label{eq:distcan}
+\label{eq:04-distcan}
 P_r \equiv \frac{\aspetta{n_r}}{\calN} = \frac{e^{-\beta E_r}}{\sum_s e^{-\beta E_s}}
 \ee
 in cui $\beta$ è determinato dall'equazione
 \be
-\label{eq:defbeta}
+\label{eq:04-defbeta}
 U = \frac{\sum_r E_r e^{-\beta E_r}}{\sum_r e^{-\beta E_r}} = -\dpar{}{\beta}\ln\left\{ \sum_r e^{-\beta E_r} \right\}
 \ee
 Per ricavare informazioni sulle varie quantità fisiche del sistema macroscopico ricordiamo alcune relazioni termodinamiche fondamentali che riguardano l'energia libera di Helmholtz $A = U - TS$:
 \be
-\label{eq:dA}
+\label{eq:04-dA}
 \de A = \de U - T\de S - S\de T = -S\de T - P\de V + \mu\de N
 \ee
 \be
-\label{eq:maxdA}
+\label{eq:04-maxdA}
 S   = -\dparc{A}{T}{N,V} \quad
 P   = -\dparc{A}{V}{N,T} \quad
 \mu =  \dparc{A}{N}{V,T}
 \ee
 e infine
 \be
-\label{eq:defU}
+\label{eq:04-defU}
 U = A + TS = A - T\dparc{A}{T}{N,V} = -T^2\left[ \dpar{}{T} \left( \frac{A}{T} \right) \right]_{N,V}
 = \left[ \dpar{(A/T)}{(1/T)} \right]_{N,V}
 \ee
-Confrontando la (\ref{eq:defU}) con la (\ref{eq:defbeta}) ci accorgiamo subito che possiamo stabilire una corrispondenza tra quantità fisiche macroscopiche e le quantità statistiche. In particolare troviamo (come si poteva facilmente immaginare) che
+Confrontando la (\ref{eq:04-defU}) con la (\ref{eq:04-defbeta}) ci accorgiamo subito che possiamo stabilire una corrispondenza tra quantità fisiche macroscopiche e le quantità statistiche. In particolare troviamo (come si poteva facilmente immaginare) che
 \be
 \beta = \frac{1}{kT}
 \ee
@@ -403,14 +406,14 @@ A = -kT \ln\left\{ \sum_r e^{-\beta E_r} \right\}
 \ee
 che riscriviamo in questo modo:
 \be
-\label{eq:introQ}
+\label{eq:04-introQ}
 A = -kT \ln Q_N(V,T)
 \ee
 in cui $Q_N(V,T) = \sum_r e^{-\beta E_r}$ è la così detta {\em funzione di partizione canonica} del sistema. La dipendenza di $Q$ da $N$ e $T$ è abbastanza ovvia. La dipendenza da $V$ è data dalla dipendenza diretta dai livelli di energia $E_r$.
 
-Nota la funzione di partizione $Q$ di un sistema, e dunque l'energia libera di Helmholtz $A$, possono essere ricavate tutte le altre quantità termodinamiche. Per entropia, pressione e potenziale chimico abbiamo già visto: equazione (\ref{eq:maxdA}). Per il calore specifico a volume costante abbiamo
+Nota la funzione di partizione $Q$ di un sistema, e dunque l'energia libera di Helmholtz $A$, possono essere ricavate tutte le altre quantità termodinamiche. Per entropia, pressione e potenziale chimico abbiamo già visto: equazione (\ref{eq:04-maxdA}). Per il calore specifico a volume costante abbiamo
 \be
-\label{eq:cvA}
+\label{eq:04-cvA}
 C_V = \dparc{U}{T}{N,V} = -T\left( \frac{\partial^2 A}{\partial T^2} \right)_{N,V}
 \ee
 Occorre tenere presente che l'energia libera $A(N,V,T)$ è una quantità estensiva: ciò implica che dev'essere una funzione omogenea di grado $1$ rispetto a $N$ e $V$, a loro volta estensive. Il fatto che sia omogenea di grado $1$ significa che
@@ -435,14 +438,14 @@ ma
 \ee
 e scegliendo $\alpha = 1$ otteniamo la dimostrazione. Questo teorema ci permette di scrivere
 \be
-\label{eq:eulerA}
+\label{eq:04-eulerA}
 N\dparc{A}{N}{V,T} + V\dparc{A}{V}{N,T} = A
 \ee
 Per l'energia libera di Gibbs otteniamo
 \be
 G = A + PV = A - V\dparc{A}{V}{N,T} = N\dparc{A}{N}{V,T} = N\mu
 \ee
-in cui nel penultimo passaggio abbiamo usato la (\ref{eq:eulerA}).
+in cui nel penultimo passaggio abbiamo usato la (\ref{eq:04-eulerA}).
 
 Per l'entropia, poiché $P_r = \exp(-\beta E_r)/Q$, troviamo
 \be
@@ -450,18 +453,19 @@ Per l'entropia, poiché $P_r = \exp(-\beta E_r)/Q$, troviamo
 \ee
 e dunque
 \be
-\label{eq:sprob}
+\label{eq:04-sprob}
 S = -k\aspetta{\ln P_r} = -k \sum_r P_r\ln P_r
 \ee
 Questa è una relazione estremamente interessante perché dimostra che l'entropia di un sistema fisico è determinata completamente e unicamente dai valori $P_r$ della probabilità che il sistema ha di essere in un determinato stato accessibile. Questo fatto ha un'importanza che è difficile sottovalutare, e porta a diverse conclusioni notevoli. Per esempio, se lo stato di minima energia ({\em ground state}) di un sistema è non degenere, a temperatura nulla il sistema non avrà alternative e potrà stare in un unico stato, col risultato che solo una delle $P_r$ vale $1$, e tutte le altre $0$. Otteniamo dunque un'entropia nulla. Questo è il teorema di Nernst, o terzo principio della termodinamica.
 
-Si può notare che la (\ref{eq:sprob}) vale anche nel microcanonico: poiché in quel caso ogni microstato è equiprobabile e il numero dei microstati è $\Omega$, abbiamo che $P_r = 1/\Omega$ per ogni $r$. Quindi
+Si può notare che la (\ref{eq:04-sprob}) vale anche nel microcanonico: poiché in quel caso ogni microstato è equiprobabile e il numero dei microstati è $\Omega$, abbiamo che $P_r = 1/\Omega$ per ogni $r$. Quindi
 \be
 S = -k\sum_{r=1}^\Omega\left\{ \frac{1}{\Omega}\ln\left( \frac{1}{\Omega} \right) \right\} = k\ln\Omega
 \ee
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Espressioni alternative per la funzione di partizione}
+\label{sec:04-espressioni-alternative}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In tutto ciò che precede bisogna fare attenzione a non confondere gli stati $r$ con energia $E_r$, in cui il sistema fisico può stare, con i possibili livelli di energia del sistema. In altre parole abbiamo definito la funzione di partizione proprio come la somma su tutti gli stati in cui il sistema può trovarsi, e non come una somma sui livelli di energia. Per un sistema con spettro discreto, il livello $i$ sarà o potrà essere degenere; sia dunque $g_i$ il numero di stati che ammettono energia $E_i$. La formula per la funzione di partizione diventa
@@ -483,16 +487,16 @@ P(E)\,\de E = \frac{g(E)e^{-\beta E}\de E}{\int_0^\infty g(E)e^{-\beta E}\de E}
 \ee
 Il denominatore dell'equazione precedente è un'espressione alternativa della funzione di partizione del sistema:
 \be
-\label{eq:laplace}
+\label{eq:04-laplace}
 Q_N(V,T) = \int_0^\infty g(E)e^{-\beta E}\de E
 \ee
 Per il valore di osservazione di un generico osservabile $f$ otteniamo
 \be
 \aspetta{f\,} = \frac{\int_0^\infty f(E)g(E)e^{-\beta E}\de E}{\int_0^\infty g(E)e^{-\beta E}\de E}
 \ee
-Notiamo una cosa interessante: osservando la (\ref{eq:laplace}) e poiché $\beta > 0$, vediamo che la funzione di partizione $Q(\beta)$ è la trasformata di Laplace della densità degli stati $g(E)$. Possiamo dunque ottenere $g(E)$, nota la funzione di partizione, come la trasformata di Laplace inversa di $Q(\beta)$:
+Notiamo una cosa interessante: osservando la (\ref{eq:04-laplace}) e poiché $\beta > 0$, vediamo che la funzione di partizione $Q(\beta)$ è la trasformata di Laplace della densità degli stati $g(E)$. Possiamo dunque ottenere $g(E)$, nota la funzione di partizione, come la trasformata di Laplace inversa di $Q(\beta)$:
 \bea 
-\label{eq:gfromq}
+\label{eq:04-gfromq}
 g(E) &=& \frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} e^{\beta E}Q(\beta)\de\beta\quad(\beta' > 0)
 \nonumber \\
 &=& \frac{1}{2\pi}\int_{-\infty}^{\infty}e^{(\beta'+i\beta'')E}Q(\beta'+i\beta'')\de\beta''
@@ -501,6 +505,7 @@ in cui adesso $\beta = \beta' + i\beta''$ è trattato come una variabile comples
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il gas ideale classico}
+\label{sec:04-gas-ideale}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Consideriamo ora sistemi classici che ammettono una descrizione in termini di spazio delle fasi. Il sistema tipico che abbiamo in mente è il gas ideale classico, che vedremo in dettaglio tra poco. Sia $\dephi \equiv \de^{3N}q\de^{3N}p$ un volumetto elementare nello spazio delle fasi. Dovrebbe risultare chiaro che l'espressione per $P_r$ che abbiamo ricavato nelle sezioni precedenti ci permette di scrivere
@@ -567,7 +572,7 @@ Questo è un risultato di carattere generale, che non vale solo per il gas ideal
 
 Proviamo ora a calcolare la funzione di partizione del gas ideale classico partendo dalla densità degli stati. Calcoliamo prima di tutto $Q_1(\beta)$ (nel seguito omettiamo la dipendenza dal volume):
 \be
-\label{eq:q1eps}
+\label{eq:04-q1eps}
 Q_1(\beta) = \int_0^\infty\de\varepsilon \densa e^{-\beta\varepsilon}
 \ee
 in cui abbiamo indicato con $\densa$ la densità degli stati di singola particella. Per calcolarla ragioniamo come segue. Sia $\Sigma(P)$ il numero di microstati per una particella racchiusa in un volume $V$ e con momento (in modulo) minore di $P$. Abbiamo
@@ -582,12 +587,12 @@ Se ora usiamo il fatto che $\varepsilon = p^2/2m$ otteniamo subito
 \be
 \densa =\frac{2\pi V}{h^2}(2m)^{3/2}\varepsilon^{1/2}\de\varepsilon
 \ee
-L'integrale (\ref{eq:q1eps}) può essere svolto facilmente con il cambio di variabile $x^2\equiv\varepsilon$, e il risultato è, senza nessuna sorpresa
+L'integrale (\ref{eq:04-q1eps}) può essere svolto facilmente con il cambio di variabile $x^2\equiv\varepsilon$, e il risultato è, senza nessuna sorpresa
 \be
 Q_1(\beta) = V / \lambda^3
 \ee
 
-Come ultimo punto di questa sezione ci proponiamo di calcolare la densità degli stati $g(E)$ per l'intero sistema come antitrasformata di Laplace della funzione di partizione. Abbiamo, applicando la (\ref{eq:gfromq}),
+Come ultimo punto di questa sezione ci proponiamo di calcolare la densità degli stati $g(E)$ per l'intero sistema come antitrasformata di Laplace della funzione di partizione. Abbiamo, applicando la (\ref{eq:04-gfromq}),
 \be
 g(E) = \frac{V^N}{N!}\left( \frac{2\pi m}{h^2} \right)^{3N/2}\frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} 
 \frac{e^{\beta E}}{\beta^{3N/2}}\de\beta\quad(\beta' > 0)
@@ -613,6 +618,7 @@ che è (per fortuna) il risultato corretto che avevamo già trovato, a patto di 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fluttuazioni dell'energia}
+\label{sec:04-fluttuazioni}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Nella sezione precedente abbiamo visto, considerando il gas ideale classico, che con il formalismo canonico riusciamo a ottenere, nel limite termodinamico, gli stessi risultati fisici che avevamo ottenuto con il formalismo microcanonico. Questo è un risultato generale che non si applica solo al gas ideale classico. D'altronde il contrario avrebbe significato una catastrofe: se due formalismi diversi che dovrebbero entrambi condurre alla termodinamica ci portano a soluzioni diverse c'è da dubitare di tutti i nostri risultati.
@@ -684,7 +690,7 @@ Va notato che la dispersione della gaussiana coincide col risultato che abbiamo 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il teorema di equipartizione}
-\label{sec:equipart}
+\label{sec:04-equipart}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Consideriamo il valore d'aspettazione della quantità $x_i(\partial\Ham/\partial x_j)$, nella quale $\Ham(q,p)$ è l'hamiltoniana di un sistema fisico e $x_i$ e $x_j$ sono qualsiasi due delle $6N$ coordinate generalizzate $(q,p)$. Utilizzando il formalismo dell'ensemble canonico otteniamo
@@ -715,7 +721,7 @@ Sommando su $i$ da $1$ a $3N$ otteniamo
 \ee
 Ora, in molti problemi fisici rilevanti l'hamiltoniana del sistema è una funzione quadratica delle sue coordinate generalizzate; in questo caso, tramite una trasformazione canonica, possiamo sempre scrivere
 \be
-\label{eq:hamab}
+\label{eq:04-hamab}
 \Ham = \sum_k A_k P_k^2 + \sum_k B_k Q_k^2
 \ee
 Per un tale sistema abbiamo chiaramente
@@ -726,13 +732,12 @@ e di conseguenza
 \be
 \aspetta{\Ham} = \frac{1}{2} MkT
 \ee
-in cui $M$ è il numero totale dei coefficienti $A$ e $B$ diversi da zero nella (\ref{eq:hamab}). Ne concludiamo che ciascun termine armonico nell'hamiltoniana trasformata dà un contributo pari a $\frac{1}{2}kT$ all'energia interna del sistema, e dunque un contributo $\frac{1}{2}k$ al calore specifico $C_V$. Questo risultato è noto come il teorema classico dell'equipartizione dell'energia. L'energia termica si equidistribuisce tra i vari gradi di libertà del sistema.
+in cui $M$ è il numero totale dei coefficienti $A$ e $B$ diversi da zero nella (\ref{eq:04-hamab}). Ne concludiamo che ciascun termine armonico nell'hamiltoniana trasformata dà un contributo pari a $\frac{1}{2}kT$ all'energia interna del sistema, e dunque un contributo $\frac{1}{2}k$ al calore specifico $C_V$. Questo risultato è noto come il teorema classico dell'equipartizione dell'energia. L'energia termica si equidistribuisce tra i vari gradi di libertà del sistema.
 
-%-----------------------------------------------------------------------
-% OSCILLATORI ARMONICI
-%-----------------------------------------------------------------------
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Sistema di oscillatori armonici}
+\label{sec:04-oscarm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Consideriamo un sistema di $N$ oscillatori armonici che consideriamo non interagenti. Questo sistema riveste una particolare importanza, come vedremo nel seguito, e ci fornità la base, per esempio, per studiare sia la radiazione di corpo nero (o la statistica di un gas di fotoni) sia il calore specifico dei solidi (ossia la statistica di un gas di fononi).
 
@@ -779,7 +784,7 @@ C_P = C_V = Nk
 \ee
 L'energia media per oscillatore è perfettamente in accordo col teorema di equipartizione, e cioè $2\times \frac{1}{2}kT$, poiché abbiamo due termini quadratici indipendenti per singolo oscillatore.
 
-Nota la funzione di partizione possiamo pensare di determinare la densità degli stati $g(E)$ usando l'equazione (\ref{eq:gfromq}):
+Nota la funzione di partizione possiamo pensare di determinare la densità degli stati $g(E)$ usando l'equazione (\ref{eq:04-gfromq}):
 \be
 g(E) = \frac{1}{(\hbar\omega)^N}\frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} 
 \frac{e^{\beta E}}{\beta^N}\de\beta\quad(\beta' > 0)
@@ -829,11 +834,10 @@ C_P &=& C_V = Nk(\beta\hbar\omega/2)^2\textrm{cosech}^2(\beta\hbar\omega/2) \non
 \eea
 L'espressione che abbiamo trovato per $U$ è particolarmente significativa in quanto mostra che l'energia di un sistema di oscillatori quantistici non obbedisce, in generale, al teorema di equipartizione. In particolare notiamo che l'energia media per oscillatore è sempre maggiore di $kT$ e tende al valore classico solo nel limite di alte temperature (ossia nel limite $kT \gg \hbar\omega$). In altre parole il limite classico viene raggiunto solo quando l'energia termica disponibile al singolo oscillatore, $kT$, è molto maggiore della spaziatura tra i livelli energetici. Questa osservazione è vera, come si può facilmente controllare, per tutte le altre quantità fisiche, che in questo limite tendono al loro valore classico.
 
-%-----------------------------------------------------------------------
-% PARAMAGNETISMO
-%-----------------------------------------------------------------------
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{La statistica del paramagnetismo}
+\label{sec:04-paramagnetismo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Studiamo ora un sistema composto da $N$ dipoli magnetici, ciascuno con un momento di dipolo pari a $\pmb{\mu}$. Assumiamo che i dipoli non interagiscano tra di loro. In presenza di un campo magnetico esterno $\mathbf{H}$ i dipoli sperimenteranno una forza torcente che tenderà ad allinearli in direzione del campo. Se nulla ostacolasse questa tendenza, tutti i dipoli finirebbero con l'allinearsi perfettamente al campo: in pratica magnetizzazione completa del sistema. In realtà l'agitazione termica offre una resistenza a questo sviluppo, e a temperatura finita si otterrà solo una magnetizzazione parziale. Chiaramente ci aspettiamo che per $T\to 0$, venendo a mancare l'agitazione termica, il sistema si magnetizzi completamente, e che per $T\to\infty$ si otterrà un sistema completamente disordinato, e cioè con magnetizzazione nulla. A temperature intermedie la situazione sarà governata dal parametro adimensionale $\mu H/kT$.
 
@@ -899,10 +903,10 @@ Questa è la legge di Curie del paramagnetismo, e la costante $C$ è detta costa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
-  \label{fig:04-langevin}
   \centering
   \input{figMS/04-langevin}
   \caption{La funzione di Langevin} 
+  \label{fig:04-langevin}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -971,10 +975,10 @@ B_J(x) = (1+1/2J)\coth\{(1+1/2J)x\} - \frac{1}{2J}\coth\{x/2J\}
 (vedi figura \ref{fig:04-brillouin}). 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
-  \label{fig:04-brillouin}
   \centering
   \input{figMS/04-brillfunc}
   \caption{Due funzioni di Brillouin. Dall'alto in basso: $J = 1/2$, $J=\infty$ (che corrisponde alla funzione di Langevin). Funzioni di Brillouin con valori intermedi di $J$ si situano all'interno delle due curve mostrate.} 
+  \label{fig:04-brillouin}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Consideriamo alcuni casi speciali; vediamo subito che per campi forti e basse temperature ($x \gg 1$) la funzione $B_J(x) \simeq 1$ per qualsiasi valore di J, e questo corrisponde a una situazione di saturazione magnetica. D'altro canto, per alte temperature e campi deboli ($x \ll 1$) possiamo espandere ottenendo
@@ -1000,6 +1004,7 @@ C_{1/2} = \frac{N_0\mu_B^2}{k}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{La distribuzione di Maxwell delle velocità}
+\label{sec:04-maxwell}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Nota anche come distribuzione di Maxwell--Boltzmann, la distribuzione delle velocità in un gas ideale classico è stata ottenuta per la prima volta da Maxwell ben prima che il formalismo canonico fosse sviluppato. Armati di questo formalismo, possiamo recuperarla in pochi passi.
@@ -1093,7 +1098,7 @@ Per quel che riguarda invece la velocità media, applichiamo la definizione:
 da cui otteniamo facilmente
 %
 \be
-\label{eq:vmediaMB}
+\label{eq:04-vmediaMB}
 \langle v \rangle = \sqrt{\frac{8kT}{\pi m}}
 \ee
 %
@@ -1101,10 +1106,10 @@ La forma della distribuzione (vedi Figura \ref{fig:04-maxwell}) implica naturalm
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
-  \label{fig:04-maxwell}
   \centering
   \input{figMS/04-distMB}
   \caption{La distribuzione di Maxwell delle velocità. Le unità sono scelte in modo tale che $m\beta/2 = 1$. Si nota come il valor medio di $v$ sia più grande del valore più probabile.}
+  \label{fig:04-maxwell}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1112,28 +1117,28 @@ Per una molecola di azoto (il maggiore costituente dell'atmosfera) a temperatura
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Considerazioni cinetiche}
-\label{sec:conskin}
+\label{sec:04-conskin}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Consideriamo un gas ideale racchiuso in un contenitore di volume $V$ e mantenuto a una temperatura $T$. Vogliamo calcolare quante molecole, in media e in un tempo $\de{t}$, colpiscono una delle pareti del contenitore, diciamo una delle due pareti perpendicolari all'asse $x$, quella più a destra guardando la scatola in figura \ref{fig:04-effusione}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h!b]
-  \label{fig:04-effusione}
   \centering
   \input{figMS/04-effusione}
   \caption{Considerazioni cinetiche ed effusione di un gas. La parete di cui si parla nel testo è quella ombreggiata. Con una linea tratteggiata si è cercato di delineare l'elemento di volume $\de{V}$: le molecole che si trovano in questo volume e viaggiano verso destra colpiscono la parete in un tempo $\de{t}$. Naturalmente detto elemento di volume varia da molecola a molecola, e per questo quindi occorre integrare sulla distribuzione $f_v(v)$.}
+  \label{fig:04-effusione}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Sia $A$ l'area della parete e $\hat x$ il versore in direzione $x$; consideriamo una particolare molecola con velocità $\myvec{v}$. Qualunque siano le componenti $y$ e $z$ della velocità, questa molecola colpirà la parete in questione nei prossimi $\de{t}$ secondi solo se è a una distanza inferiore o uguale a $\myvec{v}\cdot\hat x\,\de{t} = v_x\de{t}$ dalla parete. Per ottenere il numero totale di molecole che urtano la parete bisognerà dunque moltiplicare questa distanza per la densità $n = N/V$, per l'area $A$ della parete, per la distribuzione $f_v(v)$ e infine integrare su tutte le possibili velocità, tenendo presente che in $\de{v_x}$ occorre integrare solo da $0$ a $\infty$ (solo sulle molecole che si muovono in verso positivo). Chiamando $\de{N}$ il numero di molecole che colpiscono la parete in un tempo $\de{t}$ otteniamo:
 \bea
-\label{eq:pereff}
+\label{eq:04-pereff}
 \de{N} &=& nA\de{t}\int_0^\infty\de{v_x} v_x f_{x}(v_x)\iint_{-\infty}^{\infty}\de{v_y}\de{v_z}f_{y}(v_y)f_{z}(v_z)\nonumber\\
 &=& nA\sqrt{\dfrac{kT}{2\pi m}}
 \eea
-Ogni singolo urto trasferisce alla parete una certa quantità di moto; assumendo urti perfettamente elastici abbiamo che la quantità di moto trasferita in un singolo urto sarà pari alla variazione della quantità di moto della molecola presa con il segno negativo, cioè $2mv_x$. Per ottenere la quantità di moto totale trasferita in un tempo $\de{t}$ dobbiamo scrivere una formula identica alla (\ref{eq:pereff}), con $2mv_x^2$ al posto di $v_x$. Ma la derivata della quantità di moto rispetto al tempo è pari alla forza esercitata dal gas sulla parete, e dividendo per l'area otteniamo la pressione. Quindi
+Ogni singolo urto trasferisce alla parete una certa quantità di moto; assumendo urti perfettamente elastici abbiamo che la quantità di moto trasferita in un singolo urto sarà pari alla variazione della quantità di moto della molecola presa con il segno negativo, cioè $2mv_x$. Per ottenere la quantità di moto totale trasferita in un tempo $\de{t}$ dobbiamo scrivere una formula identica alla (\ref{eq:04-pereff}), con $2mv_x^2$ al posto di $v_x$. Ma la derivata della quantità di moto rispetto al tempo è pari alla forza esercitata dal gas sulla parete, e dividendo per l'area otteniamo la pressione. Quindi
 \bea
-\label{eq:prescine}
+\label{eq:04-prescine}
 P &=& 2mn\int_0^\infty\de{v_x} v_x^2 f_{x}(v_x)\iint_{-\infty}^{\infty}\de{v_y}\de{v_z}f_{y}(v_y)f_{z}(v_z)\nonumber\\
 &=& \dfrac{NkT}{V}
 \eea
@@ -1141,18 +1146,18 @@ Ritroviamo così la pressione di un gas ideale classico.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{L'effusione di un gas}
-\label{subsec:effusione}
+\label{subsec:04-effusione}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Se si pratica un piccolo foro di area $S$ sulla famosa parete, il gas fuoriesce dal contenitore effondendo nel vuoto. Assumiamo che il processo venga regolato in modo tale che la temperatura $T$ resti costante, almeno per un periodo di tempo finito (è noto che in generale l'effusione di un gas da un contenitore comporta il raffreddamento del gas che rimane dentro; pensate alle bombolette spray).
 
-Per calcolare il {\em rate} di effusione, ossia il numero di molecole che fuoriescono dal contenitore per unità di tempo, è sufficiente considerare l'eq. (\ref{eq:pereff}) con l'area $S$ al posto dell'area $A$. Infatti le molecole che ``urtano'' il foro sono proprio quelle che escono. Otteniamo
+Per calcolare il {\em rate} di effusione, ossia il numero di molecole che fuoriescono dal contenitore per unità di tempo, è sufficiente considerare l'eq. (\ref{eq:04-pereff}) con l'area $S$ al posto dell'area $A$. Infatti le molecole che ``urtano'' il foro sono proprio quelle che escono. Otteniamo
 %
 \be
 \frac{\de{N}}{\de{t}} = -nS\int_{0}^{\infty}\de{v_{x}} v_{x}f_{x}(v_{x})\int\int\limits_{0}^{\infty}\de{v_{y}}\de{v_{z}}f_{y}(v_{y})f_{z}(v_{z})
 \ee
 %
-in cui il segno meno è dovuto al fatto che $N$ diminuisce in seguito all'effusione; in definitiva, confrontando con la (\ref{eq:vmediaMB}), abbiamo
+in cui il segno meno è dovuto al fatto che $N$ diminuisce in seguito all'effusione; in definitiva, confrontando con la (\ref{eq:04-vmediaMB}), abbiamo
 %
 \be
 \frac{\de{N}}{\de{t}} = -\frac{nS}{4}\langle v \rangle
@@ -1173,7 +1178,7 @@ P(t) = P(0)e^{-t/\tau_{0}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Potenziale esterno: un esempio}
-\label{sec:potesterno}
+\label{sec:04-potesterno}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Notiamo subito una cosa: nonostante esista un potenziale esterno, il sistema è ancora non--interagente, nel senso che le particelle che lo compongono non interagiscono tra loro ma solo col potenziale esterno. Questo potenziale dovrà naturalmente soddisfare una serie di requisiti:
@@ -1215,16 +1220,16 @@ in cui abbiamo usato la formula di Stirling per calcolare il $\ln(N!)$. In gener
 Però se vogliamo sapere la pressione sulla faccia superiore del cilindro possiamo scrivere $V = SL$ e derivare rispetto a $L$:
 %
 \be
-\label{eq:PaL}
+\label{eq:04-PaL}
 P(L) = -\frac{1}{S}\dpar{A}{L} = \frac{Nmg}{S}\frac{e^{-\beta mgL}}{1-e^{-\beta mgL}}
 \ee
 %
 
 Se invece vogliamo sapere come varia la pressione in funzione dell'altezza dobbiamo seguire un'altra strada.
-Notiamo che in condizioni di equilibrio, pur se sottoposto a un generico potenziale esterno, $U(\myvec{r})$, nel gas non possono avvenire spostamenti netti di materia. Ciò significa che il potenziale chimico deve essere costante, e in particolare non deve dipendere da $y$. Riprenderemo questo discorso nella sezione \ref{sec:potesternoGC} del capitolo \ref{cap:grancanonico}, dopo che avremo sviluppato il formalismo dell'ensemble grancanonico.
+Notiamo che in condizioni di equilibrio, pur se sottoposto a un generico potenziale esterno, $U(\myvec{r})$, nel gas non possono avvenire spostamenti netti di materia. Ciò significa che il potenziale chimico deve essere costante, e in particolare non deve dipendere da $y$. Riprenderemo questo discorso nella sezione \ref{sec:05-potesternoGC} del Capitolo \ref{cap:grancanonico}, dopo che avremo sviluppato il formalismo dell'ensemble grancanonico.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Esercizi per il capitolo \ref{cap:canonico}}
+\section{Esercizi per il Capitolo \ref{cap:canonico}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %-----------------------------------------------------------------------
@@ -1272,6 +1277,6 @@ in cui $Q_1$ è la funzione di partizione canonica di singola particella.
 
 \vskip 0.75cm
 \begin{flushright}
-{\em Ultimo aggiornamento del capitolo: 21.04.2017}
+{\em Ultimo aggiornamento del Capitolo: 22.04.2017}
 \end{flushright}
 
