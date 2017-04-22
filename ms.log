@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.13)  22 APR 2017 08:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.13)  22 APR 2017 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1238,8 +1238,8 @@ Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
 ))
-(./myCommands.tex) (./ms.aux (./figMS/termo-eqstato.aux)
-(./figMS/termo-espalibera.aux) (./figMS/basi-esempio-bidi.aux))
+(./myCommands.tex) (./ms.aux (./figMS/01-eqstato.aux)
+(./figMS/01-espalibera.aux) (./figMS/02-esempio-bidi.aux))
 \openout1 = `ms.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -1459,45 +1459,55 @@ Underfull \vbox (badness 5260) has occurred while \output is active []
 (./01-Termodinamica.tex [8] [9
 
 ] [10]
-\openout2 = `figMS/termo-eqstato.aux'.
+\openout2 = `figMS/01-eqstato.aux'.
 
- (./figMS/termo-eqstato.tex) [11
-
-
-] [12]
-[13]
-\openout2 = `figMS/termo-espalibera.aux'.
-
- (./figMS/termo-espalibera.tex) [14
+ (./figMS/01-eqstato.tex) [11
 
 
-] [15] [16] [17] [18] [19] [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 487--489
+]
+(./figMS/01-pistone.tex) [12] [13]
+\openout2 = `figMS/01-espalibera.aux'.
+
+ (./figMS/01-espalibera.tex) [14
+
+
+] [15]
+[16] (./figMS/01-carnot.tex) [17] [18] [19] [20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 468--470
 
  []
 
 [22] [23]) (./02-Basi.tex [24] [25
 
-] (./figMS/basi-contatto1.tex) [26] [27]
+] (./figMS/02-contatto1.tex) [26] [27]
+
+LaTeX Warning: Reference `ex:02-relaSOmega' on page 28 undefined on input line 
+93.
+
 [28] [29] [30]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 215.
-\openout2 = `figMS/basi-esempio-bidi.aux'.
+(Font)              <12> on input line 216.
+\openout2 = `figMS/02-esempio-bidi.aux'.
 
- (./figMS/basi-esempio-bidi.tex) [31] [32
+ (./figMS/02-esempio-bidi.tex) [31] [32
 
 
-] [33] [34] [35]
-[36]
+] [33] [34] [35] [36]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 404.
+(Font)              <9> on input line 406.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 404.
- [37] [38] [39]) (./03-ElementiEnsembles.tex [40] [41
+(Font)              <5> on input line 406.
 
-] [42] [43] [44]
-[45] [46] [47] [48] (./figMS/03-linee-palline.tex) [49] [50] [51])
-(./04-Canonico.tex [52] [53
+[37]
+
+LaTeX Warning: Reference `ex:02-Saddit' on page 38 undefined on input line 435.
+
+
+[38] [39]) (./03-ElementiEnsembles.tex [40] [41
+
+] [42] [43] [44] [45] [46]
+[47] [48] (./figMS/03-linee-palline.tex) [49] [50] [51]) (./04-Canonico.tex
+[52] [53
 
 ] [54] [55] [56] [57]
 
@@ -1665,17 +1675,20 @@ r/m/n/10.95 = [][] [][] []\OML/lmm/m/it/10.95 ^^U  [] [] [] [] [] []$
 \tf@toc=\write5
 \openout5 = `ms.toc'.
 
- (./ms.aux (./figMS/termo-eqstato.aux)
-(./figMS/termo-espalibera.aux) (./figMS/basi-esempio-bidi.aux))
+ (./ms.aux (./figMS/01-eqstato.aux)
+(./figMS/01-espalibera.aux) (./figMS/02-esempio-bidi.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 21473 strings out of 493014
- 398911 string characters out of 6133351
- 528049 words of memory out of 5000000
- 24240 multiletter control sequences out of 15000+600000
+ 21490 strings out of 493014
+ 399350 string characters out of 6133351
+ 528095 words of memory out of 5000000
+ 24251 multiletter control sequences out of 15000+600000
  124870 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,16n,65p,1576b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1706,7 +1719,7 @@ nts/type1/public/lm/lmss17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/
 lmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ms.pdf (190 pages, 1363312 bytes).
+Output written on ms.pdf (190 pages, 1363041 bytes).
 PDF statistics:
  763 PDF objects out of 1000 (max. 8388607)
  523 compressed objects within 6 object streams

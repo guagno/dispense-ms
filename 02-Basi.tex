@@ -10,16 +10,16 @@
 \label{sec:02-microstati}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Partiamo da considerazioni di carattere completamente generale e prendiamo in esame un sistema fisico macroscopico all'equilibrio, costituito da $N$ particelle identiche (atomi o molecole) confinate in un volume $V$. Considerando i valori tipici di $N$, che sono dell'ordine del numero di Avogadro, e il rapporto tra $V$ e le distanze atomiche tipiche, è naturale pensare al cosiddetto {\em limite termodinamico}: mandiamo cioè sia $N$ sia $V$ all'infinito ma in modo tale che il loro rapporto $n = N/V$, che rappresenta la densità numerica del sistema, resti costante (vedi la sezione \ref{sec1:def} del capitolo \ref{cap:termodinamica}). Per ottenere la vera densità sarà sufficiente moltiplicare $n$ per la massa $m$ delle particelle.
+Partiamo da considerazioni di carattere completamente generale e prendiamo in esame un sistema fisico macroscopico all'equilibrio, costituito da $N$ particelle identiche (atomi o molecole) confinate in un volume $V$. Considerando i valori tipici di $N$, che sono dell'ordine del numero di Avogadro, e il rapporto tra $V$ e le distanze atomiche tipiche, è naturale pensare al cosiddetto {\em limite termodinamico}: mandiamo cioè sia $N$ sia $V$ all'infinito ma in modo tale che il loro rapporto $n = N/V$, che rappresenta la densità numerica del sistema, resti costante (vedi la sezione \ref{sec:01-def} del Capitolo \ref{cap:termodinamica}). Per ottenere la vera densità sarà sufficiente moltiplicare $n$ per la massa $m$ delle particelle.
 
 Per semplificare le cose immaginiamo che le particelle non interagiscano l'una con l'altra (questa situazione è l'idealizzazione di un sistema fisico in cui l'interazione tra i costituenti elementari può essere ritenuta, in prima approssimazione, trascurabile): in questo caso l'energia totale del sistema sarà semplicemente la somma delle energie delle singole particelle, e cioè
 \be
-\label{eq:etot}
+\label{eq:02-etot}
 E = \sum_{i} n_{i}\epsilon_{i}
 \ee
 in cui $\epsilon_{i}$ rappresenta l'energia (di singola particella) dell'$i$-mo livello, mentre $n_{i}$ è il numero di occupazione del livello stesso (ossia indica quante particelle occupano quel livello). Naturalmente il set $\seti{n_{i}}$ deve soddisfare il vincolo
 \be
-\label{eq:ntot}
+\label{eq:02-ntot}
 N = \sum_{i} n_{i}
 \ee
 
@@ -33,12 +33,12 @@ In linea del tutto generale i microstati possono essere identificati con le solu
 % PRIMO CONTATTO
 %
 \section{Primo contatto con la termodinamica}
-\label{sec:primo}
+\label{sec:02-primo}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Consideriamo due sistemi fisici, $A_{1}$ e $A_{2}$, entrambi separatamente all'equilibrio. Il primo sistema è in un macrostato caratterizzato dai valori $(N_{1},V_{1},E_{1})$ e nel quale il numero di microstati è pari a $\Omega_{1}(N_{1},V_{1},E_{1})$, mentre il secondo dai valori $(N_{2},V_{2},E_{2})$ e da un numero di microstati pari a $\Omega_{2}(N_{2},V_{2},E_{2})$. Poniamo i due sistemi in contatto termico (vedi figura \ref{fig:a1a2}); ciò equivale a dire che i due sistemi possono ora scambiare energia termica tra di loro, a volume e numero di particelle fissati. Le energie dei due sistemi non saranno più uguali a $E_{1}$ e $E_{2}$, ma la loro somma rimarrà conservata: $E = E_{1} + E_{2}$ (stiamo trascurando l'energia di interazione tra $A_{1}$ e $A_{2}$, assumendola come un termine di superficie; ciò è sempre lecito nel limite termodinamico). Risulta chiaro, per definizione stessa di numero di microstati, che il valore di $\Omega$ per i due sistemi in contatto, considerati come un unico sistema, sarà pari a
+Consideriamo due sistemi fisici, $A_{1}$ e $A_{2}$, entrambi separatamente all'equilibrio. Il primo sistema è in un macrostato caratterizzato dai valori $(N_{1},V_{1},E_{1})$ e nel quale il numero di microstati è pari a $\Omega_{1}(N_{1},V_{1},E_{1})$, mentre il secondo dai valori $(N_{2},V_{2},E_{2})$ e da un numero di microstati pari a $\Omega_{2}(N_{2},V_{2},E_{2})$. Poniamo i due sistemi in contatto termico (vedi figura \ref{fig:02-a1a2}); ciò equivale a dire che i due sistemi possono ora scambiare energia termica tra di loro, a volume e numero di particelle fissati. Le energie dei due sistemi non saranno più uguali a $E_{1}$ e $E_{2}$, ma la loro somma rimarrà conservata: $E = E_{1} + E_{2}$ (stiamo trascurando l'energia di interazione tra $A_{1}$ e $A_{2}$, assumendola come un termine di superficie; ciò è sempre lecito nel limite termodinamico). Risulta chiaro, per definizione stessa di numero di microstati, che il valore di $\Omega$ per i due sistemi in contatto, considerati come un unico sistema, sarà pari a
 \be
-\label{eq:omega}
+\label{eq:02-omega}
 \Omega(E_{1}, E_{2}) = \Omega_{1}(E_{1})\Omega_{2}(E_{2}) = \Omega_{1}(E_{1})\Omega_{2}(E-E_{1}) \equiv \Omega(E,E_{1})
 \ee
 Ci si pone dunque la domanda: per quale valore di $E_{1}$ il sistema complessivo è in equilibrio?
@@ -46,9 +46,9 @@ Ci si pone dunque la domanda: per quale valore di $E_{1}$ il sistema complessivo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
   \centering
-  \input{figMS/basi-contatto1}
+  \input{figMS/02-contatto1}
   \caption{Due sistemi in contatto termico.}
-  \label{fig:a1a2}
+  \label{fig:02-a1a2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -56,41 +56,41 @@ Sembra ragionevole pensare che ciò accada per un valore di $E_1$ che rende staz
 
 Chiamiamo dunque $\bar{E}_{1}$ il valore di $E_{1}$ per il quale il sistema totale è all'equilibrio (e quindi l'energia di $A_{2}$ sarà pari a $\bar{E}_{2}$) e scriviamo la condizione di massimo per $\Omega$:
 \be
-\label{eq:maxomega1}
+\label{eq:02-maxomega1}
 \dparc{\Omega}{E_{1}}{E_{1}=\bar{E}_{1}} = \dparc{\Omega_{1}}{E_{1}}{E_{1}=\bar{E}_{1}}\Omega_{2}(\bar{E_{2}}) + \Omega_{1}(\bar{E}_{1})\dparc{\Omega_{2}}{E_{2}}{E_{2}=\bar{E}_{2}}\dpar{E_{2}}{E_{1}} = 0
 \ee
 Ma $\partial E_{2}/\partial E_{1} = -1$, e arriviamo quindi a
 \be
-\label{eq:maxomega2}
+\label{eq:02-maxomega2}
 \dparc{\Omega_{1}}{E_{1}}{E_{1}=\bar{E}_{1}}\Omega_{2}(E_{2}) = \dparc{\Omega_{2}}{E_{2}}{E_{2}=\bar{E}_{2}}\Omega_{1}(\bar{E}_{1})
 \ee
 cioè
 \be
-\label{eq:maxomega3}
+\label{eq:02-maxomega3}
 \dparc{\ln \Omega_{1} }{E_{1}}{E_{1}=\bar{E}_{1}} = 
 \dparc{\ln \Omega_{2} }{E_{2}}{E_{2}=\bar{E}_{2}}
 \ee
 Definendo
 \be
-\label{eq:beta}
+\label{eq:02-beta}
 \beta_i \equiv \dpar{\ln \Omega_i }{E_i}
 \ee
 abbiamo che i due sistemi sono all'equilibrio quando $\beta_{1} = \beta_{2}$. Risulta chiaro che il parametro $\beta$ deve avere qualcosa a che fare con la temperatura, visto che la condizione per la quale due sistemi a contatto termico siano all'equilibrio è data proprio da $T_{1} = T_{2}$. Riprendendo le formule termodinamiche, ricordiamo che
 \be
-\label{eq:unosut}
+\label{eq:02-unosut}
 \frac{1}{T} = \dparc{S}{E}{N,V}
 \ee
-e prendendo il rapporto tra la (\ref{eq:beta}) e la (\ref{eq:unosut}) per variazioni piccole ma {\em finite} di $S$ e $\ln{\Omega}$ otteniamo
+e prendendo il rapporto tra la (\ref{eq:02-beta}) e la (\ref{eq:02-unosut}) per variazioni piccole ma {\em finite} di $S$ e $\ln{\Omega}$ otteniamo
 \be
-\label{eq:deltaomega}
+\label{eq:02-deltaomega}
 \frac{\Delta S}{\Delta(\ln \Omega)} = \frac{1}{\beta T} = \mbox{costante}
 \ee
 Fu Boltzmann il primo a capire la relazione tra l'entropia e il numero dei microstati accessibili al sistema, anche se il primo a scrivere l'equazione che segue fu Planck:
 \be
-\label{eq:entropia}
+\label{eq:02-entropia}
 S = k\ln \Omega
 \ee
-Questa formula è il ponte che collega il mondo microscopico (conteggio dei microstati) al mondo macroscopico (entropia). Occorre tenere presente che il risultato che abbiamo appena visto, sebbene corretto, è stato ottenuto con ragionamenti euristici, non esattamente rigorosi. In quel che segue daremo per scontato che l'entropia è definita dall'eq. (\ref{eq:entropia}); vedi anche l'esercizio \ref{ex2:relaSOmega}.
+Questa formula è il ponte che collega il mondo microscopico (conteggio dei microstati) al mondo macroscopico (entropia). Occorre tenere presente che il risultato che abbiamo appena visto, sebbene corretto, è stato ottenuto con ragionamenti euristici, non esattamente rigorosi. In quel che segue daremo per scontato che l'entropia è definita dall'eq. (\ref{eq:02-entropia}); vedi anche l'esercizio \ref{ex:02-relaSOmega}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Volume e pressione}
@@ -98,7 +98,7 @@ Questa formula è il ponte che collega il mondo microscopico (conteggio dei micr
 
 Possiamo pensare che la parete divisoria che separa $A_{1}$ e $A_{2}$ sia fatta in modo tale da scorrere e permettere un cambiamento dei volumi $V_{1}$ e $V_{2}$. Ripetendo il ragionamento fatto prima a proposito dell'energia, arriviamo al risultato che all'equilibrio (meccanico oltre che termico) deve valere la relazione
 \be
-\label{eq:omegavolume}
+\label{eq:02-omegavolume}
 \dpar{\ln \Omega_{1}}{V_{1}} = 
 \dpar{\ln \Omega_{2}}{V_{2}}
 \ee
@@ -116,7 +116,7 @@ T\dparc{S}{V}{E} = P
 \ee
 Otteniamo quindi subito
 \be
-\label{eq:eta}
+\label{eq:02-eta}
 \eta = \frac{P}{kT}
 \ee
 Questo risultato è abbastanza ovvio, perché è chiaro che il sistema $A_{1}+A_{2}$ è all'equilibrio sia termico sia meccanico quando le temperature e le pressioni nei due scomparti sono uguali.
@@ -148,13 +148,14 @@ e quindi la condizione di equilibrio
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il gas ideale}
+\label{sec:02-gas-ideale}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Anche senza calcolare $\Omega$ possiamo già ottenere qualche risultato. Consideriamo per esempio un gas ideale monoatomico. Poiché gli atomi del gas sono considerati come non--interagenti non c'è alcuna correlazione tra le posizioni delle particelle, e quindi il numero possibile di modi in cui possono essere distribuite $N$ particelle sarà uguale al prodotto (su tutte le particelle) del numero di modi in cui ogni particella può disporsi. Per una singola particella, a energia fissata, avremo che questo numero dovrà necessariamente essere proporzionale al volume $V$, e otteniamo dunque
 \be
 \Omega \propto V^{N}
 \ee
-Ma dalla (\ref{eq:eta}) abbiamo
+Ma dalla (\ref{eq:02-eta}) abbiamo
 \be
 \frac{P}{kT} = \dpar{\ln \Omega}{V} = \frac{N}{V}
 \ee
@@ -170,13 +171,13 @@ Per ottenere più informazioni sarà il caso di conoscere meglio $\Omega$.
 
 Formalizziamo la situazione nel modo seguente: abbiamo un sistema fisico (gas ideale, particelle non interagenti) racchiuso in una scatola di dimensioni lineari $L$ (con $L^{3}=V$). Sia $\epsilon_{i}$ il valore dell'$i$-mo livello di energia di singola particella, e sia $n_{i}$ il numero di occupazione del livello (ossia quante particelle vengono ospitate in quel livello). Abbiamo dunque
 \bea
-\label{eq:vincoli}
+\label{eq:02-vincoli}
 N &=& \sum_{i} n_{i}\nonumber\\
 E &=& \sum_{i} n_{i}\epsilon_{i}
 \eea
-Vogliamo sapere in quanti modi possiamo sistemare le $N$ particelle nei livelli in modo tale da soddisfare {\em contemporaneamente} i vincoli (\ref{eq:vincoli}). Come prima cosa converrà ricordare la formula per l'energia di una particella di massa $m$ in una scatola con condizioni al bordo $\psi=0$ (potenziale infinito):
+Vogliamo sapere in quanti modi possiamo sistemare le $N$ particelle nei livelli in modo tale da soddisfare {\em contemporaneamente} i vincoli (\ref{eq:02-vincoli}). Come prima cosa converrà ricordare la formula per l'energia di una particella di massa $m$ in una scatola con condizioni al bordo $\psi=0$ (potenziale infinito):
 \be
-\label{eq:livelliscatola}
+\label{eq:02-livelliscatola}
 \epsilon(n_{x},n_{y},n_{z}) = \frac{h^{2}}{8mL^{2}}(n^{2}_{x} + n^{2}_{y} + n^{2}_{z})\quad n_{x},n_{y},n_{z} = 1, 2, 3\dots
 \ee
 Quindi per {\em una} particella di energia $\epsilon$ il numero di {\em autofunzioni distinte} (ovvero microstati) è pari al numero di soluzioni intere e positive dell'equazione
@@ -185,20 +186,20 @@ n^{2}_{x} + n^{2}_{y} + n^{2}_{z} = \frac{8mV^{2/3}\epsilon}{h^{2}} \equiv \epsi
 \ee
 e più in generale il valore di $\Omega$ sarà dato dal numero delle soluzioni intere e positive di
 \be
-\label{eq:estar}
+\label{eq:02-estar}
 \sum_{r=1}^{3N}n^{2}_{r} = \frac{8mV^{2/3}E}{h^{2}} \equiv E^{*}
 \ee
 Dall'equazione precedente possiamo ricavare un altro risultato importante senza calcolare $\Omega$; vediamo infatti che in ogni caso $\Omega$ non dipende da $V$ e da $E$ separatamente ma solo tramite la combinazione $V^{2/3}E$, e questo si rifletterà sulla dipendenza da $E$ e $V$ dell'entropia:
 \be
 S(N,V,E) \equiv S(N,V^{2/3}E)
 \ee
-Per un processo adiabatico abbiamo $S = \mbox{costante}$ e quindi $V^{2/3}E = \mbox{costante}$. Usando la (\ref{eq:beta}) e la (\ref{eq:eta}) possiamo scrivere
+Per un processo adiabatico abbiamo $S = \mbox{costante}$ e quindi $V^{2/3}E = \mbox{costante}$. Usando la (\ref{eq:02-beta}) e la (\ref{eq:02-eta}) possiamo scrivere
 \be
 P = \dparc{S}{V}{E} \big{/} \dparc{S}{E}{V} = \dparc{S}{V}{E}\dparc{E}{S}{V}
 \ee
 Ma se tre grandezze $x$, $y$ e $z$ sono legate da una relazione funzionale, allora abbiamo che
 \be
-\label{eq:02-magic2}
+\label{eq:02-02-magic2}
 \dparc{x}{y}{z}\dparc{y}{z}{x}\dparc{z}{x}{y} = -1
 \ee
 e possiamo dunque scrivere
@@ -215,11 +216,11 @@ PV^{\gamma} = \mbox{costante}\quad\quad \gamma=5/3
 \subsection{Il calcolo di $\Omega$}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Calcoliamo $\Omega(E^{*})$ assumendo che le particelle siano {\em distinguibili}, altrimenti il conto risulta troppo difficile. $\Omega(E^{*})$ sarà uguale al numero di punti di un reticolo $3N$--dimensionale (in cui le coordinate dei siti sono etichettate da numeri interi) che giacciono sulla superficie di un'ipersfera di raggio $\sqrt{E^{*}}$. Per chiarire le idee prendiamo un esempio bidimensionale (vedi figura \ref{fig:e25}). Poniamo conto che sia $E^{*} = 25$ (in certe unità). L'equazione $n^{2}_{1} + n^{2}_{2} = E^{*}$ è risolta dai punti $(3,4)$ e $(4,3)$ e abbiamo dunque due soluzioni.
+Calcoliamo $\Omega(E^{*})$ assumendo che le particelle siano {\em distinguibili}, altrimenti il conto risulta troppo difficile. $\Omega(E^{*})$ sarà uguale al numero di punti di un reticolo $3N$--dimensionale (in cui le coordinate dei siti sono etichettate da numeri interi) che giacciono sulla superficie di un'ipersfera di raggio $\sqrt{E^{*}}$. Per chiarire le idee prendiamo un esempio bidimensionale (vedi figura \ref{fig:02-e25}). Poniamo conto che sia $E^{*} = 25$ (in certe unità). L'equazione $n^{2}_{1} + n^{2}_{2} = E^{*}$ è risolta dai punti $(3,4)$ e $(4,3)$ e abbiamo dunque due soluzioni.
 
 Dovrebbe risultare chiaro che in generale, nel caso $3N$--dimensionale, $\Omega$ sarà una funzione estremamente irregolare di $E^{*}$, perché cambiamenti molto piccoli di $E^{*}$ possono causare una grande fluttuazione nel numero di punti che giacciono {\em esattamente} sulla superficie dell'ipersfera. Invece di considerare $\Omega$ consideriamo al suo posto la quantità
 \be
-\label{eq:sigma}
+\label{eq:02-sigma}
 \Sigma_{N}(E^{*}) = \sum_{E'\le E^{*}}\Omega(E')
 \ee
 ovvero consideriamo tutti i punti che cadono all'interno del volume dell'ipersfera, nella speranza che questa nuova funzione sia un po' meno irregolare di $\Omega$. Vedremo poi in dettaglio il perché di questa scelta. Per il momento diremo solo, postponendo la spiegazione, che per trovare l'entropia il calcolo di $\Sigma_{N}$ è equivalente a quello di $\Omega$.
@@ -227,9 +228,9 @@ ovvero consideriamo tutti i punti che cadono all'interno del volume dell'ipersfe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
   \centering
-  \include{figMS/basi-esempio-bidi}
+  \include{figMS/02-esempio-bidi}
   \caption{Le due soluzioni dell'esempio bidimensionale proposto nel testo.}
-  \label{fig:e25}
+  \label{fig:02-e25}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -293,7 +294,7 @@ Applicando la formula per il volume dell'ipersfera al nostro caso otteniamo
 \be
 \Sigma_{N}(E^{*}) \simeq \frac{1}{2^{3N}}\left[\frac{\pi^{3N/2}}{(3N/2)!}E^{* 3N/2} \right]
 \ee
-(il fattore $1/2^{3N}$ deriva dal fattore $1/8$ per ogni particella, perché stiamo considerando solo un ottante dell'ipersfera). Sostituendo a $E^{*}$ il suo valore dato dall'equazione (\ref{eq:estar}) otteniamo
+(il fattore $1/2^{3N}$ deriva dal fattore $1/8$ per ogni particella, perché stiamo considerando solo un ottante dell'ipersfera). Sostituendo a $E^{*}$ il suo valore dato dall'equazione (\ref{eq:02-estar}) otteniamo
 \be
 \Sigma_{N}(E,V) \simeq \bfrac{V}{h^{3}}^{N}\frac{(2\pi mE)^{3N/2}}{(3N/2)!}
 \ee
@@ -359,6 +360,7 @@ in cui nell'ultima abbiamo usato le relazioni $E = (3/2)PV$ e $PV = NkT$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Entropia di mescolamento e paradosso di Gibbs}
+\label{sec:02-paradosso-Gibbs}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 C'è ancora qualcosa che non va: l'entropia che abbiamo appena calcolato non soddisfa il requisito di essere una quantità {\em estensiva}. Se fosse estensiva (come deve) allora moltiplicando per un fattore $\alpha$ tutte le grandezze estensive da cui dipende, lasciando dunque invariate le quantità intensive, si dovrebbe avere la trasformazione $S \to \alpha S$. Troviamo invece
@@ -417,23 +419,24 @@ Se le densità sono le stesse otteniamo $(\delta S)^{*} = 0$, com'è lecito atte
 
 Scriviamo l'energia in funzione dell'entropia:
 \be
-\label{eq:efs}
+\label{eq:02-efs}
 E(N,V,S) = \frac{3h^2N^{5/3}}{4\pi mV^{2/3}}\exp\left(\frac{2S}{3Nk}-\frac{5}{3}\right)
 \ee
 e deriviamo quest'espressione rispetto a $N$, a $V$ e $S$ costanti, per ottenere il potenziale chimico del gas ideale:
 \be
-\label{eq:mudef}
+\label{eq:02-mudef}
 \mu = \dparc{E}{N}{V,S} = \frac{E}{N}\left(\frac{5}{3}-\frac{2S}{3Nk}\right)
 \ee
 Ora, ricordando che $E = 3NkT/2$ e che $PV = 2E/3$, otteniamo facilmente questo importante risultato:
 \be
-\label{eq:muG}
+\label{eq:02-muG}
 \mu N = \frac{5E}{3} - TS = E + PV - TS = G
 \ee
-In parole povere, $\mu$ corrisponde all'energia libera di Gibbs per particella. Da notare che un'entropia non additiva avrebbe portato a un risultato sbagliato per il potenziale chimico $\mu$ (vedi per esempio l'esercizio \ref{ex2:Saddit}).
+In parole povere, $\mu$ corrisponde all'energia libera di Gibbs per particella. Da notare che un'entropia non additiva avrebbe portato a un risultato sbagliato per il potenziale chimico $\mu$ (vedi per esempio l'esercizio \ref{ex:02-Saddit}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{La numerazione corretta dei microstati}
+\label{sec:02-numerazione-corretta}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Il paradosso di Gibbs nasce dal fatto che abbiamo calcolato il numero di microstati considerando i costituenti elementari del sistema macroscopico come distinguibili. L'abbiamo fatto in ragione di un principio di economia, perché altrimenti il calcolo sarebbe stato di gran lunga più complicato; in ogni caso abbiamo commesso un errore. Di fatto non sapremo mai se la particella $k$--esima sta nel livello $\epsilon_{i}$ al posto della particella $l$--esima che sta nel livello $\epsilon_{j}$. Non potremmo mai venire a conoscere l'eventuale azione di un qualche diavoletto che le scambi di posto. Tutto ciò che possiamo ragionevolmente sperare di sapere è il {\em numero} di particelle nello stato $i$ o nello stato $j$ (cioè ciò che sappiamo è ciò che in un modo o nell'altro possiamo misurare).
@@ -452,25 +455,25 @@ Da un punto di vista puramente {\em matematico} la prescrizione di Gibbs funzion
 \section{Esercizi per il Capitolo \ref{cap:basi}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{Exercise}[label={ex2:relaSOmega}, title={Relazione funzionale tra entropia e numero di microstati}]
+\begin{Exercise}[label={ex:02-relaSOmega}, title={Relazione funzionale tra entropia e numero di microstati}]
 Assumendo che l'entropia $S$ di un sistema fisico (con $E$, $N$ e $V$ fissati) sia collegata al numero di microstati $\Omega(E,N,V)$ da una relazione funzionale:
 \be
 S = f(\Omega)
 \ee
-mostrare che il carattere additivo di $S$ e quello moltiplicativo di $\Omega$ richiedono {\em necessariamente} una forma funzionale del tipo (\ref{eq:entropia}). 
+mostrare che il carattere additivo di $S$ e quello moltiplicativo di $\Omega$ richiedono {\em necessariamente} una forma funzionale del tipo (\ref{eq:02-entropia}). 
 (Esercizio 1.2 del Pathria)
 \end{Exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{Exercise}[label={ex2:sfere}, title={Prima correzione all'equazione di stato}]
+\begin{Exercise}[label={ex:02-sfere}, title={Prima correzione all'equazione di stato}]
 Si consideri un gas classico costituito da $N$ sfere rigide di raggio $r$ e volume $v_0 = 4\pi r^3/3$ racchiuse in un volume $V$. Le sfere interagiscono tra loro solo tramite urti perfettamente elastici. Si dimostri, nel limite in cui $Nv_0 \ll V$, che l'equazione di stato di questo gas è data, in prima approssimazione, da $PV_{\textrm{eff}} = NkT$, in cui $V_{\textrm{eff}} = V-4Nv_0$.
 (Esercizio 1.4 del Pathria)
 \end{Exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{Exercise}[label={ex2:Saddit}, title={Estensività dell'entropia}]
+\begin{Exercise}[label={ex:02-Saddit}, title={Estensività dell'entropia}]
 Usando il fatto che l'entropia $S(E,N,V)$ di un sistema è una quantità estensiva (cioè additiva), mostrare che vale la relazione
 \be
 E\dparc{S}{E}{N,V} + N\dparc{S}{N}{E,V} + V\dparc{S}{V}{E,N} = S
@@ -486,5 +489,5 @@ N\mu = E + PV - TS
 
 \vskip 0.75cm
 \begin{flushright}
-{\em Ultimo aggiornamento del capitolo: 20.04.2017}
+{\em Ultimo aggiornamento del Capitolo: 22.04.2017}
 \end{flushright}

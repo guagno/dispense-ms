@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {1.2.1}Espansione libera di un gas ideale}{14}
 \contentsline {subsection}{\numberline {1.2.2}Energia interna}{15}
 \contentsline {subsection}{\numberline {1.2.3}Calori specifici}{15}
-\contentsline {subsection}{\numberline {1.2.4}Trasformazioni adiabatiche}{16}
+\contentsline {subsection}{\numberline {1.2.4}Trasformazioni adiabatiche}{15}
 \contentsline {section}{\numberline {1.3}Il secondo principio della termodinamica}{16}
 \contentsline {subsection}{\numberline {1.3.1}Il ciclo di Carnot}{16}
 \contentsline {section}{\numberline {1.4}L'entropia termodinamica}{18}
