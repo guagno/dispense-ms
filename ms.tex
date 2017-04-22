@@ -1,0 +1,41 @@
+\documentclass[a4paper,11pt,fleqn,extrafontsizes]{memoir} 
+\settocdepth{subsection}
+\setsecnumdepth{subsection}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\usepackage{microtype}      % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc}    % Use 8-bit encoding that has 256 glyphs
+\usepackage[italian]{babel}
+%-------------------------------
+\usepackage{amsmath}
+\usepackage{exercise}
+\numberwithin{Answer}{chapter}
+\numberwithin{Exercise}{chapter}
+%-------------------------------
+\usepackage{url}
+
+\chapterstyle{southall}
+
+\usepackage{eso-pic,graphicx}
+\graphicspath{{figure/}}
+
+\input{myCommands}
+
+\begin{document}
+\input{00-Preambolo}
+\input{01-Termodinamica}
+\input{02-Basi}
+\input{03-ElementiEnsembles}
+\input{04-Canonico}
+\input{05-Grancanonico}
+\input{06-Interagenti}
+\input{07-Quantistica}
+\input{08-EnsembleQuantistici}
+\input{09-Bose}
+\input{10-Fermi}
+\input{20-Ising}
+\appendix
+\input{App01}
+\end{document}

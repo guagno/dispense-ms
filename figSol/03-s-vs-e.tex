@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=5]
+  \draw[->] (-1,0) -- (1.1,0)   node[anchor=north] {$\bar\varepsilon$};
+  \draw[->] (-1,0) -- (-1,0.85) node[anchor=east]  {$s(\bar\varepsilon)$};
+  
+  \draw[dotted,color=red] (-1,0.69314718056) -- (0,0.69314718056);
+  \draw[dotted] (0,0) -- (0,0.69314718056);
+  \draw (-1,-0.05) node{$-1$};
+  \draw (0.001,-0.05) node{$0$};
+  \draw (1,-0.05) node{$1$};
+  \draw (-1.08,0.69314718056) node{$\ln 2$};
+  
+  \draw[thick,color=blue,samples=100,smooth] plot[id=03-s-vs-e] function{log(2)-0.5*((1+x)*log(1+x)+(1-x)*log(1-x))};
+\end{tikzpicture}

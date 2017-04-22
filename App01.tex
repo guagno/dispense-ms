@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Appendice matemarica}
+\label{app:matematica}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Alcune funzioni e formule utili}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{La funzione $\Gamma$}
+\label{subsec:app1-gamma}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+La funzione $\Gamma$ di Eulero è definita da:
+\be
+\label{eq:defGamma}
+\Gamma(\nu) = \int_0^\infty\de{x} \, e^{-x} \, x^{\nu-1} \quad\quad \nu > 0
+\ee
+Notiamo subito che
+\be
+\Gamma(1) = 1
+\ee
+Integrando per parti la (\ref{eq:defGamma}) otteniamo l'equazione di ricorrenza
+\be
+\Gamma(\nu+1) = \nu \Gamma(\nu)
+\ee
+Dalla precedente ricaviamo subito
+\be
+\Gamma(\nu+1) = \nu(\nu-1)(\nu-2) \, \cdots \, (1+p) p \, \Gamma(p) \quad\quad 0 < p \le 1
+\ee
+nella quale $p$ è la parte frazionaria di $\nu$. Se $\nu$ è intero abbiamo l'identificazione
+\be
+\Gamma(n+1) = n!
+\ee
+mentre se è semintero otteniamo
+\bea
+\label{eq:GammaSemint}
+\Gamma \left( m + \dfrac{1}{2} \right) &\equiv& \left( m - \dfrac{1}{2} \right)! =
+\left( m - \dfrac{1}{2} \right) \left( m - \dfrac{3}{2} \right) \, \cdots \, 
+\left( \dfrac{1}{2} \right) \Gamma\left( \dfrac{1}{2} \right) \nonumber \\
+&=& \dfrac{(2m-1)(2m-3) \, \cdots \, 1}{2^m}\pi^{1/2}
+\eea
+nella quale abbiamo sfruttato il fatto che
+\be
+\label{eq:Gamma12}
+\Gamma \left( \dfrac{1}{2} \right) = \pi^{1/2}
+\ee
+
+\noindent
+Cambiando variabile, $x = \alpha y^2$, possiamo scrivere la (\ref{eq:defGamma}) come
+\be
+\Gamma(\nu) = 2\alpha^\nu \int_0^\infty \de{y} \, e^{-\alpha y^2} \, y^{2\nu-1}
+\ee
+e ponendo $\mu = 2\nu - 1$ possiamo calcolare gli integrali notevoli
+\be
+I_\mu(\alpha) \equiv \int_0^\infty \de{y} \, e^{-\alpha y^2} \, y^{\mu}
+= \dfrac{1}{2\alpha^{(\mu+1)/2}}\Gamma \left( \dfrac{\mu+1}{2} \right)
+\ee
+
+\noindent
+Anche gli integrali appena definiti soddisfano una relazione di ricorrenza:
+\be
+I_{\mu+2}(\alpha) = -\dfrac{\text{d}}{\de{\alpha}} I_\mu(\alpha)
+\ee
+Per $\mu$ pari abbiamo, per esempio,
+\be
+I_0(\alpha) = \dfrac{1}{2}\left( \dfrac{\pi}{\alpha}   \right)^{1/2} \quad
+I_2(\alpha) = \dfrac{1}{4}\left( \dfrac{\pi}{\alpha^3} \right)^{1/2} \quad
+I_4(\alpha) = \dfrac{3}{8}\left( \dfrac{\pi}{\alpha^5} \right)^{1/2}
+\ee
+mentre per $\mu$ dispari
+\be
+I_1(\alpha) = \dfrac{1}{2\alpha}   \quad
+I_3(\alpha) = \dfrac{1}{2\alpha^2} \quad
+I_5(\alpha) = \dfrac{1}{\alpha^3}
+\ee
+Notiamo infine che abbiamo
+\be
+\int_{-\infty}^\infty \de{y} \, e^{-\alpha y^2} \, y^{\mu} = 
+\left\{
+\begin{array}{ll}
+2I_\mu(\alpha) & \quad \text{se\ } \mu \text{\ è pari} \\
+0              & \quad \text{altrimenti}
+\end{array}
+\right.
+\ee
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{La formula di Stirling}
+\label{subsec:app1-stirling}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+La formula di Stirling può essere ottenuta applicando la formula di Eulero--Maclaurin. Per definizione abbiamo
+\be
+\ln\left(\, n! \,\right) = \sum_{k=1}^{n} \ln k
+\ee
+e sostituendo l'integrale alla somma possiamo scrivere
+\be
+\ln\left(\, n! \,\right) \simeq \int_1^n \de{x} \, \ln x
+= \big[x\ln x - x \big]_1^n \simeq n\ln n - n
+\ee
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Il teorema multinomiale}
+\label{subsec:app1-multinomiale}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+È un'estensione del teorema binomiale. Dato un set di interi $\seti{k_i}$ con $i = 1, 2, \dots, n$ che soddisfano il vincolo
+\be
+\sum_{i=1}^n k_i = N
+\ee 
+si può dimostrare che
+\be
+\sum_{\seti{k_i}}\left[
+N!\prod_{i=1}^n \dfrac{x_i^{k_i}}{k_i!}
+\right] = (x_1 + x_2 + \cdots + x_n)^N
+\ee

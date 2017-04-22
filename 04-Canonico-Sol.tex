@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Soluzione degli esercizi del Capitolo \ref{cap:canonico}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:04-guc}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:04-guc}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Scriviamo, come al solito per sistemi non interagenti,
+\be
+Q_N(V,T) = \frac{1}{N!}[Q_1(V,T)]^N
+\ee
+con $Q_1$ funzione di partizione di singola particella. Abbiamo
+\be
+Q_1(V,T) = \frac{1}{h^3}\int \de^3 q\int \de^3 p \,e^{-\beta pc}
+\ee
+e quindi possiamo calcolare immediatamente
+\be
+Q_1(V,T) = \frac{8\pi V}{(\beta hc)^3}
+\ee
+L'energia libera di Helmholtz è
+\be
+A(V,T) = -kT\ln Q_N(V,T) = -kTN
+\left\{
+\ln\left( \frac{8\pi V(kT)^3}{N(hc)^3} \right)
+\right\}
+\ee
+Otteniamo subito
+\be
+\label{eq:pguc}
+P = -\dparc{A}{V}{N,T} = \frac{NkT}{V}
+\ee
+ovvero l'equazione di stato (identica a quella del gas non relativistico). Per l'energia abbiamo invece
+\be
+\label{eq:uguc}
+U = -\dpar{\ln Q_N}{\beta} = 3NkT
+\ee
+La relazione tra pressione, volume ed energia è quindi $PV = U/3$. Passando all'entropia, abbiamo
+\be
+S = \frac{U-A}{T}
+\ee
+e con pochi passaggi otteniamo subito
+\be
+S = Nk
+\left\{
+\ln\left( \frac{8\pi V(kT)^3}{N(hc)^3} \right) + 4
+\right\}
+\ee
+Se vogliamo confrontarci con il risultato microcanonico, cioè con l'eq. (\ref{eq:sgum}), dobbiamo inserire nella precedente l'energia interna; dalla (\ref{eq:uguc}) otteniamo subito
+\be
+S(U,N,V) = Nk\left\{\ln\left(\frac{8\pi VU^3}{27(hc)^3 N^4}\right) + 4\right\}
+\ee
+Se consideriamo $S = \mathrm{costante}$, allora abbiamo l'implicazione $VU^3 = \mathrm{costante}$ (per $N = \mathrm{costante}$), e otteniamo subito, usando la (\ref{eq:pguc}), il rapporto $C_P/C_V$:
+\be
+PV^{4/3} = \mathrm{costante} \quad
+\gamma \equiv C_P/C_V = 4/3
+\ee
+Per la densità degli stati abbiamo
+\be
+g(E) = \frac{1}{2\pi i}\oint e^{\beta E}Q(\beta)\de\beta
+\ee
+in cui abbiamo già previsto di chiudere l'integrale di linea sul piano complesso nella direzione $\beta\to -\infty$. Si trova facilmente
+\be
+g(E) = \frac{1}{N!}
+\left\{
+\frac{8\pi V}{(hc)^3}
+\right\}^N \frac{1}{2\pi i}\oint \frac{e^{\beta E}}{\beta^{3N}} \simeq
+\frac{1}{N!}
+\left\{
+\frac{8\pi VE^3}{(hc)^3}
+\right\}^N
+\ee
+in cui nell'ultimo passaggio abbiamo usato $3N-1 \simeq 3N$ (limite termodinamico).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:04-oscfermi}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:04-oscfermi}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+La funzione di partizione di singola particella è:
+\be
+Q_1 = e^{-\beta\varepsilon} + e^{\beta\varepsilon} = 2 \cosh(\beta\varepsilon)
+\ee
+Troviamo subito il numero di occupazione per i due livelli:
+\bea
+N_{-} &=& N \dfrac{e^{\beta\varepsilon}}{e^{-\beta\varepsilon} + e^{\beta\varepsilon}}
+= \dfrac{N}{1 + e^{-2\beta\varepsilon}} \nonumber \\
+N_{+} &=& N \dfrac{e^{-\beta\varepsilon}}{e^{-\beta\varepsilon} + e^{\beta\varepsilon}}
+= \dfrac{N}{1 + e^{2\beta\varepsilon}}
+\eea
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:04-eqchim}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:04-eqchim}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+All'equilibrio termodinamico i potenziali chimici devono essere uguali da entrambi i lati della reazione, quindi
+\be
+	\label{eq:sol04-mueq}
+	\mu_a + \mu_b = \mu_{ab}
+\ee
+	Sappiamo che 
+\be
+	\mu_x = \dparc{A_x}{N_x}{T,V}= -kT\dparc{\ln Q(N_x)}{N_x}{T,V}
+\ee
+	La funzione di partizione per un gas ideale classico è data da
+\be
+	Q(N_x) = \dfrac{1}{N_x!}\left[Q_x\right]^{N_x}
+\ee
+	quindi, usando la formula di Stirling, 
+\be
+	\mu_x = -kT\dparu{N_x}\left[ N_x\ln Q_x - N_x\ln N_x + N_x \right] = -kT[\ln Q_x - \ln N_x]
+\ee
+	Sostituendo nella (\ref{eq:sol04-mueq}) e ricordando che $N_x = n_x V$ si ottiene facilmente
+\be 
+	\ln{\dfrac{Q_a Q_b}{Q_{ab}}}= \ln \dfrac{N_a N_b}{N_{ab}} \quad\rightarrow\quad 
+	\dfrac{n_{ab}}{n_a n_b} = V\dfrac{Q_{ab}}{Q_{a}Q_{b}}
+\ee
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:04-esps}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:04-esps}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Abbiamo visto  che l'entropia di un gas ideale classico vale
+\be
+\frac{S}{Nk} = \ln\left(\frac{V}{N\lambda^3}\right) + \frac{5}{2}
+\ee
+in cui $\lambda$ è la lunghezza d'onda termica (o di de Broglie). Ai fini dell'esercizio ci basta ricordare che
+\be
+\lambda^3 = cT^{-3/2}
+\ee
+con $c$ indipendente dalla temperatura $T$,  per cui ricordando che $Q_1 = V/\lambda^3$ possiamo scrivere
+\be
+\ln\left(\frac{Q_1}{N}\right) + T\dparc{\ln Q_1}{T}{P} =
+\ln\left(\frac{V}{N\lambda^3}\right) + 3/2 + \frac{T}{V}\dparc{V}{T}{P}
+\ee
+Per un gas ideale abbiamo la relazione $V = NkT/P$, quindi
+\be
+\frac{T}{V}\dparc{V}{T}{P} = \frac{NkT}{PV} = 1
+\ee
+da cui discende ciò che dovevamo dimostrare.
