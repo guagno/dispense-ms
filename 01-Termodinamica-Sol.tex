@@ -1,0 +1,398 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Soluzione degli esercizi del Capitolo \ref{cap:termodinamica}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Ricavare espressione per C_V e C_P
+%
+\section*{Esercizio \ref{ex1:cvcp1}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex1:cvcp1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Ricordiamo il primo principio della termodinamica:
+%---
+\be
+\label{ans1:primo}
+\de U = \de Q - \de L
+\ee
+%---
+nella quale né $\de Q$ né $\de L$ sono differenziali esatti; ma $\de U$ lo è. Per definizione abbiamo
+%---
+\be
+C_V = \dparc{Q}{T}{V}
+\ee
+%---
+e scrivendo $U = U(T,V)$, con una differenziazione totale otteniamo
+%---
+\be
+\label{ans1:diffU1}
+\de U = \dparc{U}{T}{V}\de T + \dparc{U}{V}{T}\de V
+\ee
+%---
+Poiché sappiamo che per una trasformazione reversibile $\de L = P\de V$, osservando la (\ref{ans1:diffU1}) possiamo identificare subito
+%---
+\be
+P = -\dparc{U}{V}{T}
+\ee
+%---
+e dunque $\left.\de Q\right|_V = \left.\de U\right|_V$, cioè
+%---
+\be
+C_V = \dparc{U}{T}{V}
+\ee
+%---
+Per contro, esprimendo $U$ come funzione di $(T,P)$, otteniamo
+%---
+\be
+\label{ans1:diffU1}
+\de U = \dparc{U}{T}{P}\de T + \dparc{U}{P}{T}\de P
+\ee
+%---
+Introducendo il potenziale termodinamico {\em entalpia}, $H = U + PV$, abbiamo
+%---
+\be
+\de H = \de U + P\de V + V \de P = \de Q + V \de P
+\ee
+%---
+È quindi chiaro che $\left.\de H\right|_P = \left.\de Q\right|_P$, da cui
+%---
+\be
+C_P = \dparc{H}{T}{P}
+\ee
+%---
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Ricavare l'equazione di stato dei gas perfetti dalle condizioni
+% U dipende solo da T e non da V
+% H dipende solo da T e non da P
+%
+\section*{Esercizio \ref{ex1:PVNkT}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex1:PVNkT}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Scriviamo i differenziali dell'energia interna $U$ e dell'entalpia $H$ in termini delle loro variabili naturali:
+%---
+\bea
+\label{ans1:deUdeH}
+\de U = T\de S - P\de V \nonumber \\
+\de H = T\de S + V\de P
+\eea
+%---
+Le due condizioni (a) e (b) menzionate nel testo dell'esercizio significano che $(\partial U/\partial V)_T = 0$ e che $(\partial H/\partial P)_T = 0$. Otteniamo quindi facilmente, dalle (\ref{ans1:deUdeH}),
+%---
+\be
+\label{ans1:dsvt}
+\dparc{S}{V}{T} = \dfrac{P}{T} \quad\quad\quad \dparc{S}{P}{T} = -\dfrac{V}{T}
+\ee
+%---
+Possiamo liberarci dell'entropia $S$ utilizzando le relazioni di Maxwell:
+%---
+\be
+\dparc{S}{V}{T} = \dparc{P}{T}{V} \quad\quad\quad \dparc{S}{P}{T} = -\dparc{V}{T}{P}
+\ee
+%---
+ottenendo quindi
+%---
+\be
+\dparc{P}{T}{V} = \dfrac{P}{T} \quad\quad\quad \dparc{V}{T}{P} = \dfrac{V}{T}
+\ee
+%---
+Integriamo facilmente queste equazioni, ottenendo
+%---
+\be
+P = f_1(V) T \quad\quad\quad V = f_2(P) T
+\ee
+%---
+in cui $f_1(\cdot)$ e $f_2(\cdot)$ sono funzioni sconosciute. Ma le due equazioni devono essere contemporaneamente valide, quindi
+%---
+\be
+\dfrac{P}{f_1(V)} = \dfrac{V}{f_2(P)} = T = \text{costante}
+\ee
+%---
+L'unico modo perché ciò sia vero è che valga $f_1(V) = \alpha/V$ e $f_2(P) = \alpha/P$, con qualche costante $\alpha$. Possiamo dunque scrivere
+%---
+\be
+PV = \alpha T
+\ee
+%---
+Ci rendiamo però conto che a sinistra abbiamo una quantità estensiva; quindi anche $\alpha$ dev'essere estensiva, cioè proporzionale al numero di particelle $N$. Possiamo dunque scrivere
+%---
+\be
+PV = N\tilde{k}T
+\ee
+%---
+in cui la costante $\tilde{k}$ deve avere dimensioni tali che $\tilde{k}T$ sia dimensionalmente un'energia. Non ci resta che identificare $\tilde{k}$ con la costante di Boltzmann $k$. Usando l'equazione appena ottenuta e la prima delle (\ref{ans1:dsvt}) possiamo scrivere
+%---
+\be
+\dfrac{P}{T} = \dfrac{N\tilde{k}}{V} = \dparc{S}{V}{T}
+\ee
+%---
+Ma noi da principi primi sappiamo che l'entropia $S$ dev'essere della forma
+%---
+\be
+S = Nk[\ln V + f_3(T)]
+\ee
+%---
+quindi vediamo facilmente che $\tilde{k} = k$, e otteniamo $PV = NkT$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Minimo dell'energia libera di Helmholtz e dell'energia libera di Gibbs
+%
+\section*{Esercizio \ref{ex1:potAG}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex1:potAG}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Consideriamo un sistema a volume $V$ fissato, posto a contatto con una riserva termica a temperatura costante $T$. Finché il sistema non è in equilibrio con la riserva non è possibile definire la temperatura del sistema stesso, e quindi neanche la sua energia libera di Helmholtz $A(T,V)$. Possiamo però provare a definire un'energia libera di {\em non equilibrio}:
+\be
+A = U - TS
+\ee
+in cui è inteso che $U$ è l'energia interna del sistema, definita anche fuori dall'equilibrio, e $T$ la temperatura della riserva termica. L'entropia $S$ quando il sistema non è all'equilibrio non è semplicemente una funzione di $U$ e $V$, ma dipende dai dettagli dello stato di non equilibrio. Possiamo appellarci al teorema di Clausius e scrivere
+\be
+\de S = \ge \de Q / T
+\ee
+in cui $\de Q$ è la quantità di calore trasferita dalla riserva termica al sistema. Poiché il volume è costante, avremo $\de L = 0$, e quindi $\de Q = \de U$. D'altronde la temperatura $T$ della riserva termica è costante, e quindi
+\be
+\de A = \de U - T \de S = \de Q - T \de S \le 0
+\ee
+Quindi $A$ decresce sempre, fino a che non si arriva all'equilibrio; non potendo decrescere, la condizione di equilibrio equivale a una condizione di minimo per $A$.
+
+Allo stesso modo possiamo considerare, nel caso di un sistema a pressione costante in contatto con una riserva termica a temperatura costante $T$, l'energia libera di Gibbs, $G = U + PV - TS$. Differenziando a temperatura e pressione costanti otteniamo
+\be
+\de G = \de U + P\de V - T\de S
+\ee
+ma in questo caso abbiamo $\de U = \de Q - P\de V$. Sostituendo nella precedente otteniamo
+\be
+\de G = \de Q - T\de S \le 0
+\ee
+e possiamo svolgere le stesse considerazioni di prima circa la condizione di equilibrio e quella di minimo di $G$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Esprimere C_V e C_P in termini di quantità fisiche più facili da
+% misurare sperimentalmente
+%
+\section*{Esercizio \ref{ex1:cvcp2}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex1:cvcp2}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Scriviamo l'entropia $S$ come funzione di $T$ e $V$, ottenendo
+\be
+T\de S = T\dparc{S}{T}{V}\de T + T\dparc{S}{V}{T}\de V
+\ee
+In prima istanza notiamo che per una trasformazione a volume costante abbiamo $T\de S|_V = \de Q = C_V\de T$, e quindi
+\be
+T\dparc{S}{T}{V} = C_V
+\ee
+Per il secondo termine, consideriamo l'energia libera di Helmholtz $A(T,V)$. Dall'identità
+\be
+\left[\dparu{V}\dparc{A}{T}{V}\right]_T = \left[\dparu{T}\dparc{A}{V}{T}\right]_V
+\ee
+otteniamo la relazione di Maxwell
+\be
+\dparc{S}{V}{T} = \dparc{P}{T}{V}
+\ee
+Utilizziamo ora l'identità
+\be
+\dparc{P}{T}{V}\dparc{T}{V}{P}\dparc{V}{P}{T} = -1
+\ee
+per ottenere
+\be
+\dparc{S}{V}{T} = -\dfrac{(\partial V/\partial T)_P}{(\partial V/\partial P)_T} = \dfrac{\alpha}{\kappa_T}
+\ee
+trovando quindi
+\be
+\label{ans1:TdS1}
+T\de S = C_V\, \de T + \dfrac{\alpha T}{\kappa_T}\de V
+\ee
+Allo stesso modo, considerando $S$ come funzione di $T$ e $P$, abbiamo
+\be
+T\de S = T\dparc{S}{T}{P}\de T + T\dparc{S}{P}{T}\de P
+\ee
+Per il primo termine ragioniamo come in precedenza per ottenere
+\be
+T\dparc{S}{T}{P} = C_P
+\ee
+Differenziando l'energia libera di Gibbs $G(T,P)$, otteniamo la relazione di Maxwell
+\be
+\dparc{S}{P}{T} = -\dparc{V}{T}{P} = -\alpha V
+\ee
+e quindi
+\be
+\label{ans1:TdS2}
+T\de S = C_P\, \de T - \alpha TV\de P
+\ee
+Consideriamo ora una trasformazione a pressione costante: dalla (\ref{ans1:TdS1}) e dalla (\ref{ans1:TdS2}) otteniamo (ricordando che $\de P = 0$)
+\be
+TdS = C_V\, \de T + \dfrac{\alpha T}{\kappa_T}\de V = C_P\de T
+\ee
+e quindi
+\be
+CP - C_V = \dfrac{\alpha T}{\kappa_T}\dparc{V}{T}{P} = \dfrac{\alpha^2 TV}{\kappa_T}
+\ee
+Se invece consideriamo una trasformazione isoentropica, otteniamo
+\bea
+0 &=& C_V\, \de T|_S + \dfrac{\alpha T}{\kappa_T}\de V|_S \nonumber \\
+0 &=& C_P\, \de T|_S - \alpha TV\de P|_S
+\eea
+Il rapporto tra queste due equazioni fornisce
+\be
+\dfrac{C_P}{C_V} = -V\kappa_T\dparc{P}{V}{S} = \dfrac{\kappa_T}{\kappa_S}
+\ee
+Abbiamo ora due equazioni in due incognite, $C_P$, e $C_V$, e risolvendo il sistema otteniamo
+\bea
+C_V &=& \dfrac{\alpha^2 TV \kappa_S}{\kappa_T(\kappa_T-\kappa_S)} \nonumber\\
+C_P &=& \dfrac{\alpha^2 T V}{\kappa_T-\kappa_S}
+\eea
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Variazione totale di entropia per una quantità d'acqua a contatto
+% con una riserva termica. Possibilità di avere un processo (ideale)
+% per il quale \Delta S_{tot} = 0
+%
+\section*{Esercizio \ref{ex1:pasta}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex1:pasta}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Per rispondere alla domanda (a), immaginiamo, ai fini di calcolare la variazione di entropia dell'acqua, una trasformazione reversibile in cui la temperatura dell'acqua si innalza, in ciascun passo infinitesimo, di una quantità infinitesima. In ciascun passo avremo
+\be
+\de S_a = \dfrac{\de Q_{\text{rev}}}{T} = C\dfrac{\de T}{T}
+\ee
+e integrando
+\be
+\Delta S_a = C\int_{T_i}^{T_f} \dfrac{\de T}{T} = C\ln(T_f/T_i)
+\ee
+La riserva termica è invece a temperatura fissata, e quindi avremo semplicemente
+\be
+\Delta S_R = -\dfrac{\Delta Q}{T_f} = -C \dfrac{T_f - T_i}{T_f}
+\ee
+in cui $\Delta Q$ è la quantità totale di calore immessa dalla riserva nell'acqua. Sostituendo i valori numerici, $T_i = 283.15$ K e $T_f = 363.15$ K otteniamo
+\be
+\Delta S = \Delta S_a + \Delta S_R \simeq 0.0285 \; C
+\ee
+
+Per rispondere alla domanda (b), sviluppiamo gli stessi ragionamenti di prima, ottenendo
+\be
+\Delta S_a = C\left(
+\ln(T_f/T_1) + \ln(T_1/T_i) = C\ln(T_f-T_i)
+\right)
+\ee
+cioè la procedura in due passi, con una riserva termica a temperatura intermedia, non cambia la variazione di entropia dell'acqua. Per la variazione di entropia delle due riserve termiche, otteniamo invece
+\bea
+\Delta S_R = \Delta S_R^{(1)} + \Delta S_R^{(2)} &=& -C\left[
+\dfrac{T_1-T_i}{T_1} + \dfrac{T_f-T_1}{T_f}
+\right] \nonumber \\
+&=& -C\left(
+\dfrac{2T_f T_1 - T_f T_i - T_i^2}{T_1 T_f}
+\right)
+\eea
+e inserendo i dati numerici per le temperature otteniamo
+\be
+\Delta S = \Delta S_a + \Delta S_R \simeq 0.0149 \; C
+\ee
+
+Per rispondere alla domanda (c), osserviamo che la risposta alla domanda (b) ci suggerisce di dividere l'intero processo in $N$ passi, con $N$ riserve termiche a temperature
+\be
+T_n = T_i + \dfrac{n}{N}(T_f-T_i) \quad\quad n = 1 \dots N
+\ee
+In questo modo abbiamo che la variazione di entropia di tutte le riserve termiche, alla fine del processo, sarà
+\be
+\Delta S_R = -C \sum_{n=1}^{N} \dfrac{T_n - T_{n-1}}{T_n}
+= -C \sum_{n=1}^{N} \dfrac{(T_f-T_i)/N}{T_i + (n/N)(T_f-T_i)}
+\ee
+Ponendo $x \equiv (n/N)(T_f - T_i)$ e passando al limite $N\to\infty$ otteniamo
+\be
+\lim_{N\to\infty}\Delta S_R = - C\int_0^{T_f-T_i}\dfrac{\de x}{T_i + x} = -C\ln(T_f-T_i) = -\Delta S_a
+\ee
+e in questo modo abbiamo che $\Delta S = 0$.
+
+Il risultato ci dice che abbiamo creato un processo ideale reversibile. Nella realtà dei fatti le cose non possono andare così. Prima di tutto, abbiamo assunto di poter scaldare l'acqua in maniera reversibile per calcolare $\Delta S_a$. In secondo luogo, abbiamo assunto di avere a disposizione un numero infinito di riserve termiche, con temperature che cambiano in maniera infinitesimale. Naturalmente tutto ciò rappresenta un'idealizzazione che non può in alcun modo essere realizzata in maniera pratica, e quindi per cuocere la pasta dobbiamo rassegnarci ad aumentare necessariamente l'entropia dell'Universo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Calcoli termodinamici con l'eq di van der Waals
+%
+\section*{Esercizio \ref{ex1:vanderWaals}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex1:vanderWaals}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Per mostrare che $C_V$ è indipendente dal volume, calcoliamo $(\partial C_V/\partial V)_T$ come segue:
+\bea
+\dparc{C_V}{V}{T} = T\left[
+\dparu{V}\dparc{S}{T}{V}
+\right]_T &=& T\left[
+\dparu{T}\dparc{S}{V}{T}
+\right]_V \nonumber \\
+&=& T\left(
+\dfrac{\partial^2 P}{\partial^2 T}
+\right)_V
+\eea
+Nel penultimo passaggio abbiamo sfruttato l'irrilevanza dell'ordine di derivazione per le derivate seconde dei potenziali termodinamici, mentre nell'ultimo abbiamo usato la relazione di Maxwell 
+$(\partial S/\partial V)_T = (\partial P/\partial T)_V$. L'equazione di stato per un gas di van der Waals può essere scritta nella forma
+\be
+P = kTB(b,N,V) + A(a,N,V)
+\ee
+in cui $A$ e $B$ sono funzioni che, in prima approssimazione, non dipendono dalla temperatura. Vediamo quindi facilmente che $(\partial^2 P/\partial^2 T)_V = 0$ (ricordare che anche $N$ è fissato), da cui la risposta alla domanda (a).
+
+Per quel che riguarda il punto (b), notiamo che l'energia interna $U$ non varia per un'espansione libera adiabatica. A differenza del gas ideale classico, però, l'energia interna non è più solo funzione della temperatura $T$. È utile considerare $U$, in tutta generalità, come una funzione della coppia $(T,V)$. Abbiamo quindi
+\be
+\label{ans1:deUvdW1}
+\de U = \dparc{U}{T}{V}\de T + \dparc{U}{V}{T}\de V =
+C_V\,\de T + \left[
+T\dparc{P}{T}{V} - P
+\right]\,\de V
+\ee
+Per ottenere il secondo termine nel membro più a destra della (\ref{ans1:deUvdW1}) abbiamo ragionato in questo modo: sappiamo che $\de U = T\de S - P\de V$ e quindi per una variazione a temperatura fissata otteniamo
+\be
+\dparc{U}{V}{T} = T\dparc{S}{V}{T} - P
+\ee
+Usando la relazione di Maxwell $(\partial S/\partial V)_T = (\partial P/\partial T)_V$ abbiamo proprio il termine cercato.
+
+Ora, usando l'equazione di stato di van der Waals, otteniamo esplicitamente
+\be
+\de U = C_V\,\de T + \dfrac{aN^2}{V^2}\,\de V
+\ee
+Poiché $U$ non varia abbiamo $\de U = 0$ e quindi
+\be
+\int_{T_i}^{T_f}\de T = -\dfrac{aN^2}{C_V}\int_{V_i}^{V_f}\dfrac{\de V}{V^2}
+\ee
+cioè
+\be
+T_f - T_i = -\dfrac{aN^2}{C_V}\left(
+\dfrac{1}{V_i} - \dfrac{1}{V_f}
+\right)
+\ee
+Notiamo che se $a > 0$, come è il caso per un potenziale attrattivo a lunghe distanze, la temperatura del sistema diminuisce. Possiamo interpretare questo fatto pensando che in seguito all'espansione le particelle in media si allontaneranno le une dalle altre, incrementando l'energia potenziale tra loro; di conseguenza, poiché l'energia interna totale non cambia, l'energia cinetica, ovvero la temperatura, deve diminuire. Se $a = 0$, cioè senza potenziale attrattivo, la temperatura rimane invariata.
+
+Consideriamo ora l'entropia come funzione della coppia $(T,V)$. Possiamo scrivere
+\be
+\de S = \dparc{S}{T}{V}\de T + \dparc{S}{V}{T}\de V
+\ee
+e usando ancora una volta, per il termine più a destra, la relazione di Maxwell citata in precedenza, otteniamo
+\be
+\de S = \dfrac{C_V}{T}\,\de T + \dparc{P}{T}{V}\de V
+\ee
+Tenendo conto dell'equazione di stato, abbiamo infine
+\be
+\de S = \dfrac{C_V}{T}\,\de T + \dfrac{Nk}{V - Nb}\,\de V
+\ee
+e integrando troviamo
+\be
+\Delta S = \int_i^f = C_V\ln\left(\dfrac{T_f}{T_i}\right) + 
+Nk\ln\left(\dfrac{V_f-Nb}{V_i-Nb} \right)
+\ee
+Sostituendo nella precedente il risultato per la temperatura finale $T_f$ otteniamo finalmente
+\be
+\Delta S = C_V\ln\left(1 - \dfrac{aN^2}{C_V T_i}\left(\dfrac{1}{V_i}-\dfrac{1}{V_f}\right)\right)
++ Nk\ln\left(\dfrac{V_f-Nb}{V_i-Nb} \right)
+\ee
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vskip 0.75cm
+\begin{flushright}
+{\em Ultimo aggiornamento del capitolo: 20.04.2017}
+\end{flushright}

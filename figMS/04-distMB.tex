@@ -1,0 +1,13 @@
+\begin{tikzpicture}[domain={0:3},xscale=3.8,yscale=3.8]
+  \draw[->] (-0.05,0) -- (3,0) node[anchor=north] {$v$};
+  \draw[->] (0,-0.05) -- (0,1) node[anchor=east] {$f(v)$};
+  \draw[dashed] (1,0) -- (1,0.9) node[anchor=east] {$v^*$};
+  \draw[densely dotted] (1.12838,0) -- (1.12830,0.9) node[anchor=west] {$\langle v \rangle$};
+
+  \draw[thick,samples=100,smooth] plot[id=mbdist] function{4/sqrt(pi)*x**2*exp(-x**2)};
+
+  \foreach \x in {0,0.5,1,1.5,2,2.5}
+    \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+  \foreach \y in {0,0.2,0.4,0.6,0.8}
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+\end{tikzpicture}

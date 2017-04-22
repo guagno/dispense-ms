@@ -167,13 +167,13 @@ e risulta subito evidente dalla definizione (\ref{eq:gammatilde}) che $\Gamma(\c
 \label{eq:residui}
 \Gamma(\calN,U) = \frac{1}{2\pi i}\oint\frac{\widetilde{\Gamma}(\calN,U;z)}{z^{\calE+1}}\de z
 \ee
-La serie (\ref{eq:serie2}) ha un raggio di convergenza $\rho$ (quale che sia, $\rho \le 1$). Se si analizza separatamente il comportamento del numeratore e del denominatore della funzione integranda nella (\ref{eq:residui}) (vedi figura \ref{fig:x0}) ci si rende subito conto che la funzione integranda stessa deve avere, sull'asse reale, un unico minimo per un valore $x_0 < 1$ della parte reale $x$ di $z = x + iy$. Intuitivamente possiamo ragionare così; nella funzione integranda il numeratore parte da $1$ per $z=0$ e va monotonicamente all'infinito positivo verso il bordo di convergenza della serie (\ref{eq:serie1}). Il fattore $z^{-\calE-1}$ parte dall'infinito positivo per $z=0$ e decresce monotonicamente verso $0$, conservando un valore finito sul bordo di convergenza della serie (\ref{eq:serie1}). Che ci debba essere un minimo in $x_0$, con $0 < x_0 < 1$ è evidente. Per i dettagli della dimostrazione che il minimo è unico si veda \cite{Schr}.
+La serie (\ref{eq:serie2}) ha un raggio di convergenza $\rho$ (quale che sia, $\rho \le 1$). Se si analizza separatamente il comportamento del numeratore e del denominatore della funzione integranda nella (\ref{eq:residui}) (vedi figura \ref{fig:04-x0}) ci si rende subito conto che la funzione integranda stessa deve avere, sull'asse reale, un unico minimo per un valore $x_0 < 1$ della parte reale $x$ di $z = x + iy$. Intuitivamente possiamo ragionare così; nella funzione integranda il numeratore parte da $1$ per $z=0$ e va monotonicamente all'infinito positivo verso il bordo di convergenza della serie (\ref{eq:serie1}). Il fattore $z^{-\calE-1}$ parte dall'infinito positivo per $z=0$ e decresce monotonicamente verso $0$, conservando un valore finito sul bordo di convergenza della serie (\ref{eq:serie1}). Che ci debba essere un minimo in $x_0$, con $0 < x_0 < 1$ è evidente. Per i dettagli della dimostrazione che il minimo è unico si veda \cite{Schr}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
+  \label{fig:04-x0}
   \centering
-  \input{figTeX/x0-df}
+  \input{figMS/04-x0-df}
   \caption{Determinazione di $x_0$} 
-  \label{fig:x0}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Per ottenere la condizione di minimo scriviamo
@@ -218,17 +218,17 @@ Dobbiamo ora considerare cosa succede se, partendo da $x_0$, ci spostiamo lungo 
 \be
 \frac{\partial^2 f}{\partial x^2} = -\frac{\partial^2 f}{\partial y^2}
 \ee
-ci dicono che se in $x_0$ in direzione $x$ c'è un minimo molto profondo, nello stesso punto, in direzione $y$, ci sarà un massimo estremamente pronunciato. In altre parole $x_0$ è un {\em punto di sella} (vedi figura \ref{fig:sella}; per un esempio pratico di punto di sella si pensi appunto a una sella o a una patatina {\em Pringles}). Calcoliamo la derivata seconda di $g(x)$ nel punto $x_0$:
+ci dicono che se in $x_0$ in direzione $x$ c'è un minimo molto profondo, nello stesso punto, in direzione $y$, ci sarà un massimo estremamente pronunciato. In altre parole $x_0$ è un {\em punto di sella} (vedi figura \ref{fig:04-sella}; per un esempio pratico di punto di sella si pensi appunto a una sella o a una patatina {\em Pringles}). Calcoliamo la derivata seconda di $g(x)$ nel punto $x_0$:
 \bea
 g''(x_0) &=& \frac{f''(x_0)}{f(x_0)} - \left(\frac{f'(x_0)}{f(x_0)}\right)^2 + \frac{U}{x_0^2}\nonumber\\
 &=& \frac{f''(x_0)}{f(x_0)} - \frac{U^2-U}{x_0^2}
 \eea
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
+  \label{fig:04-sella}
   \centering
   \includegraphics[width=0.7\textwidth]{saddle-point.png}
   \caption{Un punto di sella} 
-  \label{fig:sella}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Notiamo che anche $g''(x_0)$ rimane indipendente da $\calN$ nel limite $\calN\to\infty$. Per svolgere l'integrale (\ref{eq:residui}) ragioniamo in questo modo: tenendo conto che nel limite $\calN\to\infty$ il minimo in direzione $x$ è {\em molto profondo} e il massimo in direzione $y$ è {\em molto piccato}, spezziamo l'integrale circolare in due parti: un breve tratto (da $-\varepsilon$ a $\varepsilon$), che possiamo considerare rettilineo, in direzione immaginaria; e poi il resto della circonferenza:
@@ -879,7 +879,7 @@ in cui $L(x)$ è la funzione di Langevin:
 \be
 L(x) = \coth x - \frac{1}{x}
 \ee
-(vedi figura \ref{fig:langevin}). Se abbiamo $N_0$ dipoli per volume unitario, la magnetizzazione del sistema, ossia il momento magnetico medio per unità di volume, sarà data da
+(vedi figura \ref{fig:04-langevin}). Se abbiamo $N_0$ dipoli per volume unitario, la magnetizzazione del sistema, ossia il momento magnetico medio per unità di volume, sarà data da
 \be
 M_{z0} = N_0 m_z = N_0\mu L(x)\quad(x=\beta\mu H)
 \ee
@@ -899,22 +899,10 @@ Questa è la legge di Curie del paramagnetismo, e la costante $C$ è detta costa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
+  \label{fig:04-langevin}
   \centering
-\begin{tikzpicture}[domain={0.0001:12},xscale=0.75,yscale=3]
-  \draw[->] (-0.5,0) -- (12.5,0) node[anchor=north] {$x$};
-  \draw[->] (0,-0.05) -- (0,1.5) node[anchor=east] {$L(x)$};
-  \draw[dashed] (0,1) -- (12,1);
-  \draw[densely dotted] (0,0) -- (3.6,1.2);
-  
-  \draw[thick] plot[id=can-lang] function{1/tanh(x)-1/x};
-
-  \foreach \x in {2,4,6,8,10}
-    \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
-  \foreach \y in {0.5,1}
-    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
-\end{tikzpicture}
+  \input{figMS/04-langevin}
   \caption{La funzione di Langevin} 
-  \label{fig:langevin}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -980,14 +968,13 @@ in cui $B_J(x)$, la funzione di Brillouin di ordine $J$, è data da
 \be
 B_J(x) = (1+1/2J)\coth\{(1+1/2J)x\} - \frac{1}{2J}\coth\{x/2J\}
 \ee
-(vedi figura \ref{fig:brillouin}). 
+(vedi figura \ref{fig:04-brillouin}). 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
-  \label{fig:brillouin}
+  \label{fig:04-brillouin}
   \centering
-  \input{figTeX/can-brillfunc}
+  \input{figMS/04-brillfunc}
   \caption{Due funzioni di Brillouin. Dall'alto in basso: $J = 1/2$, $J=\infty$ (che corrisponde alla funzione di Langevin). Funzioni di Brillouin con valori intermedi di $J$ si situano all'interno delle due curve mostrate.} 
-  \label{fig:brillouin}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Consideriamo alcuni casi speciali; vediamo subito che per campi forti e basse temperature ($x \gg 1$) la funzione $B_J(x) \simeq 1$ per qualsiasi valore di J, e questo corrisponde a una situazione di saturazione magnetica. D'altro canto, per alte temperature e campi deboli ($x \ll 1$) possiamo espandere ottenendo
@@ -1085,7 +1072,7 @@ con $k = x, y, z$.
 \subsection{Velocità più probabile, velocità media}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Per il calcolo della velocità più probabile chiediamo la condizione di estremizzazione, ossia poniamo la derivata di $f_{v}(v)$ rispetto a $v$ uguale a zero (vedi figura \ref{fig:maxwell}). Si ottiene facilmente
+Per il calcolo della velocità più probabile chiediamo la condizione di estremizzazione, ossia poniamo la derivata di $f_{v}(v)$ rispetto a $v$ uguale a zero (vedi figura \ref{fig:04-maxwell}). Si ottiene facilmente
 %
 \be
 v^{*} = \sqrt{\frac{2kT}{m}}
@@ -1110,26 +1097,14 @@ da cui otteniamo facilmente
 \langle v \rangle = \sqrt{\frac{8kT}{\pi m}}
 \ee
 %
-La forma della distribuzione (vedi Figura \ref{fig:maxwell}) implica naturalmente $\langle v \rangle > v^{*}$.
+La forma della distribuzione (vedi Figura \ref{fig:04-maxwell}) implica naturalmente $\langle v \rangle > v^{*}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
+  \label{fig:04-maxwell}
   \centering
-\begin{tikzpicture}[domain={0:3},xscale=3.8,yscale=3.8,samples=100,smooth]
-  \draw[->] (-0.05,0) -- (3,0) node[anchor=north] {$v$};
-  \draw[->] (0,-0.05) -- (0,1) node[anchor=east] {$f(v)$};
-  \draw[dashed] (1,0) -- (1,0.9) node[anchor=east] {$v^*$};
-  \draw[densely dotted] (1.12838,0) -- (1.12830,0.9) node[anchor=west] {$\langle v \rangle$};
-  
-  \draw[thick] plot[id=mbdist] function{4/sqrt(pi)*x**2*exp(-x**2)};
-
-  \foreach \x in {0,0.5,1,1.5,2,2.5}
-    \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
-  \foreach \y in {0,0.2,0.4,0.6,0.8}
-    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
-\end{tikzpicture}   
+  \input{figMS/04-distMB}
   \caption{La distribuzione di Maxwell delle velocità. Le unità sono scelte in modo tale che $m\beta/2 = 1$. Si nota come il valor medio di $v$ sia più grande del valore più probabile.}
-  \label{fig:maxwell}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1140,20 +1115,13 @@ Per una molecola di azoto (il maggiore costituente dell'atmosfera) a temperatura
 \label{sec:conskin}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Consideriamo un gas ideale racchiuso in un contenitore di volume $V$ e mantenuto a una temperatura $T$. Vogliamo calcolare quante molecole, in media e in un tempo $\de{t}$, colpiscono una delle pareti del contenitore, diciamo una delle due pareti perpendicolari all'asse $x$, quella più a destra guardando la scatola in figura \ref{fig:effusione}.
+Consideriamo un gas ideale racchiuso in un contenitore di volume $V$ e mantenuto a una temperatura $T$. Vogliamo calcolare quante molecole, in media e in un tempo $\de{t}$, colpiscono una delle pareti del contenitore, diciamo una delle due pareti perpendicolari all'asse $x$, quella più a destra guardando la scatola in figura \ref{fig:04-effusione}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h!b]
-\label{fig:effusione}
-\centering
-\begin{tikzpicture}
-  \draw[fill=gray!30!white] (5,0)--(5,5)--(7,7)--(7,2)--(5,0);
-  \draw (5,0)--(0,0)--(0,5)--(5,5);
-  \draw (0,5)--(2,7)--(7,7);
-  \draw[dotted] (0,0)--(2,2)--(2,7);
-  \draw[dotted] (2,2)--(7,2);
-  \draw[dashed] (4.5,0)--(4.5,5)--(6.5,7)--(6.5,2)--(4.5,0);
-\end{tikzpicture}
-\caption{Considerazioni cinetiche ed effusione di un gas. La parete di cui si parla nel testo è quella ombreggiata. Con una linea tratteggiata si è cercato di delineare l'elemento di volume $\de{V}$: le molecole che si trovano in questo volume e viaggiano verso destra colpiscono la parete in un tempo $\de{t}$. Naturalmente detto elemento di volume varia da molecola a molecola, e per questo quindi occorre integrare sulla distribuzione $f_v(v)$.}
+  \label{fig:04-effusione}
+  \centering
+  \input{figMS/04-effusione}
+  \caption{Considerazioni cinetiche ed effusione di un gas. La parete di cui si parla nel testo è quella ombreggiata. Con una linea tratteggiata si è cercato di delineare l'elemento di volume $\de{V}$: le molecole che si trovano in questo volume e viaggiano verso destra colpiscono la parete in un tempo $\de{t}$. Naturalmente detto elemento di volume varia da molecola a molecola, e per questo quindi occorre integrare sulla distribuzione $f_v(v)$.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

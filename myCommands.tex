@@ -1,0 +1,101 @@
+\newcommand{\hslashslash}{%
+  \raisebox{.75ex}{%
+    \scalebox{.7}{%
+      \rotatebox[origin=c]{18}{$-$}%
+    }%
+  }%
+}
+\newcommand{\bslash}{%
+  {%
+   \vphantom{b}%
+   \ooalign{\kern-.15em\smash{\hslashslash}\hidewidth\cr$b$\cr}%
+   \kern.05em
+  }%
+}\newcommand*{\bbar}{{\mkern-1.2mu\mathchar'26\mkern-7.8mu b}}
+\newcommand*{\eps}{\varepsilon}
+\newcommand*{\be}{\begin{equation}}
+\newcommand*{\ee}{\end{equation}}
+\newcommand*{\bea}{\begin{eqnarray}}
+\newcommand*{\eea}{\end{eqnarray}}
+\newcommand*{\bfrac}[2]{\left(\dfrac{#1}{#2}\right)}
+
+\newcommand*{\de}[1]{{\textrm d}#1}
+\newcommand*{\den}[2]{{\textrm d}^#1#2}
+\newcommand*{\dtot}[2]{\frac{\de#1}{\de#2}}
+\newcommand*{\dephi}{\de\varphi\,}
+
+\newcommand*{\dparu}[1]{\frac{\partial }{\partial #1}}
+\newcommand*{\dpar}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand*{\dparc}[3]{\left(\dpar{#1}{#2}\right)_{#3}}
+\newcommand*{\dpard}[4]{\left(\dpar{#1}{#2}\right)_{#3,#4}}
+
+\newcommand*{\ensemble}{{\em ensemble}}
+\newcommand*{\ensembles}{{\em ensembles}}
+
+\newcommand*{\aspetta}[1]{\langle#1\rangle}
+\newcommand*{\gaspetta}[1]{\left\langle#1\right\rangle}
+
+\newcommand\myvec[1]{\mathbf{#1}}
+\newcommand*{\versor}[1]{\hat{#1}}
+\newcommand*{\Ham}{{\mathcal H}}
+\newcommand*{\Hamop}{\hat{\mathcal H}}
+\newcommand*{\calN}{{\mathcal N}}
+\newcommand*{\calE}{{\mathcal E}}
+\newcommand*{\calQ}{{\mathcal Q}}
+\newcommand*{\calV}{{\mathcal V}}
+\newcommand*{\calU}{{\mathcal U}}
+\newcommand*{\nset}{\{\mathbf{n}\}}
+\newcommand*{\nsetstar}{\{\mathbf{n}^*\}}
+\newcommand*{\seti}[1]{\{#1\}}
+\newcommand*{\nkset}{\{n_k\}}
+\newcommand*{\dnkset}{\{n_k+\delta n_k\}}
+\newcommand*{\Wnk}{W\{n_k\}}
+\newcommand*{\densa}{a(\varepsilon)}
+\newcommand*{\nrs}{n_{r,s}}
+\newcommand*{\nrsset}{\{n_{r,s}\}}
+\newcommand*{\Wnrs}{W\{n_{r,s}\}}
+\newcommand*{\psik}{\psi^{(k)}}
+\newcommand*{\ank}{a_{n}^{(k)}}
+\newcommand*{\anks}{a_{n}^{*(k)}}
+\newcommand*{\dotank}{\dot a_{n}^{(k)}}
+\newcommand*{\dotanks}{\dot a_{n}^{*(k)}}
+\newcommand*{\amk}{a_{m}^{(k)}}
+\newcommand*{\amks}{a_{m}^{*(k)}}
+\newcommand*{\dotamk}{\dot a_{m}^{(k)}}
+\newcommand*{\alk}{a_{l}^{(k)}}
+\newcommand*{\alks}{a_{l}^{(k)}}
+\newcommand*{\dotalk}{\dot a_{l}^{(k)}}
+\newcommand*{\rhop}{\hat\rho}
+\newcommand*{\bra}[1]{\langle #1|\,}
+\newcommand*{\ket}[1]{\,|#1\rangle}
+\newcommand*{\braket}[2]{\langle #1|#2\rangle}
+\newcommand*{\Tr}[1]{\textrm{Tr}(#1)}
+
+\newcommand*{\zembe}{ze^{-\beta\eps}}
+\newcommand*{\zmebe}{z^{-1}e^{\beta\eps}}
+\newcommand*{\zemx}{ze^{-x}}
+\newcommand*{\zmex}{z^{-1}e^{x}}
+\newcommand*{\gBE}[1]{g_{#1}}
+\newcommand*{\fFD}[1]{f_{#1}}
+\newcommand*{\aspne}{\langle n_\eps\rangle}
+
+\newcommand*{\musb}{\boldsymbol{\mu^*}}
+
+\newcommand*{\refeq}[1]{eq.\~(\ref\{#1\})}
+\newcommand*{\refes}[1]{esercizio\~(\ref\{#1\})}
+\newcommand*{\reffig}[1]{figura\~(\ref{#1})}
+\newcommand*{\reftbl}[1]{tabella\~(\ref\{#1\})}
+
+\setlength{\ExerciseSkipAfter}{0\baselineskip}
+\renewcommand{\ExerciseHeaderTitle}{\;\;\;{\em \ExerciseTitle}}
+\renewcommand{\ExerciseHeader}{\medskip\noindent$\diamondsuit$\;\;{\textbf{\ExerciseName~\ExerciseHeaderNB}\ExerciseHeaderTitle\ExerciseHeaderOrigin\hfill\medskip\\}}
+\renewcommand{\AtBeginExercise}{\,\,\,\,\,}
+
+\renewcommand{\AnswerHeader}{\medskip\noindent$\diamondsuit$\;\;{\textbf{\AnswerName~\ExerciseHeaderNB}\hfill\medskip\\}}
+%\renewcommand{\AtBeginAnswer}{\,\,\,}
+
+\newenvironment{Nota}%
+{\begin{quote}\textbf{Nota }}%
+{\end{quote}}
+
+\setlength{\mathindent}{1.5em}
