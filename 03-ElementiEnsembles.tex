@@ -5,6 +5,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduzione}
+\label{sec:03-intro}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Consideriamo un sistema fisico macroscopico all'equilibrio termico e meccanico: ciò ci rassicura sulla persistenza, col passare del tempo, dello stesso macrostato di partenza. Se però potessimo guardare il sistema da un punto di vista microscopico ci accorgeremmo senza dubbio che il sistema stesso passa in continuazione da un microstato all'altro. Potremmo dire che il sistema {\em esplora} senza sosta tutti i microstati compatibili col macrostato d'equilibrio.
@@ -15,6 +16,7 @@ Nulla ci vieta di considerare le cose sotto un ottica più astratta: al tempo fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spazio delle fasi di un sistema classico}
+\label{sec:03-spazio-fasi}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Se consideriamo le cose da un punto di vista classico, definire un microstato del sistema (stiamo pensando a un sistema macroscopico costituito da $N$ particelle considerate come elementari) significa assegnare, a un tempo fissato $t_{0}$, posizione e velocità (momento) a ogni particella; se conosciamo tutte le forze che agiscono sulle particelle, le equazioni del moto saranno poi sufficienti a ricavare il microstato in ogni istante di tempo posteriore a $t_{0}$.
@@ -25,7 +27,7 @@ Assegnare tutte le posizioni e tutti i momenti corrisponde a definire un vettore
 \ee
 e il vettore $\myvec{r}$ definisce un punto (detto {\em punto rappresentativo} del sistema) in uno spazio a $6N$ dimensioni: il famigerato {\em spazio delle fasi}. Le componenti $(q_{i},p_{i})$ dipendono naturalmente dal tempo, e il modo in cui variano è dettato dalle equazioni del moto di Hamilton:
 \bea
-\label{eq:eqmotoH}
+\label{eq:03-eqmotoH}
 \dot{q}_{i} &=&   \dpar{\Ham(q_{i}, p_{i})}{p_{i}}\nonumber\\
 \dot{p}_{i} &=& - \dpar{\Ham(q_{i}, p_{i})}{q_{i}}
 \eea
@@ -49,14 +51,14 @@ Possiamo definire la funzione densità $\rho(q,p;t)$:
 \ee
 La densità $\rho$ rappresenta quindi il modo in cui sono distribuiti i punti rappresentativi nello spazio delle fasi, ed è definita come una densità di probabilità, perché è semidefinita positiva e inoltre, ovviamente, a ogni tempo $t$ abbiamo
 \be
-\label{eq:normarho}
+\label{eq:03-normarho}
 \int\dephi\rho(q,p;t) = 1
 \ee
 Per definizione di media sull'\ensemble\ possiamo scrivere, per un generico osservabile fisico $f$:
 \be
 \aspetta{f} = \int\dephi \rho(q,p;t) f(q,p)
 \ee
-ricordando che, vedi la (\ref{eq:normarho}), la densità è normalizzata.
+ricordando che, vedi la (\ref{eq:03-normarho}), la densità è normalizzata.
 Nella definizione di media l'integrale è preso sull'intero spazio delle fasi, ma chiaramente solo le regioni in cui $\rho(q,p;t)$ è diversa da zero daranno contributo. Notiamo che attraverso la dipendenza esplicita dal tempo di $\rho$ anche $\aspetta{f}$ può, in linea di principio, dipendere dal tempo. Ci occuperemo ora proprio della possibile dipendenza di $\rho$ dal tempo e di come questa può influire sul sistema fisico in esame, senza dimenticare che siamo interessati a sistemi fisici all'equilibrio, i cui parametri macroscopici quindi non dipendono dal tempo. In particolare non dobbiamo dimenticare che anche scegliendo una densità che non dipenda {\em esplicitamente} dal tempo, $\rho$ potrebbe ancora dipendere {\em implicitamente} dal tempo tramite la dipendenza da $(q,p)$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,7 +76,7 @@ Nella definizione di media l'integrale è preso sull'intero spazio delle fasi, m
 
 Il teorema di Lioville stabilisce che la densità $\rho(q,p;t)$ si comporta come un {\em fluido incomprimibile}. Per vederlo, consideriamo l'evoluzione nel tempo di $\de{\calN}$. Prendiamo un punto rappresentativo $(q,p)$ all'interno del volumetto $\dephi$ al tempo $t$. Dopo in intervallo di tempo $\delta t$ il punto $(q,p)$ si sarà spostato in $(q',p')$, con
 \bea
-\label{eq:spostaqp}
+\label{eq:03-spostaqp}
 q_i' &=& q_i + \dot{q}_i\delta t + O(\delta t^2) \nonumber \\
 p_i' &=& p_i + \dot{p}_i\delta t + O(\delta t^2)
 \eea
@@ -85,14 +87,14 @@ L'elemento di volume originale, $\dephi$, è un ipercubo. Dopo lo spostamento ri
 \eea
 Dalla precedente segue che per ciascuna coppia coniugata abbiamo
 \be
-\label{eq:evolvol}
+\label{eq:03-evolvol}
 \de{q_i'}\de{p_i'} = \de{q_i}\de{p_i}\left[
 1 + \left(
 \dpar{\dot{q}_i}{q_i} + \dpar{\dot{p}_i}{p_i}
 \right)\delta t + O(\delta t^2)
 \right]
 \ee
-Le equazioni del moto (\ref{eq:eqmotoH}) ci dicono però che
+Le equazioni del moto (\ref{eq:03-eqmotoH}) ci dicono però che
 \be
 \dpar{\dot{q}_i}{q_i} = \dfrac{\partial}{\partial q_i}\dpar{\Ham}{p_i}
 = \dfrac{\partial^2\Ham}{\partial q_i\partial p_i}
@@ -102,16 +104,16 @@ e che
 \dpar{\dot{p}_i}{p_i} = -\dfrac{\partial}{\partial p_i}\dpar{\Ham}{q_i}
 = -\dfrac{\partial^2\Ham}{\partial q_i\partial p_i}
 \ee
-Il termine proporzionale a $\delta t$ nella (\ref{eq:evolvol}) si annulla dunque per le equazioni del moto, e otteniamo $\dephi' = \dephi$. Questo significa che tutti i punti rappresentativi $\de{\calN}$ originariamente vicini al punto $(q,p)$ vengono trasportati nelle immediate vicinanze di $(q',p')$ in modo tale da preservare il volume occupato. Il rapporto $\de{\calN}/\dephi$ rimane invariato, che è un altro modo di dire che $\rho$ si comporta come  un fluido incomprimibile.
+Il termine proporzionale a $\delta t$ nella (\ref{eq:03-evolvol}) si annulla dunque per le equazioni del moto, e otteniamo $\dephi' = \dephi$. Questo significa che tutti i punti rappresentativi $\de{\calN}$ originariamente vicini al punto $(q,p)$ vengono trasportati nelle immediate vicinanze di $(q',p')$ in modo tale da preservare il volume occupato. Il rapporto $\de{\calN}/\dephi$ rimane invariato, che è un altro modo di dire che $\rho$ si comporta come  un fluido incomprimibile.
 
 Introducendo le parentesi di Poisson
 \be
-\label{eq:parentesi-poisson}
+\label{eq:03-parentesi-poisson}
 \{\rho,\Ham\} = \sum_{i}\left( \dpar{\rho}{q_{i}}\dpar{\Ham}{p_{i}} - \dpar{\rho}{p_{i}}\dpar{\Ham}{q_{i}} \right)
 \ee
 la condizione di incomprimibilità, $\rho(q',p';t+\de{t}) = \rho(q,p;t)$ può finalmente essere scritta, in forma differenziale, in questo modo:
 \be
-\label{eq:liouville}
+\label{eq:03-liouville}
 \dfrac{\de{\rho}}{\de{t}} = \dpar{\rho}{t} + \{\rho,\Ham\} = 0
 \ee
 che è appunto il {\em teorema di Liouville}. 
@@ -122,13 +124,14 @@ Ricordiamo ora che siamo interessati alla descrizione di sistemi macroscopici al
 \ee
 A questo punto siamo costretti anche a chiedere che le parentesi di Poisson si annullino:
 \be
-\label{eq:parpois0}
+\label{eq:03-parpois0}
 \{\rho,\Ham\} = 0
 \ee
-Si vede subito che $\rho$ non può essere un'arbitraria funzione di $(q,p)$, ma dev'essere una funzione dell'hamiltoniana del sistema. Il modo più semplice di implementare la condizione (\ref{eq:parpois0}) è quella di assumere $\rho$ costante sulla ipersuperficie a energia costante $E$ nello spazio delle fasi. Ciò corrisponde a considerare l'\ensemble\ micronanonico.
+Si vede subito che $\rho$ non può essere un'arbitraria funzione di $(q,p)$, ma dev'essere una funzione dell'hamiltoniana del sistema. Il modo più semplice di implementare la condizione (\ref{eq:03-parpois0}) è quella di assumere $\rho$ costante sulla ipersuperficie a energia costante $E$ nello spazio delle fasi. Ciò corrisponde a considerare l'\ensemble\ micronanonico.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{L'\ensemble\ microcanonico}
+\label{sec:03-micro}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Consideriamo dunque un sistema fisico in cui le grandezze macroscopiche fondamentali siano il numero di particelle, $N$, il volume $V$ in cui sono racchiuse e l'energia totale $E$ del sistema stesso, che si suppone conservata (sistema isolato). La terna $(N,\,V,\,E)$ rappresenta quindi un macrostato del sistema.
@@ -211,7 +214,7 @@ Consideriamo un oscillatore armonico unidimensionale; l'hamiltoniana del sistema
 \ee
 La soluzione delle equazioni del moto ci fornisce il risultato
 \bea
-\label{eq:oat}
+\label{eq:03-oat}
 q &=& \phantom{-m\omega} A\cos(\omega t + \phi)\nonumber\\
 p &=&           -m\omega A\sin(\omega t + \phi)
 \eea
@@ -219,7 +222,7 @@ in cui $A$ è l'ampiezza dell'oscillazione e $\phi$ una fase. L'energia del sist
 \be
 E = \frac{1}{2}m\omega^2 A^2 = \mbox{\textrm costante}
 \ee
-Per ottenere la traiettoria nello spazio delle fasi occorre eliminare il tempo dalle \ref{eq:oat}. Si ottiene facilmente
+Per ottenere la traiettoria nello spazio delle fasi occorre eliminare il tempo dalle \ref{eq:03-oat}. Si ottiene facilmente
 \be
 \frac{m\omega^2 q^2}{2E} + \frac{p^2}{2mE} = 1
 \ee
@@ -286,16 +289,16 @@ E = \sum_{k=1}^N\epsilon_k = \frac{N\hbar\omega}{2} + \hbar\omega\sum_k n_k
 \ee
 Tenere fissata l'energia $E$ equivale a tenere fissato il numero intero
 \be
-\label{eq:Rpalline}
+\label{eq:03-Rpalline}
 R \equiv \frac{E}{\hbar\omega} - \frac{N}{2} = \sum_k n_k
 \ee
-dunque ora il problema è capire come riuscire a ottenere il numero di modi in cui posso distribuire gli $N$ oscillatori sui vari livelli in modo che $R$ rimanga costante. Ricorriamo a un trucco (vedi figura \ref{fig:scapal}): immaginiamo di avere $N$ contenitori, che stilizziamo con $N+1$ stanghette verticali e $R$ palline. I contenitori rappresentano gli $N$ oscillatori, mentre il numero di palline nel contenitore $k$--mo rappresenta il numero $n_k$. Il numero totale $R$ di palline rappresenta ovviamente l'energia scritta come nell'eq.(\ref{eq:Rpalline}). Dentro al primo contenitore mettiamo $n_1$ palline, nel secondo $n_2$ palline e così via. Per calcolare in quanti modi posso disporre le palline nei contenitori, ossia in quanti modi possiamo realizzare il set dei numeri d'occupazione dei vari livelli, $\{n_k\}$, in modo che la somma sia uguale a $R$, basta considerare tutte le permutazioni possibili di $N-1$ stanghette (le 2 alle estremità sono fissate) e $R$ palline, e poi tener conto che stanghette sono indistinguibili e così pure le palline. 
+dunque ora il problema è capire come riuscire a ottenere il numero di modi in cui posso distribuire gli $N$ oscillatori sui vari livelli in modo che $R$ rimanga costante. Ricorriamo a un trucco (vedi figura \ref{fig:03-scapal}): immaginiamo di avere $N$ contenitori, che stilizziamo con $N+1$ stanghette verticali e $R$ palline. I contenitori rappresentano gli $N$ oscillatori, mentre il numero di palline nel contenitore $k$--mo rappresenta il numero $n_k$. Il numero totale $R$ di palline rappresenta ovviamente l'energia scritta come nell'eq.(\ref{eq:03-Rpalline}). Dentro al primo contenitore mettiamo $n_1$ palline, nel secondo $n_2$ palline e così via. Per calcolare in quanti modi posso disporre le palline nei contenitori, ossia in quanti modi possiamo realizzare il set dei numeri d'occupazione dei vari livelli, $\{n_k\}$, in modo che la somma sia uguale a $R$, basta considerare tutte le permutazioni possibili di $N-1$ stanghette (le 2 alle estremità sono fissate) e $R$ palline, e poi tener conto che stanghette sono indistinguibili e così pure le palline. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
   \centering
   \input{figMS/03-linee-palline}
   \caption{Conteggio degli stati come permutazione tra $N-1$ linee e $R$ palline. La prima e l'ultima linea, in grassetto, sono fisse e non soggette a permutazione. La prima scatola (cioè il primo oscillatore) contiene $2$ palline (il primo oscillatore è sul secondo livello di energia). La seconda scatola nessuna pallina (il secondo oscillatore è nel {\em ground--state}). La terza scatola contiene $3$ palline, e così via. L'ultima scatola contiene solo una pallina.}
-  \label{fig:scapal}
+  \label{fig:03-scapal}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -340,7 +343,7 @@ Ricordiamo che in ogni caso il vero conteggio del numero dei microstati dovrebbe
 Dunque un particolare microstato del sistema occupa, nello spazio delle fasi, un volumetto di ordine $h$. Il risultato si generalizza subito a sistemi con $M$ gradi di libertà.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Esercizi per il capitolo \ref{cap:elementi}}
+\section{Esercizi per il Capitolo \ref{cap:elementi}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %-----------------------------------------------------------------------
@@ -395,5 +398,5 @@ Si confronti il risultato con quello ottenuto utilizzando il formalismo canonico
 
 \vskip 0.75cm
 \begin{flushright}
-{\em Ultimo aggiornamento del capitolo: 21.04.2017}
+{\em Ultimo aggiornamento del Capitolo: 22.04.2017}
 \end{flushright}

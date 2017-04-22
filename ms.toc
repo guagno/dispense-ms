@@ -40,7 +40,7 @@
 \contentsline {subsection}{\numberline {3.3.2}L'oscillatore armonico}{47}
 \contentsline {subsection}{\numberline {3.3.3}Un sistema di oscillatori armonici}{48}
 \contentsline {subsection}{\numberline {3.3.4}La regola generale}{51}
-\contentsline {section}{\numberline {3.4}Esercizi per il capitolo \ref {cap:elementi}}{51}
+\contentsline {section}{\numberline {3.4}Esercizi per il Capitolo \ref {cap:elementi}}{51}
 \contentsline {chapter}{\chapternumberline {4}L'{\em ensemble}\ canonico}{53}
 \contentsline {section}{\numberline {4.1}Sistema all'equilibrio con una riserva termica}{53}
 \contentsline {section}{\numberline {4.2}L'{\em ensemble}\ canonico}{54}
