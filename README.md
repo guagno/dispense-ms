@@ -7,7 +7,7 @@ Dispense per il Corso di Meccanica Statistica
 
 Questi due files includono tutti gli altri files tex presenti. Ci sono tre directories, contenenti figure.
 
-# Compilazione:
+# Compilazione da zero (necessaria solo se si modifica un file tex o una figura tikz con funzione):
 1. Compilare ms.tex un paio di volte
 2. Compilare sol.tex un paio di volte
 3. Nella directory compariranno dei files con estensione .gnuplot
