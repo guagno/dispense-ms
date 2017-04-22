@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.13)  22 APR 2017 16:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.13)  22 APR 2017 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1685,9 +1685,6 @@ r/m/n/10.95 = [][] [][] []\OML/lmm/m/it/10.95 ^^U  [] [] [] [] [] []$
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  21610 strings out of 493014
@@ -1724,7 +1721,7 @@ nts/type1/public/lm/lmss17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/
 lmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ms.pdf (190 pages, 1368682 bytes).
+Output written on ms.pdf (190 pages, 1368684 bytes).
 PDF statistics:
  763 PDF objects out of 1000 (max. 8388607)
  523 compressed objects within 6 object streams

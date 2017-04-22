@@ -1,0 +1,97 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Soluzioni degli esercizi del Capitolo \ref{cap:grancanonico}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:05-eqcgc}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:05-eqcgc}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+La funzione di partizione canonica per $N$ particelle non interagenti è
+\be
+Q_N(T,V) = \left[ Q_1(T,V) \right]^N
+\ee
+Dalla precedente otteniamo subito
+\be
+\label{eq:sol05-AC}
+\begin{split}
+U_C &= -\dparc{\ln Q_N}{\beta}{N,V} = NkT^2 \dfrac{Q_1'}{Q_1} \\
+A_C &= -kT\ln Q_N = -NkT\ln Q_1 \\
+S_C &= \dfrac{U_C - A_C}{T} = Nk\left(
+T\dfrac{Q_1'}{Q_1} + \ln Q_1
+\right)
+\end{split}
+\ee
+nelle quali $Q_1' = (\partial Q_1/\partial T)_{V}$.
+
+Per la funzione di partizione grancanonica abbiamo invece
+\be
+\calQ(z,T,V) = \sum_{N=0}^\infty [ z Q_1 ]^N = \dfrac{1}{1 - zQ_1}
+\ee
+Per poter confrontare i risultati del canonico con quelli del grancanonico, dobbiamo aggiustare la fugacità $z$ in modo tale che valga la relazione
+\be
+N = \aspetta{N}_G = z\dparc{\ln\calQ}{z}{T,V} = \dfrac{zQ_1}{1 - zQ_1}
+\ee
+e ciò implica facilmente
+\be
+zQ_1 = \dfrac{N}{N+1} \quad\quad \mu = -kT\ln\left( \dfrac{(N+1)Q_1}{N} \right)
+\ee
+Questo ci permette di scrivere il granpotenziale $q$ come una funzione di $(N,T)$:
+\be
+q = kT\ln\calQ = kT\ln(N+1)
+\ee
+e per le prime due grandezze termodinamiche di interesse otteniamo
+\be
+\label{eq:sol05-AG}
+\begin{split}
+U_G &= -\dparc{q}{\beta}{z,V} = NkT^2 \dfrac{Q_1'}{Q_1} \\
+A_G &= \mu N - q = kT [ N\ln N - (N+1)\ln(N+1) - N\ln Q_1
+\end{split}
+\ee
+Abbiamo chiaramente che $U_G = U_C$ e quindi, utilizzando la seconda delle (\ref{eq:sol05-AC}) e la seconda delle (\ref{eq:sol05-AG}), otteniamo facilmente
+\be
+\frac{S_G-S_C}{Nk} = -\frac{A_G-A_C}{NkT} \simeq \frac{\ln N}{N}
+\ee
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Esercizio \ref{ex:05-sas}}
+\addcontentsline{toc}{section}{Esercizio \ref{ex:05-sas}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+La funzione di partizione grancanonica del gas ideale classico racchiuso nel contenitore è
+\be
+\calQ(z,T,V) = \sum_{N=0}^{\infty} \dfrac{1}{N!}[z Q_1]^N = e^{zQ_1}
+\ee
+in cui $Q_1(T,V) = V/\lambda^3 = V(2\pi mkT/h^2)^{3/2}$ è la funzione di partizione canonica di singola particella. Applicando la formula
+\be
+q = \ln\calQ(z,T,V) = \dfrac{PV}{NkT}
+\ee
+otteniamo subito la pressione
+\be
+P = z\left(\dfrac{2\pi m}{h^2}\right)^{3/2}(kT)^{5/2}
+\ee
+e da quest'ultima possiamo ricavare la fugacità del gas:
+\be
+z_g = P(kT)^{-5/2}\left(\dfrac{h^2}{2\pi m}\right)^{3/2}
+\ee
+Dal punto di vista dell'ensemble grancanonico, sia il gas sia ciascun centro di assorbimento sulle pareti del contenitore sono in contatto con una riserva, termica e di particelle, caratterizzata da temperatura $T$ e fugacità $z$, che saranno quindi le stesse per il gas e per i centri di assorbimento. Scriviamo la funzione di granpartizione di un singolo sito di assorbimento:
+\be
+\calQ_s = \sum_{N=0}{1}(z_s e^{\beta\varepsilon})^N = 1 + ze^{\beta\varepsilon}
+\ee
+Il numero medio di molecole assorbite dalle pareti, considerando $N_0$ siti di assorbimento, sarà dunque
+\be
+\aspetta{N_a} = N_0 z_s\dparc{\calQ_s}{z_s}{T} = \dfrac{N_0}{1+z_s^{-1}e^{-\beta\varepsilon}}
+\ee
+Per trovare $\aspetta{N_a}$ in funzione della pressione $P$ del gas basterà uguagliare $z_s = z_g$, trovando
+\be
+\aspetta{N_a} = \dfrac{N_0}{1 + (2\pi m/h^2)^{3/2} P^{-1}(kT)^{5/2}e^{-\beta\varepsilon}}
+\ee
+Risulta chiaro che a temperatura $T$ fissata, per pressione molto alta $\aspetta{N_a}$ tenderà a saturare al valore $N_0$, mentre per pressione molto bassa $\aspetta{N_a} \simeq 0$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vskip 0.75cm
+\begin{flushright}
+{\em Ultimo aggiornamento del Capitolo: 22.04.2017}
+\end{flushright}

@@ -23,3 +23,6 @@
 \contentsline {section}{Esercizio \ref {ex:04-oscfermi}}{28}
 \contentsline {section}{Esercizio \ref {ex:04-eqchim}}{29}
 \contentsline {section}{Esercizio \ref {ex:04-esps}}{29}
+\contentsline {chapter}{\chapternumberline {5}Soluzioni degli esercizi del Capitolo \ref {cap:grancanonico}}{31}
+\contentsline {section}{Esercizio \ref {ex:05-eqcgc}}{31}
+\contentsline {section}{Esercizio \ref {ex:05-sas}}{32}
