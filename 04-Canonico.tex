@@ -48,13 +48,13 @@ Consideriamo un \ensemble\ di $\calN$ copie mentali dello stesso sistema fisico;
 \sum_{k}n_k      &=& \calN\nonumber\\
 \sum_{k} E_k n_k &=& \calE \equiv U\calN
 \eea
-in cui $U$ è l'energia media dell'\ensemble\ che coincide proprio con l'energia interna del sistema fisico originale. 
+in cui $U$ è l'energia media dell'\ensemble\ che coincide proprio con l'energia interna del sistema fisico originale.
 Qualsiasi insieme $\nkset$ che soddisfi i vincoli (\ref{eq:04-condcan}) rappresenta un modo possibile di distribuire l'energia $\calE$ tra gli $\calN$ membri dell'\ensemble. Inoltre ognuno di questi modi possibili può essere ottenuto in molti modi diversi, perché possiamo sempre pensare di permutare i sistemi: per esempio potremmo prendere un sistema con energia $E_1$ e scambiarlo con un sistema con energia $E_5$, ottenendo un altro modo possibile di avere lo stesso set $\nkset$. Chiamiamo $\Wnk$ il numero di modi in cui possiamo ottenere il set $\nkset$:
 \be
 \label{eq:04-W}
 \Wnk = \frac{\calN!}{n_0!n_1!n_2!\cdots}
 \ee
-Considerando che tutti i possibili stati dell'\ensemble\ compatibili con le (\ref{eq:04-condcan}) hanno la stessa probabilità di occorrere, la frequenza con cui apparirà un determinato insieme 
+Considerando che tutti i possibili stati dell'\ensemble\ compatibili con le (\ref{eq:04-condcan}) hanno la stessa probabilità di occorrere, la frequenza con cui apparirà un determinato insieme
 $\nkset$ sarà proporzionale a $\Wnk$
 
 Il nostro obiettivo è quello di calcolare la probabilità $P_k$ di trovare uno degli elementi dell'\ensemble\ in uno stato con energia $E_k$; naturalmente avremo
@@ -115,7 +115,7 @@ Come vedremo in seguito, è naturale identificare ancora una volta $\beta$ con l
 
 Il nostro obiettivo è ora quello di calcolare $\aspetta{n_k}$; vedi eq. (\ref{eq:04-nrmean}). Per prima cosa introduciamo dei parametri reali $w_k$ e definiamo la funzione
 \be
-\widetilde{W}\nkset = \Wnk w_0^{n_0} w_1^{n_1} w_2^{n_2}\dots 
+\widetilde{W}\nkset = \Wnk w_0^{n_0} w_1^{n_1} w_2^{n_2}\dots
 \ee
 Introduciamo ora
 \be
@@ -174,7 +174,7 @@ La serie (\ref{eq:04-serie2}) ha un raggio di convergenza $\rho$ (quale che sia,
 \begin{figure}[h]
   \centering
   \input{figMS/04-x0-df}
-  \caption{Determinazione di $x_0$} 
+  \caption{Determinazione di $x_0$}
   \label{fig:04-x0}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -229,7 +229,7 @@ g''(x_0) &=& \frac{f''(x_0)}{f(x_0)} - \left(\frac{f'(x_0)}{f(x_0)}\right)^2 + \
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.7\textwidth]{saddle-point.png}
-  \caption{Un punto di sella} 
+  \caption{Un punto di sella}
   \label{fig:04-sella}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -280,8 +280,8 @@ dà un contributo trascurabile. Sappiamo già che $f(z)$ ha, in $x_0$, un minimo
 \ee
 Avremo quindi
 \be
-\frac{1}{2\pi i}\int_C\frac{f^\calN(z)}{z^{\calE+1}}\de z \le 
-\frac{1}{2\pi}\frac{M^\calN}{x_0^{\calE+1}} \oint\de\theta \simeq 
+\frac{1}{2\pi i}\int_C\frac{f^\calN(z)}{z^{\calE+1}}\de z \le
+\frac{1}{2\pi}\frac{M^\calN}{x_0^{\calE+1}} \oint\de\theta \simeq
 \left(\frac{M}{x_0^U}\right)^\calN = \left(\frac{f(x_0)}{x_0^U}\right)^\calN\left(\frac{M}{f(x_0)}\right)^\calN
 \ee
 Confrontando il risultato appena ottenuto con la (\ref{eq:04-gammanu}) si vede subito che il secondo integrale nella (\ref{eq:04-spezza}) dà un contributo trascurabile. Ma ciò è vero solo se $M = f(x_0)$ solo per $z = x_0$. Immaginiamo che per un certo angolo $\phi$ tutti i termini della serie che definisce $f(z)$ divengano reali (questo è il disastro che vogliamo evitare). Ciò implicherebbe che tutte le quantità $E_k\phi$ sono multiple intere di $2\pi$:
@@ -337,7 +337,7 @@ s_n = \sum_r w_r E_r^n e^{-\beta E_r}
 \ee
 e scriviamo dunque $\ln U = \ln s_1 - \ln s_0$. Quindi, per la (\ref{eq:04-dlnu}), variando $\beta$ e solo una delle $w_k$, diciamo $w_r$, abbiamo
 \be
-\frac{\de s_1}{s_1} - \frac{\de s_0}{s_0} = 
+\frac{\de s_1}{s_1} - \frac{\de s_0}{s_0} =
 \frac{E_r e^{-\beta E_r}\de w_r - s_2\de\beta}{s_1} - \frac{e^{-\beta E_r}\de w_r - s_1\de\beta}{s_0} = 0
 \ee
 Possiamo quindi scrivere
@@ -495,7 +495,7 @@ Per il valore di osservazione di un generico osservabile $f$ otteniamo
 \aspetta{f\,} = \frac{\int_0^\infty f(E)g(E)e^{-\beta E}\de E}{\int_0^\infty g(E)e^{-\beta E}\de E}
 \ee
 Notiamo una cosa interessante: osservando la (\ref{eq:04-laplace}) e poiché $\beta > 0$, vediamo che la funzione di partizione $Q(\beta)$ è la trasformata di Laplace della densità degli stati $g(E)$. Possiamo dunque ottenere $g(E)$, nota la funzione di partizione, come la trasformata di Laplace inversa di $Q(\beta)$:
-\bea 
+\bea
 \label{eq:04-gfromq}
 g(E) &=& \frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} e^{\beta E}Q(\beta)\de\beta\quad(\beta' > 0)
 \nonumber \\
@@ -594,7 +594,7 @@ Q_1(\beta) = V / \lambda^3
 
 Come ultimo punto di questa sezione ci proponiamo di calcolare la densità degli stati $g(E)$ per l'intero sistema come antitrasformata di Laplace della funzione di partizione. Abbiamo, applicando la (\ref{eq:04-gfromq}),
 \be
-g(E) = \frac{V^N}{N!}\left( \frac{2\pi m}{h^2} \right)^{3N/2}\frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} 
+g(E) = \frac{V^N}{N!}\left( \frac{2\pi m}{h^2} \right)^{3N/2}\frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty}
 \frac{e^{\beta E}}{\beta^{3N/2}}\de\beta\quad(\beta' > 0)
 \ee
 Considerando che l'unico polo della funzione è in $\beta=0$ (un polo di ordine $3N/2$), l'esponenziale al denominatore ci suggerisce di chiudere il cammino di integrazione all'infinito andando verso $\beta\to -\infty$. Dobbiamo sostanzialmente saper svolgere l'integrale
@@ -631,8 +631,8 @@ U \equiv \aspetta{E} = \frac{\sum_k E_k e^{-\beta E_k}}{\sum_k e^{-\beta E_k}}
 \ee
 e proviamo a calcolare la quantità
 \be
--\dpar{U}{\beta} = \frac{\sum_k E_k^2 e^{-\beta E_k}}{\sum_k e^{-\beta E_k}} 
-    - \frac{(\sum_k E_k e^{-\beta E_k})^2}{(\sum_k e^{-\beta E_k})^2} 
+-\dpar{U}{\beta} = \frac{\sum_k E_k^2 e^{-\beta E_k}}{\sum_k e^{-\beta E_k}}
+    - \frac{(\sum_k E_k e^{-\beta E_k})^2}{(\sum_k e^{-\beta E_k})^2}
     = \aspetta{E^2} - \aspetta{E}^2 = \aspetta{(\Delta E)^2}
 \ee
 in cui la derivata rispetto a $\beta$ è fatta lasciando invariati i livelli di energia $E_k$. Vediamo dunque che la quantità appena calcolata ci fornisce la fluttuazione quadratica media dell'energia interna. Osserviamo ora che
@@ -741,7 +741,7 @@ in cui $M$ è il numero totale dei coefficienti $A$ e $B$ diversi da zero nella 
 
 Consideriamo un sistema di $N$ oscillatori armonici che consideriamo non interagenti. Questo sistema riveste una particolare importanza, come vedremo nel seguito, e ci fornità la base, per esempio, per studiare sia la radiazione di corpo nero (o la statistica di un gas di fotoni) sia il calore specifico dei solidi (ossia la statistica di un gas di fononi).
 
-Partiamo con la situazione classica. Poiché gli oscillatori sono indipendenti possiamo calcolare la funzione di partizione di singola oscillatore e poi elevare alla $N$ per ottenere la funzione di partizione totale. Anticipiamo subito che ometteremo il fattore correttivo di Gibbs $1/N!$ in quanto immaginiamo che ogni oscillatore vibri intorno a una sua posizione d'equilibrio; gli oscillatori sono per così dire localizzati, e quindi distinguibili. Questo sarà un punto che riprenderemo in esame quando vedremo la statistica dei fotoni. 
+Partiamo con la situazione classica. Poiché gli oscillatori sono indipendenti possiamo calcolare la funzione di partizione di singola oscillatore e poi elevare alla $N$ per ottenere la funzione di partizione totale. Anticipiamo subito che ometteremo il fattore correttivo di Gibbs $1/N!$ in quanto immaginiamo che ogni oscillatore vibri intorno a una sua posizione d'equilibrio; gli oscillatori sono per così dire localizzati, e quindi distinguibili. Questo sarà un punto che riprenderemo in esame quando vedremo la statistica dei fotoni.
 
 Per il singolo oscillatore (unidimensionale) di frequenza $\omega$ abbiamo l'hamiltoniana
 \be
@@ -786,7 +786,7 @@ L'energia media per oscillatore è perfettamente in accordo col teorema di equip
 
 Nota la funzione di partizione possiamo pensare di determinare la densità degli stati $g(E)$ usando l'equazione (\ref{eq:04-gfromq}):
 \be
-g(E) = \frac{1}{(\hbar\omega)^N}\frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} 
+g(E) = \frac{1}{(\hbar\omega)^N}\frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty}
 \frac{e^{\beta E}}{\beta^N}\de\beta\quad(\beta' > 0)
 \ee
 Il teorema dei residui (vedi il conto fatto per il gas ideale classico: le cose vanno allo stesso modo) ci permette di trovare subito
@@ -824,7 +824,7 @@ A   &=& NkT\ln[2\sinh(\beta\hbar\omega/2)] = N[\hbar\omega/2 + kT\ln(1-e^{-\beta
 P   &=& 0 \\
 S   &=& Nk[\beta\hbar\omega\coth(\beta\hbar\omega/2)/2 - \ln\{2\sinh(\beta\hbar\omega/2)\}] \nonumber \\
     &=& Nk\left[ \frac{\beta\hbar\omega}{e^{\beta\hbar\omega} - 1} - \ln(1-e^{-\beta\hbar\omega}) \right] \\
-U   &=& \frac{1}{2}N\hbar\omega\coth(\beta\hbar\omega/2) = N\left[\frac{\hbar\omega}{2} + 
+U   &=& \frac{1}{2}N\hbar\omega\coth(\beta\hbar\omega/2) = N\left[\frac{\hbar\omega}{2} +
         \frac{\hbar\omega}{e^{\beta\hbar\omega} - 1} \right]
 \eea
 e finalmente
@@ -845,7 +845,7 @@ Poiché i dipoli non interagiscono tra loro possiamo considerare la funzione di 
 \be
 Q_N(\beta) = [Q_1(\beta)]^N
 \ee
-Si noti che omettiamo il fattore correttivo di Gibbs $1/N!$, in quanto immaginiamo che i dipoli siano fissi nelle loro posizioni e siano solo liberi di ruotare nello spazio. In questo caso risultano distinguibili. 
+Si noti che omettiamo il fattore correttivo di Gibbs $1/N!$, in quanto immaginiamo che i dipoli siano fissi nelle loro posizioni e siano solo liberi di ruotare nello spazio. In questo caso risultano distinguibili.
 
 Se consideriamo un singolo dipolo, la sua energia sarà data dall'espressione
 \be
@@ -905,7 +905,7 @@ Questa è la legge di Curie del paramagnetismo, e la costante $C$ è detta costa
 \begin{figure}[h]
   \centering
   \input{figMS/04-langevin}
-  \caption{La funzione di Langevin} 
+  \caption{La funzione di Langevin}
   \label{fig:04-langevin}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -972,12 +972,12 @@ in cui $B_J(x)$, la funzione di Brillouin di ordine $J$, è data da
 \be
 B_J(x) = (1+1/2J)\coth\{(1+1/2J)x\} - \frac{1}{2J}\coth\{x/2J\}
 \ee
-(vedi figura \ref{fig:04-brillouin}). 
+(vedi figura \ref{fig:04-brillouin}).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
   \centering
   \input{figMS/04-brillfunc}
-  \caption{Due funzioni di Brillouin. Dall'alto in basso: $J = 1/2$, $J=\infty$ (che corrisponde alla funzione di Langevin). Funzioni di Brillouin con valori intermedi di $J$ si situano all'interno delle due curve mostrate.} 
+  \caption{Due funzioni di Brillouin. Dall'alto in basso: $J = 1/2$, $J=\infty$ (che corrisponde alla funzione di Langevin). Funzioni di Brillouin con valori intermedi di $J$ si situano all'interno delle due curve mostrate.}
   \label{fig:04-brillouin}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1273,10 +1273,125 @@ Mostrare che per un gas ideale classico vale la relazione
 in cui $Q_1$ è la funzione di partizione canonica di singola particella.
 \end{Exercise}
 
+%-----------------------------------------------------------------------
+% OSSIGENO MOLECOLARE CON SPIN 1
+%-----------------------------------------------------------------------
+\begin{Exercise}[title={Ossigeno molecolare con spin 1},label={ex:05-ossigenomol}]
+	Consideriamo  un gas ideale di $N$  molecole di ossigeno con spin $S$ unitario, cioè $s_z =-1, 0, +1 $. Supponiamo che il gas sia contenuto una scatole di volume $V$ e che su di esso agisca un campo magnetico $H$ diretto lungo $z$. L'hamiltoniana del sistema è
+  \be
+  \mathcal{H} = \sum_{i=1}^{N}\left[\dfrac{p_i^2}{2m} - \mu H s_i^z\right]
+  \ee
+  dove $\{p_i \}$ sono i momenti rispetto al centro di massa della molecola.
+  \begin{enumerate}
+    \item Calcolare la funzione di partizione (semiclassica) $Q(T,N,V)$ trattando i gradi di libertà traslazionali $\{p_i , q_i \}$ classicamente, ma considerando i gradi di libertà di spin come quantizzati.
+    \item Quali sono le probabilità che $s_i^z$  di una specifica molecola assuma i valori -1, 0, +1 a una certa temperatura $T$ ?
+    \item Trovare il momento di dipolo magnetico medio $\langle M \rangle / V$ dove $M = \mu\sum_{i=1}^{N}s_i^z.$
+    \item Calcolare la suscettività a campo nullo $\chi =\dfrac{\partial \langle M \rangle}{\partial H}_{H=0} $
+  \end{enumerate}
+\end{Exercise}
+
+%-----------------------------------------------------------------------
+% GADOLINIO
+%-----------------------------------------------------------------------
+
+\begin{Exercise}[title={Gadolinio},label={ex:06-gadolinio}]
+	Il solfato di Gadolinio è un metallo delle terre rare che  obbedisce alla legge di Langevin del paramagnetismo fino a temperature di pochi Kelvin. Il suo momento magnetico molecolare è $7.21\cdot 10^{-23} A\,m^2$. Determinare il grado di saturazione magnetica (magnetizzazione) a $2\,K$ in un campo $H = 2\, Wb\,m^{-2} = 2\, T$.
+\end{Exercise}
+
+%-----------------------------------------------------------------------
+% SISTEMA CON N LIVELLI N-DEGENERE
+%-----------------------------------------------------------------------
+
+\begin{Exercise}[title={Degenerazione con legge di potenza},label={ex:07-degdipotenza}]
+Si consideri un sistema composto da $N$ particelle distinguibili non interagenti. I livelli d'energia di singola particella sono
+\be
+\varepsilon_n = n\varepsilon \qquad n = 0,1,2,\dots\qquad \varepsilon = cost
+\ee
+Ogni livello ha una degenerazione pari a $g_n = \lambda^n$.
+\begin{enumerate}
+\item Si calcoli la temperatura oltre la quale, nella descrizione canonica, il sistema perde di di significato.
+\item Nel range di temperature ammesse si calcolino l'energia interna e il calore specifico.
+\end{enumerate}
+\end{Exercise}
+
+%-----------------------------------------------------------------------
+% GAS MOLECOLARE ED ENERGIA ROTAZIONALE
+%-----------------------------------------------------------------------
+
+\begin{Exercise}[title={Gas molecolare ed energia rotazionale},label={ex:08-polarroads}]
+Consideriamo una molecola con un momento di inerzia $I$ e un momento di dipolo $\mu$. Il contributo rotazionale all'hamiltoniana è
+\be
+H_{rot} = \dfrac{1}{2I}\left(p_{\theta}^2 + \dfrac{p^2_{\phi}}{\sin^2{\theta}}\right) -\mu E\cos{\theta}
+\ee
+dove $E$ è un campo elettrico esterno, $\phi \in [0, 2\pi], \theta \in [0, \pi]$ sono gli angoli azimutali e polari e $p_\phi, p_\theta$ sono i loro momenti coniugati.
+\be
+\begin{enumerate}
+\item Calcolare il contributo rotazionale  alla funzione di partizione di singolo dipolo.
+\item Calcolare la polarizzazione media P = $\mu\cos\theta$ di ogni dipolo.
+\item Trovare la polarizzabilità  a campo elettrico nullo.
+\item Calcolare l'energia rotazionale per unità di particella ad energia finita e studiarne i limiti ad alta e bassa temperatura.
+\item Calcolare il calore specifico e studiarne i limiti.
+\end{enumerate}
+\end{Exercise}
+
+%-----------------------------------------------------------------------
+% SISTEMA A DUE LIVELLI DEGENERI
+%-----------------------------------------------------------------------
+
+\begin{Exercise}[title={Sistema a due livelli degeneri},label={ex:09-sist2liv}]
+  Consideriamo un sistema a due livelli energetici tali che il livello a energia $\epsilon_1$ ha degenerazione $g_1$, mentre il livello a energia $\epsilon_2 > \epsilon_1$ ha degenerazione $g_2$. Dette rispettivamente $p_1$ e $p_2$ le probabilità che una particella si trovi a livello  $\epsilon_1$  e  $\epsilon_2$, mostrare che
+  \begin{enumerate}
+  \item \be
+  S = -k\left[p_1\ln\left(\dfrac{p_1}{g_1}\right)+ p_2\ln\left(\dfrac{p_2}{g_2}\right)\right]
+  \ee
+  \item Assumendo che le $p_i$ siano date dalla distribuzione canonica mostrare che
+  \be
+  S = k\left[p_1\ln{g_1}+ \ln\lbrace 1 +\left(\dfrac{g_2}{g_1}\right)e^{-x}\rbrace + \dfrac{x}{1 +\left(\dfrac{g_1}{g_2}\right)e^{x}} \right]
+  \ee
+  dove $x= (\epsilon_2 -\epsilon_1)/kT$. Assumendo $g_1=g_2=1$ confrontare il risultato con l'oscillatore di Fermi.
+  \item Derivare l'espressione precedente partendo dalla funzione di partizione.
+  \item Verificare che per $T\to 0$ $S\to k\ln g_1$ e interpretare il risultato.
+  \end{enumerate}
+\end{Exercise}
+
+%-----------------------------------------------------------------------
+% OSCILLATORE ANARMONICO: CASO CLASSICO
+%-----------------------------------------------------------------------
+
+\begin{Exercise}[title={Oscillatore anarmonico: caso classico},label={ex:10-oanacl}]
+L'energia potenziale di un oscillatore anarmonico monodimensionale può essere scritta come
+\be
+V(q) = cq^2 -gq^3 -fq^4
+\ee
+dove $c,g,f$ sono costanti positive e in generale, $g$ e $f$ possono essere assunte molto piccole in valore. Mostrare che il contributo principale ai termini anarmonici nel calcolo del calore specifico dell'oscillatore, assunto classico, è dato da
+\be
+\dfrac{3}{2}\left(\dfrac{f}{c^2}+\dfrac{5g^2}{4c^3}\right)T
+\ee
+e, allo stesso ordine, che il valore medio della coordinata di posizione $q$ è dato  da
+\be
+\dfrac{3gkT}{4c^2}
+\ee
+\end{Exercise}
+
+%-----------------------------------------------------------------------
+% OSCILLATORE ANARMONICO: CASO QUANTISTICO
+%-----------------------------------------------------------------------
+
+\begin{Exercise}[title={Oscillatore anarmonico: caso quantistico},label={ex:11-oanaqt}]
+I livelli di energia di un oscillatore anarmonico quantistico monodimensionale possono essere approssimati a
+\be
+\varepsilon_n = \left(n+\frac{1}{2}\right)\hbar\omega - x\left(n+\dfrac{1}{2}\right)^2\hbar\omega; \qquad n=0,1,2\dots
+\ee
+Il parametro $x$, che solitamente è molto minore di 1, rappresenta il grado di anarmonicità. Mostrare che, al primo ordine in $x$ e al quarto ordine in $u\equiv \hbar\omega\beta$, il calore specifico di un sistema di tali $N$ oscillatori è dato da
+\be
+C = Nk\left[\left(1-\dfrac{1}{12}u^2 + \dfrac{1}{240}u^4\right)+ 4x\left(\dfrac{1}{u}+\dfrac{1}{80}u^3\right)\right]
+\ee
+Notare che il termine correttivo cresce con la temperatura.
+\end{Exercise}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \vskip 0.75cm
 \begin{flushright}
 {\em Ultimo aggiornamento del Capitolo: 22.04.2017}
 \end{flushright}
-

@@ -84,7 +84,7 @@ Chiarito questo punto, possiamo calcolare il differenziale totale $\de q$. Facen
 \label{eq:05-deqpot}
 \de q = -N\de\alpha - U\de\beta - \frac{\beta}{\calN}\sum_{r,s}\aspetta{\nrs}\de E_r
 \ee
-(dove con $N$, lo scrivo per l'ultima volta, spero, si intende $\aspetta{N}$). 
+(dove con $N$, lo scrivo per l'ultima volta, spero, si intende $\aspetta{N}$).
 Per ricavare il terzo dermine nel lato destro della (\ref{eq:05-deqpot}) ragioniamo come segue: differenziamo dapprima rispetto a una sola delle $E_r$, ottenendo:
 \be
 -\beta \frac{e^{-\alpha N_s - \beta E_r}}{\sum{\rho,\sigma -\alpha N_\sigma - \beta E_\rho}}\de{E_r}
@@ -128,7 +128,7 @@ e possiamo scrivere, introducendo la funzione di granpartizione,
 \be
 q(z,V,T) = \ln\calQ(z,V,T)
 \ee
-Da come è stata definita, sembra che per calcolare la funzione di granpartizione di un sistema occorra prima calcolarne la funzione di partizione. In generale, e in linea di principio, questo è vero, ma non sempre. Ci sono situazioni (e lo vedremo quando ci occuperemo dei gas ideali quantistici) in cui calcolare la funzione di partizione è pressoché impossibile mentre risulta più facile calcolare direttamente la funzione di granpartizione. 
+Da come è stata definita, sembra che per calcolare la funzione di granpartizione di un sistema occorra prima calcolarne la funzione di partizione. In generale, e in linea di principio, questo è vero, ma non sempre. Ci sono situazioni (e lo vedremo quando ci occuperemo dei gas ideali quantistici) in cui calcolare la funzione di partizione è pressoché impossibile mentre risulta più facile calcolare direttamente la funzione di granpartizione.
 
 Siamo ora in posizione per scrivere la ricetta completa che ci permette di passare dalla meccanica statistica grancanonica alla termodinamica. Abbiamo:
 \bea
@@ -326,12 +326,12 @@ Sostituendo la (\ref{eq:05-secondafgc}) e la (\ref{eq:05-terzafgc}) nella (\ref{
 \ee
 e usando la {\em chain rule} otteniamo finalmente
 \be
-\aspetta{(\Delta E)^2} = \aspetta{(\Delta E)^2}_{\mathrm{can}} + 
+\aspetta{(\Delta E)^2} = \aspetta{(\Delta E)^2}_{\mathrm{can}} +
 \left\{
 \dparc{U}{N}{T,V}
 \right\}^2 \aspetta{(\Delta N)^2}
 \ee
-Vediamo dunque che le fluttuazioni di energia del grancanonico sono composte dalla somma della stessa espressione canonica più un termine che dipende dalla fluttuazione del numero di particelle.	
+Vediamo dunque che le fluttuazioni di energia del grancanonico sono composte dalla somma della stessa espressione canonica più un termine che dipende dalla fluttuazione del numero di particelle.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ritorno sul potenziale esterno}
@@ -357,7 +357,7 @@ q(z,V,T) = \ln\calQ(z,V,T) = zV/\lambda^3
 in cui la $z = e^{\mu/kT}$. Per il gas ideale classico possiamo quindi scrivere
 \be
 q(z,V,T) = zQ_1
-\ee 
+\ee
 D'altronde per il numero medio di particelle $N$ abbiamo
 \be
 \label{eq:05-conGC0}
@@ -419,6 +419,10 @@ Sostituendo $y = L$ in questa equazione e normalizzando correttamente (tutto ci�
 \section{Esercizi per il Capitolo \ref{cap:grancanonico}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%-----------------------------------------------------------------------
+% EQUIVALENZA TRA ENSEMBLES
+%-----------------------------------------------------------------------
+
 \begin{Exercise}[title={Equivalenza tra \ensembles},label={ex:05-eqcgc}]
 \noindent
 Si consideri un gas ideale classico composto da $N$ particelle {\em distinguibili}. Si calcolino l'energia libera di Helmholtz $A$, l'energia interna $U$ e l'entropia $S$ in termini di $Q_1$ (funzione di partizione di singola particella), sia nel canonico ($C$) sia nel grancanonico ($G$). Si verifichi che $U_G = U_C$, e che nel limite termodinamico vale la relazione
@@ -429,9 +433,23 @@ Si consideri un gas ideale classico composto da $N$ particelle {\em distinguibil
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%-----------------------------------------------------------------------
+% SCATOLA CON PARETI ASSORBENTI 1 MOLECOLA
+%-----------------------------------------------------------------------
+
 \begin{Exercise}[title={Scatola a sorpresa},label={ex:05-sas}]
 \noindent
 Si consideri una scatola di volume $V$ in cui è contenuto un gas ideale classico composto da $N$ molecole monoatomiche; il sistema è all'equilibrio a una temperatura $T$ e una pressione $P$. Le pareti del contenitore hanno $N_0$ centri di assorbimento; ognuno di questi centri può ospitare al massimo una molecola di gas. Nel caso in cui una molecola venga assorbita, assume un'energia pari a $-\varepsilon$. Si calcoli la fugacità del gas in funzione di pressione e temperatura. Si calcoli inoltre il numero medio $\aspetta{N_a}$ di molecole assorbite in funzione di $P$ e $T$ e si discutano i limiti di pressione piccola e grande.
+\end{Exercise}
+
+%-----------------------------------------------------------------------
+% SCATOLA CON PARETI ASSORBENTI 2 MOLECOLA
+%-----------------------------------------------------------------------
+
+\begin{Exercise}[title={Scatola a dobbia sorpresa},label={ex:05-sa2s}]
+\noindent
+Si ripeta l'esercizio precedente assumendo che ogni centro di assorbimento possa assobire al massimo due molecole di gas.
+Sia $-\varepsilon$ l'energia di una molecola assorbita. Sapendo che i numero di particelle è fissato ed è maggiore di $2N_0$, si calcoli l'equazione di stato del gas in presenza di pareti assorbenti e trovare il numero medio di particelle assobite nel limite per $T\to 0$ e $T\to\infty$.
 \end{Exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
