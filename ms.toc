@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {1.2.1}Espansione libera di un gas ideale}{14}{subsection.23}
 \contentsline {subsection}{\numberline {1.2.2}Energia interna}{15}{subsection.25}
 \contentsline {subsection}{\numberline {1.2.3}Calori specifici}{15}{subsection.28}
-\contentsline {subsection}{\numberline {1.2.4}Trasformazioni adiabatiche}{15}{subsection.33}
+\contentsline {subsection}{\numberline {1.2.4}Trasformazioni adiabatiche}{16}{subsection.33}
 \contentsline {section}{\numberline {1.3}Il secondo principio della termodinamica}{16}{section.39}
 \contentsline {subsection}{\numberline {1.3.1}Il ciclo di Carnot}{16}{subsection.40}
 \contentsline {section}{\numberline {1.4}L'entropia termodinamica}{18}{section.48}
@@ -41,95 +41,95 @@
 \contentsline {subsection}{\numberline {3.3.3}Un sistema di oscillatori armonici}{48}{subsection.222}
 \contentsline {subsection}{\numberline {3.3.4}La regola generale}{51}{subsection.240}
 \contentsline {section}{\numberline {3.4}Esercizi per il Capitolo \ref {cap:elementi}}{51}{section.242}
-\contentsline {chapter}{\chapternumberline {4}L'{\em ensemble}\ canonico}{53}{chapter.251}
-\contentsline {section}{\numberline {4.1}Sistema all'equilibrio con una riserva termica}{53}{section.252}
-\contentsline {section}{\numberline {4.2}L'{\em ensemble}\ canonico}{54}{section.258}
-\contentsline {subsection}{\numberline {4.2.1}Il metodo del valore pi\IeC {\`u} probabile}{55}{subsection.263}
-\contentsline {subsection}{\numberline {4.2.2}Il metodo di Darwin--Fowler}{56}{subsection.272}
-\contentsline {section}{\numberline {4.3}Significato fisico delle quantit\IeC {\`a} statistiche}{65}{section.321}
-\contentsline {section}{\numberline {4.4}Espressioni alternative per la funzione di partizione}{67}{section.341}
-\contentsline {section}{\numberline {4.5}Il gas ideale classico}{68}{section.349}
-\contentsline {section}{\numberline {4.6}Fluttuazioni dell'energia}{72}{section.374}
-\contentsline {section}{\numberline {4.7}Il teorema di equipartizione}{74}{section.388}
-\contentsline {section}{\numberline {4.8}Sistema di oscillatori armonici}{76}{section.398}
-\contentsline {section}{\numberline {4.9}La statistica del paramagnetismo}{79}{section.417}
-\contentsline {subsection}{\numberline {4.9.1}Paramagnetismo classico}{80}{subsection.423}
-\contentsline {subsection}{\numberline {4.9.2}Paramagnetismo quantistico}{81}{subsection.432}
-\contentsline {section}{\numberline {4.10}La distribuzione di Maxwell delle velocit\IeC {\`a}}{83}{section.452}
-\contentsline {subsection}{\numberline {4.10.1}Velocit\IeC {\`a} pi\IeC {\`u} probabile, velocit\IeC {\`a} media}{85}{subsection.463}
-\contentsline {section}{\numberline {4.11}Considerazioni cinetiche}{86}{section.469}
-\contentsline {subsection}{\numberline {4.11.1}L'effusione di un gas}{87}{subsection.473}
-\contentsline {section}{\numberline {4.12}Potenziale esterno: un esempio}{87}{section.478}
-\contentsline {section}{\numberline {4.13}Esercizi per il Capitolo \ref {cap:canonico}}{89}{section.484}
-\contentsline {chapter}{\chapternumberline {5}L'{\em ensemble}\ grancanonico}{91}{chapter.492}
-\contentsline {section}{\numberline {5.1}Contatto con una riserva}{91}{section.493}
-\contentsline {section}{\numberline {5.2}L'{\em ensemble}\ grancanonico}{92}{section.498}
-\contentsline {section}{\numberline {5.3}Significato fisico delle quantit\IeC {\`a} statistiche}{93}{section.503}
-\contentsline {section}{\numberline {5.4}Esempi}{95}{section.519}
-\contentsline {subsection}{\numberline {5.4.1}Equilibrio solido--vapore}{97}{subsection.535}
-\contentsline {section}{\numberline {5.5}Fluttuazioni}{98}{section.544}
-\contentsline {section}{\numberline {5.6}Ritorno sul potenziale esterno}{100}{section.558}
-\contentsline {section}{\numberline {5.7}Esercizi per il Capitolo \ref {cap:grancanonico}}{103}{section.573}
-\contentsline {chapter}{\chapternumberline {6}Sistemi interagenti: un'introduzione}{105}{chapter.577}
-\contentsline {section}{\numberline {6.1}Espansione in cluster di un gas classico}{105}{section.579}
-\contentsline {subsection}{\numberline {6.1.1}L'equazione di van der Waals}{113}{subsection.616}
-\contentsline {chapter}{\chapternumberline {7}Costruzione della Statistica Quantistica}{115}{chapter.622}
-\contentsline {section}{\numberline {7.1}La matrice densit\IeC {\`a}}{116}{section.623}
-\contentsline {section}{\numberline {7.2}{\em Ensembles} quantistici}{118}{section.639}
-\contentsline {subsection}{\numberline {7.2.1}Microcanonico}{118}{subsection.640}
-\contentsline {subsection}{\numberline {7.2.2}Canonico}{120}{subsection.648}
-\contentsline {subsection}{\numberline {7.2.3}Grancanonico}{121}{subsection.656}
-\contentsline {section}{\numberline {7.3}Esempi}{121}{section.659}
-\contentsline {subsection}{\numberline {7.3.1}Elettrone in un campo magnetico}{121}{subsection.660}
-\contentsline {subsection}{\numberline {7.3.2}Particella libera in una scatola}{122}{subsection.665}
-\contentsline {section}{\numberline {7.4}Gas ideale quantistico}{124}{section.683}
-\contentsline {section}{\numberline {7.5}La matrice densit\IeC {\`a} canonica di un gas quantistico ideale}{127}{section.699}
-\contentsline {section}{\numberline {7.6}Il potenziale statistico}{131}{section.723}
-\contentsline {chapter}{\chapternumberline {8}Gas ideali quantistici}{133}{chapter.733}
-\contentsline {section}{\numberline {8.1}Gas ideale nel microcanonico quantistico}{133}{section.734}
-\contentsline {subsection}{\numberline {8.1.1}Divisione in celle di energia}{133}{subsection.735}
-\contentsline {subsection}{\numberline {8.1.2}Distribuzione di Bose--Einstein}{134}{subsection.740}
-\contentsline {subsection}{\numberline {8.1.3}Distribuzione di Fermi--Dirac}{135}{subsection.743}
-\contentsline {subsection}{\numberline {8.1.4}Distribuzione di Maxwell--Boltzmann (caso classico)}{135}{subsection.746}
-\contentsline {subsection}{\numberline {8.1.5}Il calcolo dell'entropia}{135}{subsection.748}
-\contentsline {subsection}{\numberline {8.1.6}Il calcolo di $n_{i}^{*}$}{137}{subsection.756}
-\contentsline {subsection}{\numberline {8.1.7}Quantit\IeC {\`a} termodinamiche}{138}{subsection.763}
-\contentsline {section}{\numberline {8.2}Gas ideali quantistici nel canonico e nel grancanonico}{138}{section.770}
-\contentsline {section}{\numberline {8.3}Statistica dei numeri d'occupazione}{141}{section.788}
-\contentsline {section}{\numberline {8.4}Rivisitazione delle considerazioni cinetiche}{143}{section.794}
-\contentsline {chapter}{\chapternumberline {9}Sistemi ideali di Bose--Einstein}{145}{chapter.805}
-\contentsline {section}{\numberline {9.1}Equazioni fondamentali per un gas ideale di Bose--Einstein}{145}{section.806}
-\contentsline {section}{\numberline {9.2}Espansione del viriale}{147}{section.819}
-\contentsline {section}{\numberline {9.3}Transizione di fase di Bose--Einstein}{149}{section.834}
-\contentsline {section}{\numberline {9.4}Termodinamica del gas ideale di Bose}{152}{section.846}
-\contentsline {subsection}{\numberline {9.4.1}La pressione}{152}{subsection.847}
-\contentsline {subsection}{\numberline {9.4.2}Il calore specifico}{153}{subsection.854}
-\contentsline {subsection}{\numberline {9.4.3}Isoterme e adiabatiche}{155}{subsection.870}
-\contentsline {section}{\numberline {9.5}La radiazione di corpo nero}{157}{section.880}
-\contentsline {subsection}{\numberline {9.5.1}La teoria di Planck}{157}{subsection.882}
-\contentsline {subsection}{\numberline {9.5.2}Il punto di vista di Bose}{158}{subsection.886}
-\contentsline {subsection}{\numberline {9.5.3}Una visione globale \IeC {\`e} necessaria}{160}{subsection.894}
-\contentsline {section}{\numberline {9.6}Il calore specifico dei solidi}{162}{section.910}
-\contentsline {subsection}{\numberline {9.6.1}Il modello di Einstein}{165}{subsection.921}
-\contentsline {subsection}{\numberline {9.6.2}Il modello di Debye}{165}{subsection.928}
-\contentsline {chapter}{\chapternumberline {10}Sistemi ideali di Fermi--Dirac}{169}{chapter.939}
-\contentsline {section}{\numberline {10.1}Equazioni fondamentali per un gas ideale di Fermi}{169}{section.940}
-\contentsline {section}{\numberline {10.2}Espansione del viriale}{170}{section.946}
-\contentsline {section}{\numberline {10.3}Il limite di degenerazione}{170}{section.949}
-\contentsline {section}{\numberline {10.4}Espansione a bassa temperatura}{172}{section.960}
-\contentsline {section}{\numberline {10.5}Fenomeni magnetici in un gas di Fermi ideale}{174}{section.971}
-\contentsline {subsection}{\numberline {10.5.1}Paramagnetismo di Pauli}{175}{subsection.972}
-\contentsline {subsection}{\numberline {10.5.2}Diamagnetismo di Landau}{178}{subsection.997}
-\contentsline {chapter}{\chapternumberline {11}Il modello di Ising}{179}{chapter.998}
-\contentsline {section}{\numberline {11.1}Il modello in una dimensione}{180}{section.1005}
-\contentsline {subsection}{\numberline {11.1.1}Espansione ad alta temperatura}{180}{subsection.1006}
-\contentsline {subsection}{\numberline {11.1.2}La matrice di trasferimento}{181}{subsection.1014}
-\contentsline {section}{\numberline {11.2}Approssimazione di campo medio}{182}{section.1026}
-\contentsline {subsection}{\numberline {11.2.1}Un modo alternativo}{184}{subsection.1042}
-\contentsline {subsection}{\numberline {11.2.2}Soluzioni dell'equazione di campo medio}{184}{subsection.1049}
-\contentsline {subsection}{\numberline {11.2.3}Un modello esattamente risolubile}{187}{subsection.1063}
-\contentsline {appendix}{\chapternumberline {A}Appendice matemarica}{189}{appendix.1075}
-\contentsline {section}{\numberline {A.1}Alcune funzioni e formule utili}{189}{section.1076}
-\contentsline {subsection}{\numberline {A.1.1}La funzione $\Gamma $}{189}{subsection.1077}
-\contentsline {subsection}{\numberline {A.1.2}La formula di Stirling}{190}{subsection.1091}
-\contentsline {subsection}{\numberline {A.1.3}Il teorema multinomiale}{190}{subsection.1094}
+\contentsline {chapter}{\chapternumberline {4}L'{\em ensemble}\ canonico}{55}{chapter.257}
+\contentsline {section}{\numberline {4.1}Sistema all'equilibrio con una riserva termica}{55}{section.258}
+\contentsline {section}{\numberline {4.2}L'{\em ensemble}\ canonico}{56}{section.264}
+\contentsline {subsection}{\numberline {4.2.1}Il metodo del valore pi\IeC {\`u} probabile}{57}{subsection.269}
+\contentsline {subsection}{\numberline {4.2.2}Il metodo di Darwin--Fowler}{58}{subsection.278}
+\contentsline {section}{\numberline {4.3}Significato fisico delle quantit\IeC {\`a} statistiche}{67}{section.327}
+\contentsline {section}{\numberline {4.4}Espressioni alternative per la funzione di partizione}{69}{section.347}
+\contentsline {section}{\numberline {4.5}Il gas ideale classico}{70}{section.355}
+\contentsline {section}{\numberline {4.6}Fluttuazioni dell'energia}{74}{section.380}
+\contentsline {section}{\numberline {4.7}Il teorema di equipartizione}{76}{section.394}
+\contentsline {section}{\numberline {4.8}Sistema di oscillatori armonici}{78}{section.404}
+\contentsline {section}{\numberline {4.9}La statistica del paramagnetismo}{81}{section.423}
+\contentsline {subsection}{\numberline {4.9.1}Paramagnetismo classico}{82}{subsection.429}
+\contentsline {subsection}{\numberline {4.9.2}Paramagnetismo quantistico}{83}{subsection.438}
+\contentsline {section}{\numberline {4.10}La distribuzione di Maxwell delle velocit\IeC {\`a}}{85}{section.458}
+\contentsline {subsection}{\numberline {4.10.1}Velocit\IeC {\`a} pi\IeC {\`u} probabile, velocit\IeC {\`a} media}{87}{subsection.469}
+\contentsline {section}{\numberline {4.11}Considerazioni cinetiche}{88}{section.475}
+\contentsline {subsection}{\numberline {4.11.1}L'effusione di un gas}{89}{subsection.479}
+\contentsline {section}{\numberline {4.12}Potenziale esterno: un esempio}{89}{section.484}
+\contentsline {section}{\numberline {4.13}Esercizi per il Capitolo \ref {cap:canonico}}{91}{section.490}
+\contentsline {chapter}{\chapternumberline {5}L'{\em ensemble}\ grancanonico}{95}{chapter.530}
+\contentsline {section}{\numberline {5.1}Contatto con una riserva}{95}{section.531}
+\contentsline {section}{\numberline {5.2}L'{\em ensemble}\ grancanonico}{96}{section.536}
+\contentsline {section}{\numberline {5.3}Significato fisico delle quantit\IeC {\`a} statistiche}{97}{section.541}
+\contentsline {section}{\numberline {5.4}Esempi}{99}{section.557}
+\contentsline {subsection}{\numberline {5.4.1}Equilibrio solido--vapore}{101}{subsection.573}
+\contentsline {section}{\numberline {5.5}Fluttuazioni}{102}{section.582}
+\contentsline {section}{\numberline {5.6}Ritorno sul potenziale esterno}{104}{section.596}
+\contentsline {section}{\numberline {5.7}Esercizi per il Capitolo \ref {cap:grancanonico}}{107}{section.611}
+\contentsline {chapter}{\chapternumberline {6}Sistemi interagenti: un'introduzione}{109}{chapter.616}
+\contentsline {section}{\numberline {6.1}Espansione in cluster di un gas classico}{109}{section.618}
+\contentsline {subsection}{\numberline {6.1.1}L'equazione di van der Waals}{117}{subsection.655}
+\contentsline {chapter}{\chapternumberline {7}Costruzione della Statistica Quantistica}{119}{chapter.661}
+\contentsline {section}{\numberline {7.1}La matrice densit\IeC {\`a}}{120}{section.662}
+\contentsline {section}{\numberline {7.2}{\em Ensembles} quantistici}{122}{section.678}
+\contentsline {subsection}{\numberline {7.2.1}Microcanonico}{122}{subsection.679}
+\contentsline {subsection}{\numberline {7.2.2}Canonico}{124}{subsection.687}
+\contentsline {subsection}{\numberline {7.2.3}Grancanonico}{125}{subsection.695}
+\contentsline {section}{\numberline {7.3}Esempi}{125}{section.698}
+\contentsline {subsection}{\numberline {7.3.1}Elettrone in un campo magnetico}{125}{subsection.699}
+\contentsline {subsection}{\numberline {7.3.2}Particella libera in una scatola}{126}{subsection.704}
+\contentsline {section}{\numberline {7.4}Gas ideale quantistico}{128}{section.722}
+\contentsline {section}{\numberline {7.5}La matrice densit\IeC {\`a} canonica di un gas quantistico ideale}{131}{section.738}
+\contentsline {section}{\numberline {7.6}Il potenziale statistico}{135}{section.762}
+\contentsline {chapter}{\chapternumberline {8}Gas ideali quantistici}{137}{chapter.772}
+\contentsline {section}{\numberline {8.1}Gas ideale nel microcanonico quantistico}{137}{section.773}
+\contentsline {subsection}{\numberline {8.1.1}Divisione in celle di energia}{137}{subsection.774}
+\contentsline {subsection}{\numberline {8.1.2}Distribuzione di Bose--Einstein}{138}{subsection.779}
+\contentsline {subsection}{\numberline {8.1.3}Distribuzione di Fermi--Dirac}{139}{subsection.782}
+\contentsline {subsection}{\numberline {8.1.4}Distribuzione di Maxwell--Boltzmann (caso classico)}{139}{subsection.785}
+\contentsline {subsection}{\numberline {8.1.5}Il calcolo dell'entropia}{140}{subsection.787}
+\contentsline {subsection}{\numberline {8.1.6}Il calcolo di $n_{i}^{*}$}{141}{subsection.795}
+\contentsline {subsection}{\numberline {8.1.7}Quantit\IeC {\`a} termodinamiche}{142}{subsection.802}
+\contentsline {section}{\numberline {8.2}Gas ideali quantistici nel canonico e nel grancanonico}{142}{section.809}
+\contentsline {section}{\numberline {8.3}Statistica dei numeri d'occupazione}{145}{section.827}
+\contentsline {section}{\numberline {8.4}Rivisitazione delle considerazioni cinetiche}{147}{section.833}
+\contentsline {chapter}{\chapternumberline {9}Sistemi ideali di Bose--Einstein}{149}{chapter.844}
+\contentsline {section}{\numberline {9.1}Equazioni fondamentali per un gas ideale di Bose--Einstein}{149}{section.845}
+\contentsline {section}{\numberline {9.2}Espansione del viriale}{151}{section.858}
+\contentsline {section}{\numberline {9.3}Transizione di fase di Bose--Einstein}{153}{section.873}
+\contentsline {section}{\numberline {9.4}Termodinamica del gas ideale di Bose}{155}{section.885}
+\contentsline {subsection}{\numberline {9.4.1}La pressione}{156}{subsection.886}
+\contentsline {subsection}{\numberline {9.4.2}Il calore specifico}{159}{subsection.893}
+\contentsline {subsection}{\numberline {9.4.3}Isoterme e adiabatiche}{160}{subsection.909}
+\contentsline {section}{\numberline {9.5}La radiazione di corpo nero}{162}{section.919}
+\contentsline {subsection}{\numberline {9.5.1}La teoria di Planck}{163}{subsection.921}
+\contentsline {subsection}{\numberline {9.5.2}Il punto di vista di Bose}{164}{subsection.925}
+\contentsline {subsection}{\numberline {9.5.3}Una visione globale \IeC {\`e} necessaria}{166}{subsection.933}
+\contentsline {section}{\numberline {9.6}Il calore specifico dei solidi}{168}{section.949}
+\contentsline {subsection}{\numberline {9.6.1}Il modello di Einstein}{170}{subsection.960}
+\contentsline {subsection}{\numberline {9.6.2}Il modello di Debye}{171}{subsection.967}
+\contentsline {chapter}{\chapternumberline {10}Sistemi ideali di Fermi--Dirac}{175}{chapter.978}
+\contentsline {section}{\numberline {10.1}Equazioni fondamentali per un gas ideale di Fermi}{175}{section.979}
+\contentsline {section}{\numberline {10.2}Espansione del viriale}{176}{section.985}
+\contentsline {section}{\numberline {10.3}Il limite di degenerazione}{176}{section.988}
+\contentsline {section}{\numberline {10.4}Espansione a bassa temperatura}{178}{section.999}
+\contentsline {section}{\numberline {10.5}Fenomeni magnetici in un gas di Fermi ideale}{181}{section.1010}
+\contentsline {subsection}{\numberline {10.5.1}Paramagnetismo di Pauli}{181}{subsection.1011}
+\contentsline {subsection}{\numberline {10.5.2}Diamagnetismo di Landau}{185}{subsection.1036}
+\contentsline {chapter}{\chapternumberline {11}Il modello di Ising}{187}{chapter.1037}
+\contentsline {section}{\numberline {11.1}Il modello in una dimensione}{188}{section.1044}
+\contentsline {subsection}{\numberline {11.1.1}Espansione ad alta temperatura}{188}{subsection.1045}
+\contentsline {subsection}{\numberline {11.1.2}La matrice di trasferimento}{189}{subsection.1053}
+\contentsline {section}{\numberline {11.2}Approssimazione di campo medio}{190}{section.1065}
+\contentsline {subsection}{\numberline {11.2.1}Un modo alternativo}{192}{subsection.1081}
+\contentsline {subsection}{\numberline {11.2.2}Soluzioni dell'equazione di campo medio}{192}{subsection.1088}
+\contentsline {subsection}{\numberline {11.2.3}Un modello esattamente risolubile}{195}{subsection.1102}
+\contentsline {appendix}{\chapternumberline {A}Appendice matemarica}{197}{appendix.1114}
+\contentsline {section}{\numberline {A.1}Alcune funzioni e formule utili}{197}{section.1115}
+\contentsline {subsection}{\numberline {A.1.1}La funzione $\Gamma $}{197}{subsection.1116}
+\contentsline {subsection}{\numberline {A.1.2}La formula di Stirling}{198}{subsection.1130}
+\contentsline {subsection}{\numberline {A.1.3}Il teorema multinomiale}{198}{subsection.1133}
