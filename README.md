@@ -15,3 +15,5 @@ Questi due files includono tutti gli altri files tex presenti. Ci sono tre direc
 5. Compilare ms.tex ancora una volta
 6. Compilare sol.tex ancora una volta
 7. Questa procedura crea i files ms.pdf e sol.pdf
+
+Oppure eseguire lo script "compila.sh".
